@@ -33,11 +33,12 @@ Many factors likely affect the accuracy and speed of quality assessment in these
 Our goal is to better understand the conditions under which a badge signal or individual recognition would be favored. We simulated quality assessment through fights among individuals. Each time individuals fight, they are able to assess each other's quality and update their previous opinion about quality. We use two quality assessment methods: (1) Badge signal systems: individuals group others into quality categories based on the intensity of badge signals and (2) Recognition systems: individuals use individual recognition to remember the outcome of events with particular individuals to estimate quality. 
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\section*{Conceptual description of model} 
+\section*{Model} 
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{General model conditions}
-We use an actor-oriented model design. We form naive groups (composed of individuals who have no knowledge of each other), and they must estimate their own quality and the quality of others. In the experience-only case, individuals can only base these estimates of quality on the fights they have with other individuals. In the observation case, individuals use a combination of their direct experience in fights and their observations of the fights of others to estimate quality. We refer to these estimates of quality as each individuals \q{opinion} of the quality of others. These opinions are iteratively updated as individuals are involved in, or observe, subsequent interactions. 
+
+The group consists entirely of naive animals, none of whom have any knowledge of each other. The animals learn about the quality of each of the other animals based on fights pairs of animals engage in. We refer to such an estimate of quality as an individual's \q{opinion} of another. At first, animals can only learn directly from their own experiences in fights. Below, we consider the possibility of observational learning, where animals can additionally learn from watching the outcomes of fights in which they are not involved. 
+
 
 At each time step, we randomly chose two individuals to \q{fight}. The probability of winning and losing these fights is dependent on the underlying difference in individual quality (VAR, with some stochasticity VAR). Once event outcomes are determined, individuals update their opinions of their own quality and the quality of their opponents, according to EQN. If $a_{ij}(t)$ is $i$'s assessment of $j$ at time $t$, after fighting, 
 \begin{equation*}
