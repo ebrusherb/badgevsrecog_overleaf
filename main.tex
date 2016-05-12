@@ -36,7 +36,7 @@ Our goal is to better understand the conditions under which a badge signal or in
 \section*{Model} 
 %%%%%%%%%%%%%%%%%%%%%%%
 
-Animals in a social group can benefit from knowing about their peers. For example, knowing which individuals are strong and weak can help an animal decide with whom to fight. Knowing which individuals are likely to have viable and healthy offspring can help females choose a male with which to mate. In our model, each animal has an inherent \q{quality} value, $q_i$, that the other animals try to assess. An animal's quality is only revealed when it engages in a fight. Each animal also displays a \q{signal}, $s_i$, which is always visible. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$.
+Animals in a social group can benefit from knowing about their peers. For example, knowing which individuals are strong and weak can help an animal decide with whom to fight. Knowing which individuals are likely to have viable and healthy offspring can help females choose a male with which to mate. In our model, each animal has an inherent \q{quality} value, $q_i$, that the other animals try to assess. An animal's quality is only revealed when it engages in a fight. Each animal also displays a \q{signal}, $s_i$, which is always visible. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.)
   
 At first, the group consists entirely of naive animals, none of whom have any knowledge of each other. The animals learn about the quality of each of the other animals based on fights in which pairs of animals engage. At first, animals can only learn directly from their own experiences in fights. Below, we consider the possibility of observational learning, where animals can additionally learn from watching the outcomes of fights in which they are not involved.  
 
@@ -45,7 +45,13 @@ We consider two types of learning: individual and categorical learning. An indiv
 A categorical learner forms these categories before any fights occur. Specifically, two animals are perceived to be the same if the difference in their signals is less than $\delta$, $|s_j-s_k|<\delta$. A focal animal picks one animal, $j$ at random. All animals whose signals are within $\delta$ of $s_j$ are put in the same category. Then the focal animal picks an uncategorized animal at random, $k$, forming a second category of all uncategorized animals whose signals are within $\delta$ of $s_k$. It proceeds this way until every animal in the group has been assigned a category.  Figure \ref{cats_ex} shows one example of this process. The number of categories the animal perceives depends on the size of the group and the perceptive ability, $\delta$ (Supp Figure XX).
 
 
-At each time step, we randomly chose two individuals to \q{fight}. The probability of winning and losing these fights is dependent on the underlying difference in individual quality (VAR, with some stochasticity VAR). Once event outcomes are determined, individuals update their opinions of their own quality and the quality of their opponents, according to EQN. If $a_{ij}(t)$ is $i$'s assessment of $j$ at time $t$, after fighting, 
+At each time step, we randomly choose two individuals to \q{fight}. 
+%The animal with higher quality is more likely to win. Specifically, the probability of $i$ winning in a fight against $j$ is 
+%\begin{equation*}
+%\frac{\exp\big(b(q_i-q_j)\big)}{\exp\big(b(q_i-q_j)\big)+1},
+%\end{equation*}
+%where $b$ represents the bias in the fight: if $b=0$, then both animals are equally likely to win, regardless of their qualities, and if $b$ is large, the stronger animals wins with near certainty. 
+Individuals update their opinions of their own quality and the quality of their opponents, according to EQN. If $a_{ij}(t)$ is $i$'s assessment of $j$ at time $t$, after fighting, 
 \begin{equation*}
 a_{ij}(t+1)=(1-r)a_{ij}(t)+rq_j+\xi,
 \end{equation*}
@@ -77,13 +83,13 @@ For the recognition/relationship system, we set...% anything extra?
 \begin{tabular}{cl}
 \toprule
  Variables & Description of variables \\
-\midrule
-$n$ & number of individuals \\ 
+\midrule 
+$\delta$ & perceptive threshold \\
+$\epsilon_i$ & learning accuracy of individual $i$ (averaged across all $j$ individuals) \\
+$N$ & number of individuals \\ 
  $q_i$ & quality of individual i \\ 
- $s_i$ & signal of quality / badge of status of individual i \\ 
- $\epsilon_i$ & learning accuracy of individual i (pooled across all j individuals) \\
- $\delta$ & perceptive threshold \\
- 
+$\rho$ & correlation between quality and signal \\
+$s_i$ & signal of quality / badge of status of individual $i$ \\ 
 \bottomrule
 \end{tabular}
 \end {table}
