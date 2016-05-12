@@ -36,44 +36,49 @@ Our goal is to better understand the conditions under which a badge signal or in
 \section*{Model} 
 %%%%%%%%%%%%%%%%%%%%%%%
 
-Animals in a social group can benefit from knowing about their peers. For example, knowing which individuals are strong and weak can help an animal decide with whom to fight. Knowing which individuals are likely to have viable and healthy offspring can help females choose a male with which to mate. In our model, each animal has an inherent \q{quality} value, $q_i$, that the other animals try to assess. An animal's quality is only revealed when it engages in a fight. Each animal also displays a \q{signal}, $s_i$, which is always visible. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.)
+Animals in a social group can benefit from knowing about their peers. For example, knowing which individuals are strong and weak can help an animal decide with whom to fight. Knowing which individuals are likely to have viable and healthy offspring can help females choose a male with which to mate. In our model, each animal has an inherent \q{quality} value, $q_i$, that the other animals try to assess. An animal's quality is only revealed when it engages in a fight. Each animal also displays a \q{signal}, $s_i$, which is always visible. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.) To simulate a particular social group, we draw $N$ values $\{q_1,\dots,q_N\}$ from a normal distribution with mean $0$ and standard deviation $\sigma_\text{q}$. We then generate $N$ signal values such that $\min_i{s_i}\approx -1$, $\max_i{s_i}\approx 1$, and the correlation between $\{q_i\}$ and $\{s_i\}$ is precisely $\rho$.
   
 At first, the group consists entirely of naive animals, none of whom have any knowledge of each other. The animals learn about the quality of each of the other animals based on fights in which pairs of animals engage. At first, animals can only learn directly from their own experiences in fights. Below, we consider the possibility of observational learning, where animals can additionally learn from watching the outcomes of fights in which they are not involved.  
 
 We consider two types of learning: individual and categorical learning. An individual learner can recognize each of the other individuals in its group and successively refine its estimate of each of their quality values. A categorical learner only recognizes animals based on the signals they display. A categorical learner has a perceptive threshold, such that if two animals have sufficiently similar signals, it will perceive them to be the same. Every time it encounters an animal it perceives to be in a given category, it updates its estimate of the quality of animals in that category. For example, if an animal has very poor perceptive abilities, it might only be able to identify animals with small, medium, and large signals, and the best it can do is to try to learn about animals in each of those categories. 
 
-A categorical learner forms these categories before any fights occur. Specifically, two animals are perceived to be the same if the difference in their signals is less than $\delta$, $|s_j-s_k|<\delta$. A focal animal picks one animal, $j$ at random. All animals whose signals are within $\delta$ of $s_j$ are put in the same category. Then the focal animal picks an uncategorized animal at random, $k$, forming a second category of all uncategorized animals whose signals are within $\delta$ of $s_k$. It proceeds this way until every animal in the group has been assigned a category.  Figure \ref{cats_ex} shows one example of this process. The number of categories the animal perceives depends on the size of the group and the perceptive ability, $\delta$ (Supp Figure XX).
+A categorical learner forms these categories before any fights occur. Specifically, two animals are perceived to be the same if the difference in their signals is less than $\delta$, $|s_j-s_k|<\delta$. A focal animal picks one animal, $j$ at random. All animals whose signals are within $\delta$ of $s_j$ are put in the same category. Then the focal animal picks an uncategorized animal at random, $k$, forming a second category of all uncategorized animals whose signals are within $\delta$ of $s_k$. It proceeds this way until every animal in the group has been assigned a category.  Figure \ref{cats_ex} shows one example of this process. Depending on how each animal forms its categories, different animals will categorize the group differently and may perceive different numbers of categories. Each individual $i$ will identify a category $k$ by the median of the signal being displayed by individuals in that category, $\bar{s}_{ik}$. The average number of categories  animals perceive depends on the size of the group and the perceptive ability, $\delta$ (Supp Figure XX). 
 
-
-At each time step, we randomly choose two individuals to \q{fight}. 
+At each time step, the animals forget their opinions of individuals or categories they encountered longer than a time window, $w$ steps, ago. An individual learner will maintain its opinions of animals they encountered fewer than $w$ time steps ago. A categorical learner re-categorizes the rest of the group at each time step. Specifically, animal $i$ puts animal $j$ in category $k$ with probability 
+\begin{equation*}
+\frac{\exp(-r_\text{cat}|s_j-\bar{s}_{ik}|)}{\sum_\ell\exp(-r_\text{cat}|s_j-\bar{s}_{il}|)},
+\end{equation*}
+where $r_\text{cat}$ describes the reliability of the categories over time: if $r_\text{cat}=\infty$, $i$ categorizes the group the same way at every time step and as $r_\text{cat}$ the probability of re-categorizing animals increases. If $i$ remembers its opinion of category $k$, it assigns that opinion to all individuals it now perceives as being in category $k$. 
+Next, we randomly choose two individuals to \q{fight}. 
 %The animal with higher quality is more likely to win. Specifically, the probability of $i$ winning in a fight against $j$ is 
 %\begin{equation*}
 %\frac{\exp\big(b(q_i-q_j)\big)}{\exp\big(b(q_i-q_j)\big)+1},
 %\end{equation*}
 %where $b$ represents the bias in the fight: if $b=0$, then both animals are equally likely to win, regardless of their qualities, and if $b$ is large, the stronger animals wins with near certainty. 
-Individuals update their opinions of their own quality and the quality of their opponents, according to EQN. If $a_{ij}(t)$ is $i$'s assessment of $j$ at time $t$, after fighting, 
+An individual learner correctly identifies its opponent with probability $r_\text{ind}$. With probability $1-r_\text{ind}$ it misidentifies its opponent as another randomly chosen member of the group.  A categorical learner perceives the category of its opponent with the probabilities just described. Each animal in the fight updates its opinion of the individual or category it perceives in its opponent. If $a_{ij}(t-1)$ is $i$'s opinion of $j$ at time $t-1$, after fighting, 
 \begin{equation*}
-a_{ij}(t+1)=(1-r)a_{ij}(t)+rq_j+\xi,
+a_{ij}(t)=(1-\ell)a_{ij}(t-1)+\ell q_j+\xi,
 \end{equation*}
-where $r$ is a parameter describing how much $i$ changes its opinion based on its observation and $\xi$ is drawn from a normal distribution with mean $0$ and standard deviation $\sigma_\text{u}$. If $i$ and $j$ have not fought before so $i$ has no assessment of $j$, then after fighting 
+where $\ell$ is a parameter describing how much $i$ changes its opinion based on its observation and $\xi$ is drawn from a normal distribution with mean $0$ and standard deviation $\sigma_\xi$. If $i$ and $j$ have not fought before or $i$ has forgotten its opinion of $j$, then after fighting 
 \begin{equation*}
 a_{ij}(t+1)=(1-r)b_{i}(t)+rq_j+\xi,
 \end{equation*}
-where $b_i(t)$ is a baseline opinion of any animal it encounters. Specifically, $b_i(t)$ is drawn from a normal distribution with mean equal to the average quality of the group and small standard deviation. 
+where $b_i(t)$ is a baseline opinion of any animal it encounters. Specifically, $b_i(t)$ is drawn from a normal distribution with mean equal to the average quality of the group and standard deviation $\sigma_\text{b}$. 
 
-% QUESTION: how many simulations were run? EB: 25 simulations.
+In a given simulation, we keep track of each animal's opinion of every other for $T$ fights. This allows us to calculate the error of each animal's opinion of every other at each point in time, $|a_{ij}(t)-q_j|$. To measure each animal's learning ability, we average its error over the rest of the group. 
+\begin{equation*}
+\epsilon_i(t) = \frac{1}{|\mathscr{O}_i(t)|}\sum_{j\in \mathscr{O}_i(t)}|a_{ij}(t)-q_j|,
+\end{equation*}
+where $\mathscr{O}_i(t)$ is the set of animals about whom $i$ has an opinion at time $t$.
+We also calculate an animal's learning time about another individual as the first point in time at which its error about that individual drops below a threshold $\bar{\epsilon}$. We then average its learning time about each of the other animals in the group:
+\begin{equation*}
+\tau_{i} = \frac{1}{|\mathscr{O}_i|} \sum_{j\in\mathscr{O}_i} \min_{t=1,\dots,T}\{t: \epsilon_{ij}(t)\leq\bar{\epsilon}\}.
+\end{equation*}
 
-% describe noise / error
-We include error in how individuals recognize or categorize individuals, and in the observation case, we also include error in observation of event outcome. In the badge signal case, individuals may mistakenly categorize individuals into neighboring categories. For example, an individual in Category I may be miscategorized into Category II, with the probability of miscategorization determined by an error parameter (VAR) and the category that an individuals is mistakenly assigned dependent on the distance an individual's quality is from a category bound. In individual recognition, a misidentification occurs at a set rate (VAR). When misidentifications occur, another individual is subbed in at random.  
-
-% describe what we measured
-We then measured three aspects of learning: learning curves, learning accuracy, and learning time. Learning curves summarize the mean error in quality assessment across all individual opinions for a single run; summarized learning curves show the global mean of learning curves across multiple runs. Learning accuracy summarizes the each individual's final opinion of the quality of others compared to the actual quality of those individuals. Learning time summarizes the number of fights an individual engaged in (or observed) before reaching a threshold within which the opinion matched the final opinion of quality. Learning accuracy and learning time are summarized for each run and plotted as a function of the parameter values. 
 
 
 \subsection*{Parameter space}
-We investigated how varying several parameters affected the learning curves, learning accuracy, and learning time. We varied group size (n=\{25, 50, 75, 100\}), the group's index strength (the correlation between the badge intensity and underlying quality of individuals, s=\{ADD\}), the memory capabilities of agents, and the total number of fights. For the badge signal system, we also specify the number of bins that individuals use to categorize individuals by quality (b=\{2, 5, 10, 15\}). 
-
-For the recognition/relationship system, we set...% anything extra?
+We investigated how varying several parameters affected the learning curves, learning accuracy, and learning time. We varied group size ($N=\{25, 50, 75, 100\}$), the correlation between the signal and underlying quality of individuals ($\rho=\{0.5,0.9\}$), the memory capabilities of agents ($w=\{200,1000,\infty\}$), and the total number of fights. For the badge signal system, we also specify the perceptive threshold that individuals use to categorize individuals by signal ($\delta=\{0,0.1,0.2,\dots,1.5\}$). For the individual learning system, we set $r_\text{ind}=1$, and for the categorical learning system, we set $r_\text{cat}=\infty$. For both types of learning, we set $\bar{\epsilon}=0.2$, $\ell=0.2$, $\sigma_\text{b}=0.2$, $\sigma_\text{q}=0.5$, $\sigma_\xi=0.01$.
 
 
 \subsection*{Variables}
@@ -86,10 +91,17 @@ For the recognition/relationship system, we set...% anything extra?
 \midrule 
 $\delta$ & perceptive threshold \\
 $\epsilon_i$ & learning accuracy of individual $i$ (averaged across all $j$ individuals) \\
+$\bar{\epsilon}$ & threshold error for defining learning time \\
+$\ell$ & learning rate \\
 $N$ & number of individuals \\ 
  $q_i$ & quality of individual i \\ 
 $\rho$ & correlation between quality and signal \\
 $s_i$ & signal of quality / badge of status of individual $i$ \\ 
+$w$ & memory window \\
+$\sigma_\text{b}$ & standard deviation of baseline opinion \\
+$\sigma_\text{q}$ & standard deviation of quality values \\
+$\sigma_\xi$ & standard deviation of noise in opinion updating \\
+$T$ & total number of fights \\
 \bottomrule
 \end{tabular}
 \end {table}
