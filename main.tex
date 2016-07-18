@@ -8,7 +8,7 @@
 \affil[1]{University of Maryland; email: xxxxx}
 \author[2,3]{Elizabeth A. Hobson}
 \affil[2]{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501 USA}
-\affil[3]{National Institute for Mathematical and Biological Synthesis, University of Tennessee, Knoxville, TN, USA; email: ehobson@nimbios.org}
+\affil[3]{National Institute for Mathematical and Biological Synthesis, University of Tennessee, Knoxville, TN, USA; email: ehobson@santafe.edu}
 %\date{} 
 \maketitle
 
@@ -28,14 +28,18 @@ Species have different ways of assessing the quality of others. Here, we focus o
 
 At the two extremes, individuals in a pure badge quality signal system would be completely unable to recognize individuals, and would treat all individuals with similar badge intensities as equivalent; individuals in a pure recognition/relationships based quality system would be completely reliant on remembering an individual's actions, and have no other cues to infer that individual's quality or rank. Binning individuals with similar badge intensities into the same category effectively decreases the functional group size to the number of bins, but also increases noise about quality of each individual. An individual recognition-based system is one in which the number of bins equals the number of individuals in the group.  
 
-Many factors likely affect the accuracy and speed of quality assessment in these two systems. Recent work (\cite{sheehan2016evotradeoff}) provides several predictions but focused on predicting differences in signaling systems comparing an innate quality signal to a social recognition system across different species, not within species (\cite{sheehan2016response}). Here, we use a somewhat different approach: we are interested in two hypothetical systems, where individuals learn to assess quality to others in different ways. 
+\subsection*{Justification and Goals}
+
+[this is a bit rough] Many factors likely affect the accuracy and speed of quality assessment in these two systems. Recent work (\cite{sheehan2016evotradeoff}) provides several predictions but focused on predicting differences in signaling systems comparing an innate quality signal to a social recognition system across different species, not within species (\cite{sheehan2016response}). Here, we use a somewhat different approach: we are interested in two hypothetical systems, where individuals learn to assess quality to others in different ways. 
 
 Our goal is to better understand the conditions under which a badge signal or individual recognition would be favored. We simulated quality assessment through fights among individuals. Each time individuals fight, they are able to assess each other's quality and update their previous opinion about quality. We use two quality assessment methods: (1) Badge signal systems: individuals group others into quality categories based on the intensity of badge signals and (2) Recognition systems: individuals use individual recognition to remember the outcome of events with particular individuals to estimate quality. 
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\section*{Model} 
+\section*{Methods} 
 %%%%%%%%%%%%%%%%%%%%%%%
-
+%
+\subsection*{Model}
+%
 Animals in a social group can benefit from knowing about their peers. For example, knowing which individuals are strong and weak can help an animal decide with whom to fight. Knowing which individuals are likely to have viable and healthy offspring can help females choose a male with which to mate. In our model, each animal has an inherent \q{quality} value, $q_i$, that the other animals try to assess. An animal's quality is only revealed when it engages in a fight. Each animal also displays a \q{signal}, $s_i$, which is always visible. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.) To simulate a particular social group, we draw $N$ values $\{q_1,\dots,q_N\}$ from a normal distribution with mean $0$ and standard deviation $\sigma_\text{q}$. We then generate $N$ signal values such that $\min_i{s_i}\approx -1$, $\max_i{s_i}\approx 1$, and the correlation between $\{q_i\}$ and $\{s_i\}$ is precisely $\rho$.
   
 At first, the group consists entirely of naive animals, none of whom have any knowledge of each other. The animals learn about the quality of each of the other animals based on fights in which pairs of animals engage. At first, animals can only learn directly from their own experiences in fights. Below, we consider the possibility of observational learning, where animals can additionally learn from watching the outcomes of fights in which they are not involved.  
@@ -74,15 +78,14 @@ We also calculate an animal's learning time about another individual as the firs
 \begin{equation*}
 \tau_{i} = \frac{1}{|\mathscr{O}_i|} \sum_{j\in\mathscr{O}_i} \min_{t=1,\dots,T}\{t: \epsilon_{ij}(t)\leq\bar{\epsilon}\}.
 \end{equation*}
-
-
-
+%
 \subsection*{Parameter space}
+%
 We investigated how varying several parameters affected the learning curves, learning accuracy, and learning time. We varied group size ($N=\{25, 50, 75, 100\}$), the correlation between the signal and underlying quality of individuals ($\rho=\{0.5,0.9\}$), the memory capabilities of agents ($w=\{200,1000,\infty\}$), and the total number of fights. For the badge signal system, we also specify the perceptive threshold that individuals use to categorize individuals by signal ($\delta=\{0,0.1,0.2,\dots,1.5\}$). For the individual learning system, we set $r_\text{ind}=1$, and for the categorical learning system, we set $r_\text{cat}=\infty$. For both types of learning, we set $\bar{\epsilon}=0.2$, $\ell=0.2$, $\sigma_\text{b}=0.2$, $\sigma_\text{q}=0.5$, $\sigma_\xi=0.01$.
 
-
+%
 \subsection*{Variables}
-
+%
 \begin {table}[h]
 \caption {Description of variables} \label{tab:vars} 
 \begin{tabular}{cl}
@@ -105,8 +108,9 @@ $T$ & total number of fights \\
 \bottomrule
 \end{tabular}
 \end {table}
-
+%
 \subsection*{Defining categories}
+%
 \textbf{Email text: }I noticed at the end of the day yesterday that since I've changed how the categories are created, for a given perception window, there are fewer categories when signal and quality are poorly correlated, i.e. holding perception window constant but varying correlation changes the number of categories the animals perceive. I'll explain why this happened below if you care, but I've rewritten the code so that varying correlation doesn't affect the number of categories being perceived. It's better because we can only identify the effects of the signal-quality correlation and the perception abilities if they're independent parameters. Since all the lines in the summary plots hold correlation constant, so it shouldn't change any results. 
 
 The issue was in how I generated signal values: First, I draw quality values from a normal distribution. Then, I draw signal values from a normal distribution and rotate them so that the signal values have the desired correlation with the quality values. The way I was rotating kind of squashed the signal values together when correlation was low and spread them out when correlation was high. This didn't matter when we were using number of categories as a parameter because we'd just divvy up the group into that many categories. However, using a perception window, the more similar the animals are, the fewer categories they get binned into, so low correlation meant few categories. I've rewritten how the signal values are generated so that there is more or less the same amount of variation regardless of the quality-signal correlation.
@@ -116,9 +120,9 @@ The issue was in how I generated signal values: First, I draw quality values fro
 "Categories.pdf" is an example of how 25 animals might be categorized when the perception window is 0.3.
 
 "numberofcategories.pdf" shows how the number of categories the group gets divided into depends on the perception window and the group size, in case you'd like to see.
-
+%
 \subsection*{learning times}
-
+%
 \textbf{Email text:} Re: learning time: Within one simulation of one group, I calculate an animal's learning time as the average number of fights it takes to decrease the error in its assessment about each other animal below a threshold, right now, 0.2. For each combination of parameters, I average this learning time across all individuals and all 25 simulations. This is indeed a little different than the first version of the model, where I calculated learning time as the number of fights it takes for error to get within a threshold of its final error, which doesn't make as much sense.
 
 \textbf{Email text: }I got to wondering why learning time is much higher for individual learning when the perception window is 0, since both individual and categorical learners can identify all individuals in the group. I meant to have the probability of confusion be 0 for both types of learning, but I realized that the parameter I've been using  for categorical learning actually allowed for a small probability of two individuals being put in the same category. This means that, if an animal encounters and learns about another animal, there is a small probability that it updates its opinion about other animals that are sufficiently similar. This non-zero probability of confusion actually allows categorical learners to learn more quickly. That to me is a potentially interesting result. BUT for the moment, I'm rerunning simulations where both types of learning have 0 probability of confusion. When I get the chance, I'm planning on a more systematic sweep of the confusion probabilities to see what their effects are. If you use the current figures and someone asks why individual learning takes longer, that's why, and I'll get new figures to you as soon as I can.
@@ -144,17 +148,21 @@ The issue was in how I generated signal values: First, I draw quality values fro
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%
 \section*{Results}
+%%%%%%%%%%%%%%%%%%%%
+%
 \subsection*{General results}
+%
 \textbf{Email text: }Red is always categorical learning. Blue is always individual learning. The average-error figures show the average (saturated line) plus or minus the standard deviation (shaded area) across all members of a group across all 25 random initial conditions. The title of each panel gives the group size (N), number of categories (number sign), window size (wind), and correlation between quality and signal (corr). All the parameters I've looked at have the expected effect, e.g. increasing group size makes individual learning more error prone. The effect-of-categor-num figure shows how the average error of categorical learning depends on the number of categories being used, for the parameters given in the title. There's a surprising shape here: the lowest error happens at an intermediate number of categories. I'm not sure why this is happening yet, but it's interesting I think. Finally, the learning-times figures give the frequencies across all individuals and all initial conditions of how long it takes the animal to get its error sufficiently close to its error after 10000 fights. Here, too, all of the parameters I've looked at have expected effects, e.g. increasing group size increases the learning time.
 
-
+%
 \subsection*{How do category bin sizes affect error and learning time?}
-
+%
 \subsection*{How does group size affect error and learning time?}
-
+%
 \subsection*{How does memory affect error and learning time?}
-
+%
 
 \begin{figure}[ht]
 \caption{\sffamily\small\textbf{Learning curves.}
@@ -190,6 +198,12 @@ The issue was in how I generated signal values: First, I draw quality values fro
 \label{summary_time_percwindow}
 \includegraphics[width=.8\textwidth]{figures/summary_time_percwindow.pdf}
 \end{figure}
+
+%%%%%%%%%%%%%%%%%
+\section*{Discussion}
+%%%%%%%%%%%%%%%%%
+
+
 
 
 \newpage
