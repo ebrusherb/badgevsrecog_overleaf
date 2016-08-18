@@ -153,50 +153,43 @@ The issue was in how I generated signal values: First, I draw quality values fro
 %%%%%%%%%%%%%%%%%%%%
 %
 \subsection*{General results}
-%
-\textbf{Email text: }Red is always categorical learning. Blue is always individual learning. The average-error figures show the average (saturated line) plus or minus the standard deviation (shaded area) across all members of a group across all 25 random initial conditions. The title of each panel gives the group size (N), number of categories (number sign), window size (wind), and correlation between quality and signal (corr). All the parameters I've looked at have the expected effect, e.g. increasing group size makes individual learning more error prone. The effect-of-categor-num figure shows how the average error of categorical learning depends on the number of categories being used, for the parameters given in the title. There's a surprising shape here: the lowest error happens at an intermediate number of categories. I'm not sure why this is happening yet, but it's interesting I think. Finally, the learning-times figures give the frequencies across all individuals and all initial conditions of how long it takes the animal to get its error sufficiently close to its error after 10000 fights. Here, too, all of the parameters I've looked at have expected effects, e.g. increasing group size increases the learning time.
 
 %
-\subsection*{How do category bin sizes affect error and learning time?}
+\subsection*{The effects of group size and cognitive abilities on learning}
+\begin{itemize}
+
+\item 
+\end{itemize}
 %
-\subsection*{How does group size affect error and learning time?}
+\subsection*{The effect of observational learning}
 %
-\subsection*{How does memory affect error and learning time?}
+\subsection*{Comparison of two systems}
 %
 
 \begin{figure}[ht]
-\caption{\sffamily\small\textbf{Learning curves.}
-     Cherry-picked parameter combinations to illustrate how learning curves change under different conditions (summarized below).}
+
 \label{learning_curves}
 \includegraphics[width=.95\textwidth]{figures/learning_curves.pdf}
+\caption{\sffamily\small\textbf{Learning curves.}
+     Cherry-picked parameter combinations to illustrate how learning curves change under different conditions (summarized below).}
 \end{figure}
 
 \begin{figure}
-\caption{\sffamily\small\textbf{Summary error by group size.}
-    xxxxxxx (individualized levels shown for reference).}
-\label{summary_error_groupsize}
-\includegraphics[width=.8\textwidth]{figures/summary_error_groupsize.pdf}
+\label{parameters}
+\includegraphics[width=6.85in]{figures/parameters.pdf}
+\caption{\sffamily\small\textbf{Effect of group size and cognitive abilities on learning.}}
 \end{figure}
 
 \begin{figure}
-\caption{\sffamily\small\textbf{Summary error by perception window.}
-    xxxxxxx (individualized levels shown for reference).}
-\label{summary_error}
-\includegraphics[width=.8\textwidth]{figures/summary_error_percwindow.pdf}
+\label{costs}
+\includegraphics[width=6.85in]{figures/costs.pdf}
+\caption{\sffamily\small\textbf{Effect of group size and cognitive abilities on the costs of using each system.}}
 \end{figure}
 
 \begin{figure}
-\caption{\sffamily\small\textbf{Summary time by group size.}
-     xxxxxxx (individualized levels shown for reference).}
-\label{summary_time_groupsize}
-\includegraphics[width=.8\textwidth]{figures/summary_time_groupsize.pdf}
-\end{figure}
-
-\begin{figure}
-\caption{\sffamily\small\textbf{Summary time by perception window.}
-     xxxxxxx (individualized levels shown for reference).}
-\label{summary_time_percwindow}
-\includegraphics[width=.8\textwidth]{figures/summary_time_percwindow.pdf}
+\label{comparison}
+\includegraphics[width=6.85in]{figures/cost_comparisons.pdf}
+\caption{\sffamily\small\textbf{Parameters that favor the use of each system.}}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%
