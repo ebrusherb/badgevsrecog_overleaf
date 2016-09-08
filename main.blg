@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: main.aux
+The style file: apa.bst
+Database file #1: BIB_badgeVSrecog.bib
+Database file #2: TODO_newrefs.bib
+Warning--I didn't find a database entry for ""
+You've used 2 entries,
+            1940 wiz_defined-function locations,
+            484 strings with 4044 characters,
+and the built_in function-call counts, 705 in all, are:
+= -- 66
+> -- 26
+< -- 2
++ -- 10
+- -- 8
+* -- 60
+:= -- 129
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 14
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 27
+empty$ -- 48
+format.name$ -- 14
+if$ -- 133
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 6
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 14
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 38
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 0
+while$ -- 5
+width$ -- 0
+write$ -- 27
+(There was 1 warning)

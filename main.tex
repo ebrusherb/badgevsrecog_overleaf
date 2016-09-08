@@ -41,51 +41,65 @@ Our goal is to better understand the conditions under which a badge signal or in
 %
 \subsection*{Model}
 %
-Animals in a social group can benefit from knowing about their peers. For example, knowing which individuals are strong and weak can help an animal decide with whom to fight. Knowing which individuals are likely to have viable and healthy offspring can help females choose a male with which to mate. In our model, each animal has an inherent \q{quality} value, $q_i$, that the other animals try to assess. An animal's quality is only revealed when it engages in a fight. Each animal also displays a \q{signal}, $s_i$, which is always visible. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.) To simulate a particular social group, we draw $N$ values $\{q_1,\dots,q_N\}$ from a normal distribution with mean $0$ and standard deviation $\sigma_\text{q}$. We then generate $N$ signal values such that $\min_i{s_i}\approx -1$, $\max_i{s_i}\approx 1$, and the correlation between $\{q_i\}$ and $\{s_i\}$ is precisely $\rho$.
+Each animal in the social group has an inherent quality value. This can be thought of, for example, as fighting ability \cite{}, resource holding potential \cite{}, or body size. An animal can learn about another's quality value by interacting with it. The animals can also learn by observing the interactions between other pairs. We consider two different ways of learning: individual recognition and badges. An animal using individual recognition can identify each of its group mates. An animal using the badge system only recognizes animals based on the signals they display. It is costly to the animals in the group to learn about each other inaccurately. Since animals can use information about their group mates to decide how to interact with them in the future, having the wrong information can lead to an inappropriate choice. It is also costly to learn slowly. The time spent interacting and learning about one's group mates could be spent in other ways. Additionally, if the interaction is actually a fight between animals, having more interactions than necessary can lead to injury and perhaps even death. Finally, having improved memory and perceptive ability can also be costly because of the associated energetic costs and or because improving these properties involves a tradeoff that negatively affects other traits. We combine the costs associated with inaccurate learning, the time required to learn, and cognitive abilities to assess the performance of animals using each of the two systems. 
+
+\subsection{Interactions and learning }
+Specifically, each animal has a quality value, $q_i$. Each animal also displays a signal, $s_i$, which is always visible. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. In a group with $N$ animals, we draw quality values $\{q_1,\dots,q_N\}$ from a normal distribution with mean $0$ and standard deviation $\sigma_\text{q}$. We then generate $N$ signal values such that $\min_i{s_i}\approx -1$, $\max_i{s_i}\approx 1$, and the correlation between $\{q_i\}$ and $\{s_i\}$ is precisely $\rho$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.)
   
-At first, the group consists entirely of naive animals, none of whom have any knowledge of each other. The animals learn about the quality of each of the other animals based on fights in which pairs of animals engage. At first, animals can only learn directly from their own experiences in fights. Below, we consider the possibility of observational learning, where animals can additionally learn from watching the outcomes of fights in which they are not involved.  
-
-We consider two types of learning: individual and categorical learning. An individual learner can recognize each of the other individuals in its group and successively refine its estimate of each of their quality values. A categorical learner only recognizes animals based on the signals they display. A categorical learner has a perceptive threshold, such that if two animals have sufficiently similar signals, it will perceive them to be the same. Every time it encounters an animal it perceives to be in a given category, it updates its estimate of the quality of animals in that category. For example, if an animal has very poor perceptive abilities, it might only be able to identify animals with small, medium, and large signals, and the best it can do is to try to learn about animals in each of those categories. 
-
-A categorical learner forms these categories before any fights occur. Specifically, two animals are perceived to be the same if the difference in their signals is less than $\delta$, $|s_j-s_k|<\delta$. A focal animal picks one animal, $j$ at random. All animals whose signals are within $\delta$ of $s_j$ are put in the same category. Then the focal animal picks an uncategorized animal at random, $k$, forming a second category of all uncategorized animals whose signals are within $\delta$ of $s_k$. It proceeds this way until every animal in the group has been assigned a category.  Figure \ref{cats_ex} shows one example of this process. Depending on how each animal forms its categories, different animals will categorize the group differently and may perceive different numbers of categories. Each individual $i$ will identify a category $k$ by the median of the signal being displayed by individuals in that category, $\bar{s}_{ik}$. The average number of categories  animals perceive depends on the size of the group and the perceptive ability, $\delta$ (Supp Figure XX). 
-
-At each time step, the animals forget their opinions of individuals or categories they encountered longer than a time window, $w$ steps, ago. An individual learner will maintain its opinions of animals they encountered fewer than $w$ time steps ago. A categorical learner re-categorizes the rest of the group at each time step. Specifically, animal $i$ puts animal $j$ in category $k$ with probability 
+Each animal assesses the quality of each other animal: $a_{ij}(t)$ is the opinion of animal $i$ about animal $j$ at time $t$.  At first, the group consists entirely of naive animals: at $t=0$, no animal has an opinion of any other. Every animal has a memory window of length $w$. At each point in time, first, if animal $k$ has not updated its opinion of animal $\ell$ within the last $w$ timesteps, it forgets its opinion of $\ell$. Next, two animals, $i$ and $j$, are chosen randomly to interact. If $i$ already has an opinion of $j$, its updated opinion is 
 \begin{equation*}
-\frac{\exp(-r_\text{cat}|s_j-\bar{s}_{ik}|)}{\sum_\ell\exp(-r_\text{cat}|s_j-\bar{s}_{il}|)},
+a_{ij}(t)=(1-\ell_\text{i})a_{ij}(t-1)+\ell_\text{i} q_j+\xi,
 \end{equation*}
-where $r_\text{cat}$ describes the reliability of the categories over time: if $r_\text{cat}=\infty$, $i$ categorizes the group the same way at every time step and as $r_\text{cat}$ the probability of re-categorizing animals increases. If $i$ remembers its opinion of category $k$, it assigns that opinion to all individuals it now perceives as being in category $k$. 
-Next, we randomly choose two individuals to \q{fight}. 
+where $\ell_\text{i}$ is a parameter describing how much $i$ changes its opinion based on the interaction and $\xi$ is drawn from a normal distribution with mean $0$ and standard deviation $\sigma_\text{i}$. If $i$ and $j$ have not previously interacted or $i$ has forgotten its opinion of $j$, then after interacting 
+\begin{equation*}
+a_{ij}(t+1)=(1-r)b_{i}(t)+rq_j+\xi,
+\end{equation*}
+where $b_i(t)$ is a baseline opinion of any animal it encounters. Specifically, $b_i(t)$ is drawn from a normal distribution with mean $0$ (the expected quality value of any animal) and standard deviation $\sigma_\text{b}$. The other animals in the group observe the interaction with probability $p_\text{o}$. If animal $k$ observes the interaction, it uses the same rules to update its opinion of both $i$ and $j$, with parameters $\ell_\text{o}$ and $\sigma_\text{o}$. We use $\ell_\text{o}\leq\ell_\text{i}$ and $\sigma_\text{o}\geq\sigma_\text{i}$ so that observational learning is noisier. This completes the description of how learning occurs for animals using individual recognition. 
+
+\subsection{Badge system }
+An animal that uses the badge system to learn cannot perceive the difference between animals with similar signals and is forced to make a noisy estimate of the quality values of all such animals.  Specifically, an animal divides the rest of its group into categories before any interactions take place. It does so by picking another animal, $j$, at random. All animals whose signals are within $\delta/2$ of $s_j$ are put in the same category. Then the focal animal picks an uncategorized animal at random, $k$, forming a second category of all uncategorized animals whose signals are within $\delta/2$ of $s_k$. The process continues until every animal in the group has been assigned a category. Category width $\delta$ depends on the animals' perceptive abilities. For example, if $\delta$ is large, an animal might only be able to identify animals with small, medium, and large signals, whereas if $\delta=0$ an animal can identify every individual in its group and using the badge is no different than using individual recognition. Different animals will categorize the group differently and may perceive different numbers of categories. Figure \ref{cats_ex} shows one example of this process. 
+%Each individual $i$ will identify a category $c$ by the median of the signal being displayed by individuals in that category, $\bar{s}_{ic}$. 
+The average number of categories  animals perceive decreases with group size and category width, $\delta$ (Figure \ref{num_cat}). When an animal using the badge system updates its opinion of another animal based on direct interaction or on observation, it simultaneously updates its opinions of all the other animals in the same category. If an animal observes an interaction between two animals in the same category, it does not updates its opinion of that category.
+
+%A categorical learner re-categorizes the rest of the group at each time step. Specifically, animal $i$ puts animal $j$ in category $k$ with probability 
+%\begin{equation*}
+%\frac{\exp(-r_\text{cat}|s_j-\bar{s}_{ik}|)}{\sum_\ell\exp(-r_\text{cat}|s_j-\bar{s}_{il}|)},
+%\end{equation*}
+%where $r_\text{cat}$ describes the reliability of the categories over time: if $r_\text{cat}=\infty$, $i$ categorizes the group the same way at every time step and as $r_\text{cat}$ the probability of re-categorizing animals increases. If $i$ remembers its opinion of category $k$, it assigns that opinion to all individuals it now perceives as being in category $k$. 
 %The animal with higher quality is more likely to win. Specifically, the probability of $i$ winning in a fight against $j$ is 
 %\begin{equation*}
 %\frac{\exp\big(b(q_i-q_j)\big)}{\exp\big(b(q_i-q_j)\big)+1},
 %\end{equation*}
 %where $b$ represents the bias in the fight: if $b=0$, then both animals are equally likely to win, regardless of their qualities, and if $b$ is large, the stronger animals wins with near certainty. 
-An individual learner correctly identifies its opponent with probability $r_\text{ind}$. With probability $1-r_\text{ind}$ it misidentifies its opponent as another randomly chosen member of the group.  A categorical learner perceives the category of its opponent with the probabilities just described. Each animal in the fight updates its opinion of the individual or category it perceives in its opponent. If $a_{ij}(t-1)$ is $i$'s opinion of $j$ at time $t-1$, after fighting, 
+%An individual learner correctly identifies its opponent with probability $r_\text{ind}$. With probability $1-r_\text{ind}$ it misidentifies its opponent as another randomly chosen member of the group.  A categorical learner perceives the category of its opponent with the probabilities just described. Each animal in the fight updates its opinion of the individual or category it perceives in its opponent. If $a_{ij}(t-1)$ is $i$'s opinion of $j$ at time $t-1$, after fighting, 
+ 
+\subsection{Measures of performance }
+The animals interact and learn about each other for $T$ timesteps. To measure each animal's learning ability, we average the errors it makes in its opinions about the rest of the group: 
 \begin{equation*}
-a_{ij}(t)=(1-\ell)a_{ij}(t-1)+\ell q_j+\xi,
+\epsilon_i(T) = \frac{1}{|\mathscr{O}_i(T)|}\sum_{j\in \mathscr{O}_i(T)}|a_{ij}(T)-q_j|,
 \end{equation*}
-where $\ell$ is a parameter describing how much $i$ changes its opinion based on its observation and $\xi$ is drawn from a normal distribution with mean $0$ and standard deviation $\sigma_\xi$. If $i$ and $j$ have not fought before or $i$ has forgotten its opinion of $j$, then after fighting 
+where $\mathscr{O}_i(T)$ is the set of animals about whom $i$ has an opinion at time $T$.  
+We also calculate the average time it takes for an animal's error about each other animal to drop below a threshold:
 \begin{equation*}
-a_{ij}(t+1)=(1-r)b_{i}(t)+rq_j+\xi,
+\tau_{i} = \frac{1}{|\mathscr{O}_i|} \sum_{j\in\mathscr{O}_i} \min_{t=1,\dots,T}\{t: \epsilon_{ij}(t)\leq 0.2 \}.
 \end{equation*}
-where $b_i(t)$ is a baseline opinion of any animal it encounters. Specifically, $b_i(t)$ is drawn from a normal distribution with mean equal to the average quality of the group and standard deviation $\sigma_\text{b}$. 
+(If $\epsilon_{ij}$ is always greater than the threshold, then $i$'s learning time about $j$ is taken to be $T$.) Figure \ref{learnT.ex} shows one example of this calculation. We model $25$ groups of animals using each of the two learning systems and calculate the average error $\bar{\epsilon}$ and average learning time $\bar{\tau}$ of all animals in all groups. In Figure \ref{curves} we show how the average error of animals using each of the two systems changes over time.
 
-In a given simulation, we keep track of each animal's opinion of every other for $T$ fights. This allows us to calculate the error of each animal's opinion of every other at each point in time, $|a_{ij}(t)-q_j|$. To measure each animal's learning ability, we average its error over the rest of the group. 
+Learning errors and learning time can both be costly. Improving  perceptive ability (by decreasing $\delta$) and improving memory (by increasing $w$) can also be costly. We describe the cost of the category width with the function
 \begin{equation*}
-\epsilon_i(t) = \frac{1}{|\mathscr{O}_i(t)|}\sum_{j\in \mathscr{O}_i(t)}|a_{ij}(t)-q_j|,
+c_\delta = \left(\frac{2-\delta}{2}\right)^\alpha
 \end{equation*}
-where $\mathscr{O}_i(t)$ is the set of animals about whom $i$ has an opinion at time $t$.
-We also calculate an animal's learning time about another individual as the first point in time at which its error about that individual drops below a threshold $\bar{\epsilon}$. We then average its learning time about each of the other animals in the group:
+and that of memory with the function
 \begin{equation*}
-\tau_{i} = \frac{1}{|\mathscr{O}_i|} \sum_{j\in\mathscr{O}_i} \min_{t=1,\dots,T}\{t: \epsilon_{ij}(t)\leq\bar{\epsilon}\}.
+c_w = \left(\frac{w}{2000}\right)^\alpha,
 \end{equation*}
-%
-\subsection*{Parameter space}
-%
-We investigated how varying several parameters affected the learning curves, learning accuracy, and learning time. We varied group size ($N=\{25, 50, 75, 100\}$), the correlation between the signal and underlying quality of individuals ($\rho=\{0.5,0.9\}$), the memory capabilities of agents ($w=\{200,1000,\infty\}$), and the total number of fights. For the badge signal system, we also specify the perceptive threshold that individuals use to categorize individuals by signal ($\delta=\{0,0.1,0.2,\dots,1.5\}$). For the individual learning system, we set $r_\text{ind}=1$, and for the categorical learning system, we set $r_\text{cat}=\infty$. For both types of learning, we set $\bar{\epsilon}=0.2$, $\ell=0.2$, $\sigma_\text{b}=0.2$, $\sigma_\text{q}=0.5$, $\sigma_\xi=0.01$.
+where $\alpha$ is a parameter determining the concavity of the cost function. The animals pay no costs for having no cognitive ability ($\delta=2$ and $w=0$), and $1$ unit of cost for optimal cognitive ability ($\delta=0$ and $w=2000$, the highest $w$ we consider). (Figure \ref{cost_fx} shows these cost functions.)
+We then combine the four sources of cost---error, time, memory window, and category width---into the total cost 
+\begin{equation*}
+C = 2\bar{\epsilon}+10^{-4}\bar{\tau}+c_w+c_\delta,
+\end{equation*}
+where the terms in front of $\bar{\epsilon}$ and $\bar{\tau}$ ensure that the four factors, $\bar{\epsilon}$, $\bar{\tau}$, $c_w$ and $c_\delta$, are on the same scale. 
 
-%
-\subsection*{Variables}
 %
 \begin {table}[h]
 \caption {Description of variables} \label{tab:vars} 
@@ -93,98 +107,89 @@ We investigated how varying several parameters affected the learning curves, lea
 \toprule
  Variables & Description of variables \\
 \midrule 
-$\delta$ & perceptive threshold \\
-$\epsilon_i$ & learning accuracy of individual $i$ (averaged across all $j$ individuals) \\
-$\bar{\epsilon}$ & threshold error for defining learning time \\
-$\ell$ & learning rate \\
-$N$ & number of individuals \\ 
- $q_i$ & quality of individual i \\ 
-$\rho$ & correlation between quality and signal \\
-$s_i$ & signal of quality / badge of status of individual $i$ \\ 
-$w$ & memory window \\
+$C$ & total cost of learning \\ 
+$\delta$ & category width \\
+$\epsilon_i$ & average error of animal $i$ about all other animals \\
+$\bar{\epsilon}$ & average error of all animals in all groups \\
+$\ell_\text{i}$ & learning rate in direct interaction \\
+$\ell_\text{o}$ & learning rate in indirect observation \\
+$N$ & number of animals in group \\ 
+$p_\text{o}$ & probability of observing interactions between other pairs \\
+ $q_i$ & quality of animal i \\ 
+ $\rho$ & correlation between quality and signal \\
+$s_i$ & signal of quality / badge of status of animal $i$ \\ 
 $\sigma_\text{b}$ & standard deviation of baseline opinion \\
+$\sigma_\text{i}$ & standard deviation of noise in opinion updating during interaction \\
+$\sigma_\text{o}$ & standard deviation of noise in opinion updating during observation \\
 $\sigma_\text{q}$ & standard deviation of quality values \\
-$\sigma_\xi$ & standard deviation of noise in opinion updating \\
 $T$ & total number of fights \\
+$\tau_i$ & average learning time of animal $i$ \\
+$\bar{\tau}$ & average learning time of all animals in all groups \\ 
+$w$ & memory window \\
 \bottomrule
 \end{tabular}
 \end {table}
 %
-\subsection*{Defining categories}
-%
-\textbf{Email text: }I noticed at the end of the day yesterday that since I've changed how the categories are created, for a given perception window, there are fewer categories when signal and quality are poorly correlated, i.e. holding perception window constant but varying correlation changes the number of categories the animals perceive. I'll explain why this happened below if you care, but I've rewritten the code so that varying correlation doesn't affect the number of categories being perceived. It's better because we can only identify the effects of the signal-quality correlation and the perception abilities if they're independent parameters. Since all the lines in the summary plots hold correlation constant, so it shouldn't change any results. 
-
-The issue was in how I generated signal values: First, I draw quality values from a normal distribution. Then, I draw signal values from a normal distribution and rotate them so that the signal values have the desired correlation with the quality values. The way I was rotating kind of squashed the signal values together when correlation was low and spread them out when correlation was high. This didn't matter when we were using number of categories as a parameter because we'd just divvy up the group into that many categories. However, using a perception window, the more similar the animals are, the fewer categories they get binned into, so low correlation meant few categories. I've rewritten how the signal values are generated so that there is more or less the same amount of variation regardless of the quality-signal correlation.
-
-\textbf{Email text: }I reran all the simulations with a new-and-improved way of fixing the correlation between quality and signal and generated new figures. They are, with the exception of running slightly fewer parameters for the sake of time, pretty much identical to the old. I left the old ones in the Dropbox folder just so you could compare and they have "old" at the end of the filename. Figures without "old" are good to go.
-
-"Categories.pdf" is an example of how 25 animals might be categorized when the perception window is 0.3.
-
-"numberofcategories.pdf" shows how the number of categories the group gets divided into depends on the perception window and the group size, in case you'd like to see.
-%
-\subsection*{learning times}
-%
-\textbf{Email text:} Re: learning time: Within one simulation of one group, I calculate an animal's learning time as the average number of fights it takes to decrease the error in its assessment about each other animal below a threshold, right now, 0.2. For each combination of parameters, I average this learning time across all individuals and all 25 simulations. This is indeed a little different than the first version of the model, where I calculated learning time as the number of fights it takes for error to get within a threshold of its final error, which doesn't make as much sense.
-
-\textbf{Email text: }I got to wondering why learning time is much higher for individual learning when the perception window is 0, since both individual and categorical learners can identify all individuals in the group. I meant to have the probability of confusion be 0 for both types of learning, but I realized that the parameter I've been using  for categorical learning actually allowed for a small probability of two individuals being put in the same category. This means that, if an animal encounters and learns about another animal, there is a small probability that it updates its opinion about other animals that are sufficiently similar. This non-zero probability of confusion actually allows categorical learners to learn more quickly. That to me is a potentially interesting result. BUT for the moment, I'm rerunning simulations where both types of learning have 0 probability of confusion. When I get the chance, I'm planning on a more systematic sweep of the confusion probabilities to see what their effects are. If you use the current figures and someone asks why individual learning takes longer, that's why, and I'll get new figures to you as soon as I can.
-
-\textbf{Email text:} Within one simulation of one group, each animal has an assessment about every other animal at each point in time (it may be NA). Its error about each other animal at each point in time is the absolute difference between that assessment and each other animal's quality (if the assessment is NA, the error is NA). An animal's learning time about each other animal is the number of fights before its error drops below 0.2. Error fluctuates because the animals forget and because there's some noise in every assessment they make. Even though i's error about j dropped below 0.2, it might go back up again. And just because i's error about j is below 0.2, its error about other animals might still be high. So its average error about every other animal might be above the threshold, even while its error about some or all of the other animals has already dropped below the threshold. To generate the learning curves, I take the average of this average error across all individuals and all simulations. So this average can be above the threshold, even while the average learning time is finite. I hope that makes sense. Like I said, a figure illustrating this counterintuitive calculation is on the way. 
-
-\textbf{Email text: } See figure~\ref{learnT.ex}. The parameters are group size = 10, quality to signal correlation = 0.7, perception window = 0.5, memory window = Inf. I ran one simulation of such a group. Then I calculated the error in one animal's assessment of each other animal. There is a squiggly colored line for each of these errors over time. The squiggly black line is the average of these. The horizontal black line is the error threshold. The vertical colored lines are the "learning times" for each animal: the time when the focal animal's error about the other drops below the threshold. The vertical black line is the average of the learning times. The average error remains above the threshold, even though the animal's error about some of the other animals drops below the threshold. I tried to explain this in an earlier email, but it helps me to visualize it, hence the figure.
-
-%%%%%%%%%%%% explanation figures
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \section*{Results}
 %%%%%%%%%%%%%%%%%%%%
-%
-\subsection*{General results}
 
 %
-\subsection*{The effects of group size and cognitive abilities on learning}
-\begin{itemize}
+\subsection*{The effects of group size and cognitive abilities on learning. }
+We first analyze the model without any observational learning ($p_\text{o}=0$). The effects of group size $N$, memory window $w$, and signal-quality correlation $\rho$ on error and learning time are intuitive and confirm that our model is a reasonable description of a real social system. For animals using both learning systems, smaller groups and longer memory windows make it easier to learn. As group size decreases and memory window increases, both error and learning time decrease (Figure \ref{parameters}). Animals using the badge system learn more accurately and more quickly when the correlation between the signal and quality increases (Figure \ref{parameters}).
 
-\item 
-\end{itemize}
+While changing any of these first three parameters (group size, memory window, and correlation) will either increasing or decreasing both error and learning time, changing category width leads to a tradeoff between error and learning time, increasing one while decreasing the other. Increasing category width results in low learning time and high error (Figure \ref{parameters}). When a focal animal lumps many of its peers together, it updates its opinion about each of those animals more frequently and by chance may at any given point in time have an accurate opinion about one of the animals in the category, leading to a lower average learning time. On the other hand, by lumping many animals into the same category, it loses its ability to accurately learn about their individual quality values, leading to a higher average error.  When the signal-quality correlation is poor, decreasing category width decreases error, by allowing animals to distinguish between their peers more easily. However, when the signal is highly correlated with quality, an intermediate category width minimizes error (Figure \ref{parameters}). When the signal is a good indicator of quality, it is advantageous to lump animals with similar signals together because it makes sense to transfer information about one of their quality values to other animals in the category. This effect is weakened when the memory window is very long because in that case one can simply learn about all the other animals without a chance of forgetting what has been learned (Figure \ref{interactions_badge}).
+
 %
-\subsection*{The effect of observational learning}
+\subsection*{The effect of observational learning. }
+Observational learning helps animals using both systems to learn more accurately and more quickly, but it helps animals using individual recognition much more (Figure \ref{observational}). Observational learning increases the number of animals about which a focal animal can learn at any given time. 
+%Since animals using the badge system already learn about multiple animals at once, increasing the probability of observing interactions does not help much. 
+In fact, for animals using individual recognition, the same level of error can be achieved by increasing the probability of observing ($p_\text{o}$), by increasing memory window ($w$), or by increasing both to a lesser degree. The same is true of learning time. This can be seen in the strong interaction in how error and learning time change as a function of the probability of observing ($p_\text{o}$) and memory window ($w$) (Figure \ref{observational}).
+
 %
-\subsection*{Comparison of two systems}
-%
+\subsection*{Cost of learning. }
+% 
+Since increasing group size increases both error and learning time (Figure \ref{parameters}), it increases the overall cost of using both learning systems (Figure \ref{costs}). The effects of memory window ($w$) and category width ($\delta$) on overall cost depend on the cost function, specifically on the parameter $\alpha$ (Figure \ref{costs}). When $\alpha<1$, the costs of memory window ($c_w$) and category width ($c_\delta$) increase most quickly at low cognitive ability; when $\alpha>1$, the costs of memory window and category width increase most quickly at high cognitive ability (Figure \ref{cost_fx}). 
+
+When the costs of the memory window increase quickly at low $w$ ($\alpha<1$), the rapid increase in the cost of using a larger memory window is almost exactly offset by the decrease in error and learning time, so the costs of using both systems are almost a constant function of memory window (Figure \ref{costs}). However, when the cost of memory window increases quickly at high $w$ ($\alpha>1$), overall costs initially decrease as $w$ increases because of the improvement in error and learning time and only eventually increase because of the cost of using a higher memory window, so an intermediate memory window is the least costly (Figure \ref{costs}).
+
+Using a category width $\delta$ equal to $0$ is always costly because it leads to high error and learning time, as we saw above (Figure \ref{parameters}).  When the costs of category width increase quickly as $\delta$ decreases from $2$ ($\alpha<1$), overall costs tend to increase as $\delta$ decreases, but there is a large range of intermediate $\delta$ at which overall costs are nearly constant: in this range, the increase in cost from decreasing $\delta$ is offset by a decrease in cost from reduced error and learning time. When the costs of category width increase only at low $\delta$ ($\alpha>1$), at first decreasing $\delta$ decreases overall cost by improving error and learning time and only at low $\delta$ does overall cost increase because of the higher cost of this cognitive ability: an intermediate category width is favored (Figure \ref{costs}).
+
+The overall costs of using the badge system are higher than the costs of using individual recognition when group size is low and memory window is high  (Figure \ref{comparison}A). In these cases, animals using individual recognition are capable of learning accurately about their peers and there is no benefit from grouping animals together into categories. When the signal-quality correlation is high, individual recognition is only better for very small groups and very high memory windows (Figure \ref{comparison}C). 
+
+At an intermediate group size ($N=50$), animals using individual recognition perform similarly to or better than animals using the badge system when category width is low and memory window is high (Figure \ref{comparison}B). In these cases, animals using the badge system are paying high costs for their cognitive abilities without receiving much benefit from either improved error or improved learning time. When the signal-quality correlation is high, individual recognition is more costly except when category width is equal to $0$ and the two systems are equivalent (Figure \ref{comparison}D). 
 
 \begin{figure}[ht]
 
 \label{learning_curves}
 \includegraphics[width=.95\textwidth]{figures/learning_curves.pdf}
-\caption{\sffamily\small\textbf{Learning curves.}
-     Cherry-picked parameter combinations to illustrate how learning curves change under different conditions (summarized below).}
+\caption{\label{curves} \sffamily\small\textbf{Examples of how average error decreases over time.}
+In each panel, we show time in number of interactions on the x-axis and average error, $\bar{\epsilon}$, on the y-axis. The line shows the average error across all animals in all groups and the shaded area shows this average $\pm 0.5$ the standard deviation of error across all animals in all groups. In each panel, blue lines show animals using individual recognition and red lines show animals using the badge system. The solid lines correspond to groups where signal-quality correlation $\rho=0.9$ and the dotted lines correspond to groups where signal-quality correlation $\rho=0.5$. As groups size increases, from A to B, the error of animals using both systems increases, but it affects the error of animals using individual recognition more. As memory window decreases, from B to C, the error of animals using the badge system is not strongly affected, whereas the error of animals using individual recognition becomes higher. Parameters: in all panels $\delta = 0.5$, $\ell_\text{i}=0.2$, $p_\text{o}=0$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{q}=0.5$, $T=10000$; in A $N=20$, $w=2000$; in B $N=50$, $w=2000$; in C $N=50$, $w=500$. }
 \end{figure}
 
 \begin{figure}
-\label{parameters}
 \includegraphics[width=6.85in]{figures/parameters.pdf}
-\caption{\sffamily\small\textbf{Effect of group size and cognitive abilities on learning.}}
+\caption{\sffamily\small\textbf{Increasing group size and decreasing memory window both improve learning.} Error and learning time are minimized at an intermediate category width. In the left column, we show average error $\bar{\epsilon}$ as a function of various parameters, and in the right column, we show average learning time $\bar{\tau}$ as a function of various parameters. In each panel, blue lines show animals using individual recognition and red lines show animals using the badge system. The solid red lines correspond to groups in which the signal-quality correlation $\rho=0.9$ and the dotted lines correspond to groups in which the signal-quality correlation $\rho=0.5$. Parameters: unless the parameter is being varied $\delta = 0.5$, $\ell_\text{i}=0.2$, $N=50$, $p_\text{o}=0$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{q}=0.5$, $T=10000$, $w=1100$.}
+\label{parameters}
 \end{figure}
 
 \begin{figure}
-\label{costs}
 \includegraphics[width=6.85in]{figures/observational_learning.pdf}
-\caption{\sffamily\small\textbf{Effect of observational learning.}}
+\caption{\sffamily\small\textbf{Observational learning improves both error and learning time and does so much more for animals using individual recognition.} For animals using individual recognition, there is a strong interaction between the probability of observing and memory window. In A and D, we show average error $\bar{\epsilon}$ and average learning time $\bar{\tau}$ respectively as a function of the probability of observing, $p_\text{o}$. In each panel, blue lines show animals using individual recognition and red lines show animals using the badge system. The solid red lines correspond to groups in which the signal-quality correlation $\rho=0.9$ and the dotted lines correspond to groups in which the signal-quality correlation $\rho=0.5$. In B and C we show average error $\bar{\epsilon}$ of animals using the badge system and individual recognition respectively as a function of both the probability of observing $p_\text{o}$ on the horizontal axis and memory window $w$ on the vertical axis. In E and F we show average learning time $\bar{\tau}$ of animals using the badge system and individual recognition respectively as a function of both the probability of observing $p_\text{o}$ on the horizontal axis and memory window $w$ on the vertical axis.  Parameters: in all panels $\delta = 0.5$, $\ell_\text{i}=0.2$, $\ell_\text{o}=0.2$, $N=50$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{o}=0.01$, $\sigma_\text{q}=0.5$, $\rho=0.9$, $T=10000$; in A and D $w=1100$, in B and E $\rho=0.9$.}
+\label{observational}
 \end{figure}
 
 \begin{figure}
-\label{costs}
 \includegraphics[width=6.85in]{figures/costs.pdf}
-\caption{\sffamily\small\textbf{Effect of group size and cognitive abilities on the costs of using each system.}}
+\caption{\sffamily\small\textbf{Overall costs are lowest in small groups and with intermediate memory window and category width, when costs increases at high cognitive abilities ($\alpha>1$).} When costs increase at low cognitive abilities ($\alpha<1$), memory window $w$ does not affect overall costs and large category width $\delta$ minimizes overall costs. In A,B, and C, we show overall costs $C$ as a function of group size $N$, memory window $w$, and category width $\delta$ respectively. In each panel, blue lines show animals using individual recognition and red lines show animals using the badge system. The solid lines correspond to $\alpha=5$ and the dotted lines correspond to $\alpha=0.2$.  Parameters: unless the parameter is being varied $\delta = 0.5$, $\ell_\text{i}=0.2$, $N=50$, $p_\text{o}=0$, $\rho=0.9$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{q}=0.5$, $T=10000$, $w=1100$.}
+\label{costs}
 \end{figure}
 
 \begin{figure}
-\label{comparison}
 \includegraphics[width=6.85in]{figures/cost_comparisons.pdf}
-\caption{\sffamily\small\textbf{Parameters that favor the use of each system.}}
+\caption{\sffamily\small\textbf{The overall costs of using individual recognition are lower than the costs of using the badge system at low group size, high memory window, and low category width.} When the signal-quality correlation $\rho$ increases, animals using the badge system incur lower costs for more combinations or parameters. Here we show the difference in the overall costs ($C$) associated with individual recognition and with the badge system as a function of A,C group size $N$ and memory window $w$ and B,D category width $w$ and memory window $w$. Red indicates the badge system is less costly and blue indicates individual recognition is less costly. Parameters: in A and B $\rho=0.5$, in C and D $\rho=0.9$; unless the parameter is being varied $\delta = 0.5$, $\ell_\text{i}=0.2$, $N=50$, $p_\text{o}=0$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{q}=0.5$, $T=10000$, $w=1100$.}
+\label{comparison}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%
@@ -200,38 +205,42 @@ The issue was in how I generated signal values: First, I draw quality values fro
 
 \section{Supplemental Information } 
 \begin{figure}[h]
-\caption{\sffamily\small\textbf{Categories.}
-     xxxxxxx.}
-\label{cats_ex}
 \includegraphics[width=.8\textwidth]{figures/categories.pdf}
+\caption{\sffamily\small\textbf{Example of how categories are defined.}
+Here we show how a group of size $N=40$ might be divided into categories with maximum width $0.5$. Each point corresponds to an animal in the group. We show the signal of each animal on the y-axis and the order of the animals from lowest to highest signal on the x-axis. The color of the point indicates the category to which it belongs and the horizontal lines show the median signal value for each category. Categories were formed by choosing an animal $i$ at random, putting all other animals whose signals were within $\delta/2$ of $i$'s signal $s_i$ into the same category, then choosing another uncategorized animal at random, and continuing until all animals were categorized.}
+ \label{cats_ex}
 \end{figure}
 
 \begin{figure}[h]
-\caption{\sffamily\small\textbf{Number of categories.}
-     xxxxxxx.}
-\label{cats_ex}
 \includegraphics[width=.8\textwidth]{figures/number_of_categories.pdf}
+\caption{\sffamily\small\textbf{As category width $\delta$ decreases the number of categories into which the group is divided increases.}
+For a given group size $N$ and category width $\delta$ we generated a group with $N$ signal values $\{s_i\}$ and categorized the group according to the procedure in the text and Figure \ref{cats_ex} $100$ times and took the average number of categories across these $100$ groups. Here we show how the average number of categories into which a group is divided depends on group size $N$ and category width $\delta$.  Each colored line corresponds to a group size. There are overlapping solid and dotted lines in each color since the signal-quality correlation $\rho$ does not affect the number of categories formed. When $\delta=0$ there are as many categories as there are animals in the group. When $\delta=2$ there are on average $2$ categories, although it can happen that all animals are put into the same category. }
+\label{num_cat}
 \end{figure}
 
 \begin{figure}[h]
-\caption{\sffamily\small\textbf{Learning time example.}
-     xxx.}
-\label{learnT.ex}
 \includegraphics[width=.8\textwidth]{figures/learning_time_example.pdf}
+\caption{\label{learnT.ex} \sffamily\small\textbf{Example of how to calculate learning time.} Learning time $\tau_i$ can be less than $T$, even if average error at time $T$ is above the threshold $0.2$. Each colored line shows how one the error in one animal's opinion of its five group mates changes over time. The black line is its average error about the other animals, $\epsilon_i(t)$. The horizontal black line is the error threshold, $0.2$. Each vertical colored line is the first time when corresponding line drops below the threshold. The vertical black line is the average of these learning times, $\tau_i$.}
 \end{figure}
 
 \begin{figure}[h]
-\caption{\sffamily\small\textbf{Parameter interactions for badge learners.}
-     xxx.}
-\label{learnT.ex}
+\includegraphics[width=.8\textwidth]{figures/cost_functions.pdf}
+\caption{\sffamily\small\textbf{Cost functions.} Here we show how the cost functions for the cognitive parameters category width and memory window. In each panel, the solid line corresponds to $\alpha=5$ and the dotted line corresponds to $\alpha=0.2$. }
+\label{cost_fx}
+\end{figure}
+
+\begin{figure}[h]
 \includegraphics[width=.8\textwidth]{figures/parameter_interactions_badge.pdf}
+\caption{\sffamily\small\textbf{Parameter interactions for animals using the badge system.}
+In A, B, and C we show average error $\bar{\epsilon}$ for animals using the badge system as a function of two parameters. In D, E, and F we show average learning time $\bar{\tau}$ as a function of two parameters. Parameters: unless the parameter is being varied $\delta = 0.5$, $\ell_\text{i}=0.2$, $N=50$, $p_\text{o}=0$, $\rho=0.9$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{q}=0.5$, $T=10000$, $w=1100$.}
+\label{interactions_badge}
 \end{figure}
 
 \begin{figure}[h]
-\caption{\sffamily\small\textbf{Parameter interactions for individual learners.}
-     xxx.}
-\label{learnT.ex}
 \includegraphics[width=.8\textwidth]{figures/parameter_interactions_indiv.pdf}
+\caption{\sffamily\small\textbf{Parameter interactions for animals using individual recognition.}
+In A, B, and C we show average error $\bar{\epsilon}$ for animals using individual recognition as a function of two parameters. In D, E, and F we show average learning time $\bar{\tau}$ as a function of two parameters. Parameters: unless the parameter is being varied $\delta = 0.5$, $\ell_\text{i}=0.2$, $N=50$, $p_\text{o}=0$, $\rho=0.9$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{q}=0.5$, $T=10000$, $w=1100$.}
+\label{interactions_indiv}
 \end{figure}
 \end{document}
 
