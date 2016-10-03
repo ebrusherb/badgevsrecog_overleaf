@@ -1,9 +1,39 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\astroncite{Brush et~al.}{2016}]{Brush:2016kx}
+Brush, E., \r{A}ke Br\"{a}nnstr\"{o}m, and Dieckmann, U. (2016).
+\newblock Indirect reciprocity with imperfect information.
+\newblock {\em In prep}.
+
+\bibitem[\protect\astroncite{Dunlap et~al.}{2009}]{Dunlap:2009vn}
+Dunlap, A.~S., McLinn, C.~M., MacCormick, H.~A., Scott, M.~E., and Kerr, B.
+  (2009).
+\newblock Why some memories do not last a lifetile: dynamics long-term
+  retrieval in changing environments.
+\newblock {\em Behavioral Ecology}, 20(5):1096--1105.
+
+\bibitem[\protect\astroncite{Kerr and Feldman}{2003}]{Kerr:2003vn}
+Kerr, B. and Feldman, M.~W. (2003).
+\newblock Carving the cognitive niche: Optimal learning strategies in
+  homogeneous and heterogeneous environments.
+\newblock {\em Journal of Theoretical Biology}, 220(2):169--188.
+
+\bibitem[\protect\astroncite{Kikuchi and Pfennig}{2010}]{Kikuchi:2010ys}
+Kikuchi, D.~W. and Pfennig, D.~W. (2010).
+\newblock Predator cognition permits imperfect coral snake mimicry.
+\newblock {\em The American Naturalist}, 176(6):830--834.
+
+\bibitem[\protect\astroncite{Olsen et~al.}{2010}]{Olsen:2010uq}
+Olsen, B.~J., Greenberg, R., Liu, I.~A., Felch, J.~M., and Walters, J.~R.
+  (2010).
+\newblock Interactions between sexual and natural selection on the evolution of
+  a plumage badge.
+\newblock {\em Evolutionary Ecology}, 24:731--748.
+
 \bibitem[\protect\astroncite{Sheehan and Bergman}{2015}]{sheehan2016response}
 Sheehan, M.~J. and Bergman, T.~J. (2015).
-\newblock A quality signaling?recognition trade-off at the level of the type of
-  interaction not species: a response to comments on sheehan and bergman.
+\newblock A quality signaling--recognition trade-off at the level of the type
+  of interaction not species: a response to comments on sheehan and bergman.
 \newblock {\em Behavioral Ecology}.
 
 \bibitem[\protect\astroncite{Sheehan and
@@ -12,5 +42,21 @@ Sheehan, M.~J. and Bergman, T.~J. (2016).
 \newblock Is there an evolutionary trade-off between quality signaling and
   social recognition?
 \newblock {\em Behavioral Ecology}, 27(1):2--13.
+
+\bibitem[\protect\astroncite{Stephens}{1991}]{Stephens:1991fk}
+Stephens, D.~W. (1991).
+\newblock Change, regularity, and value in the evolution of animal learning.
+\newblock {\em Behavioral Ecology}, 2(1):77--89.
+
+\bibitem[\protect\astroncite{Tibbetts and Dale}{2004}]{Tibbetts:2004kx}
+Tibbetts, E.~A. and Dale, J. (2004).
+\newblock A socially enforced signal of quality in a paper wasp.
+\newblock {\em Nature}, 432:218--222.
+
+\bibitem[\protect\astroncite{Veiga}{1993}]{Veiga:1993fk}
+Veiga, J.~P. (1993).
+\newblock Badge size, phenotypic quality, and reproductive success in the house
+  sparrow: A study on honest advertisment.
+\newblock {\em Evolution}, 47(4):1161--1170.
 
 \end{thebibliography}

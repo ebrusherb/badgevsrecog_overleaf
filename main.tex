@@ -153,7 +153,7 @@ $w$ & memory window \\
 
 %
 \subsection*{The effects of group size and cognitive abilities on learning. }
-We first analyze the model without any observational learning ($p_\text{o}=0$). The effects of group size $N$, memory window $w$, and signal-quality correlation $\rho$ on error and learning time are intuitive and confirm that our model is a reasonable description of a real social system. For animals using both learning systems, smaller groups and longer memory windows make it easier to learn. As group size decreases and memory window increases, both error and learning time decrease (Figure \ref{parameters}). Animals using the badge system learn more accurately and more quickly when the correlation between the signal and quality increases (Figure \ref{parameters}).
+We first analyze the model without any observational learning ($p_\text{o}=0$). The effects of group size $N$, memory window $w$, and signal-quality correlation $\rho$ on error and learning time are intuitive and confirm that our model is a reasonable description of a real social system. For animals using both learning systems, smaller groups and longer memory windows make it easier to learn. As group size decreases, both error and learning time decrease (Figure \ref{parameters}). As memory window increases, error decreases and learning time either slightly decreases or stays constant (Figure \ref{parameters}). Longer memory windows more effectively reduce error for animals using individual recognition. For animals using the badge system with moderate category widths, they encounter other animals in the same category so often that they rarely forget their opinions before the memory window has elapsed. Only when category width is very small does increasing memory window have a significant effect on error (Figure \ref{interactions_badge}).  Animals using the badge system learn more accurately and more quickly when the correlation between the signal and quality increases (Figure \ref{parameters}).
 
 While changing any of these first three parameters (group size, memory window, and correlation) will either increasing or decreasing both error and learning time, changing category width leads to a tradeoff between error and learning time, increasing one while decreasing the other. Increasing category width results in low learning time and high error (Figure \ref{parameters}). When a focal animal lumps many of its peers together, it updates its opinion about each of those animals more frequently and by chance may at any given point in time have an accurate opinion about one of the animals in the category, leading to a lower average learning time. On the other hand, by lumping many animals into the same category, it loses its ability to accurately learn about their individual quality values, leading to a higher average error.  When the signal-quality correlation is poor, decreasing category width decreases error, by allowing animals to distinguish between their peers more easily. However, when the signal is highly correlated with quality, an intermediate category width minimizes error (Figure \ref{parameters}). When the signal is a good indicator of quality, it is advantageous to lump animals with similar signals together because it makes sense to transfer information about one of their quality values to other animals in the category. This effect is weakened when the memory window is very long because in that case one can simply learn about all the other animals without a chance of forgetting what has been learned (Figure \ref{interactions_badge}).
 
@@ -212,8 +212,36 @@ In each panel, we show time in number of interactions on the x-axis and average 
 \section*{Discussion}
 %%%%%%%%%%%%%%%%%
 
+examples of cases where maximal cognitive abilities are not optimal
+\cite{Kerr:2003vn,Stephens:1991fk,Brush:2016kx,Dunlap:2009vn} 
 
+real observation of imperfect cognition in predators of coral snakes \cite{Kikuchi:2010ys}
 
+empirical examples of badges: black on face of paper wasps \cite{Tibbetts:2004kx}, house sparrows \cite{Veiga:1993fk}, black crowns on swamp sparrows \cite{Olsen:2010uq}
+
+ swamp sparrows: black crown --> aggression, less black crown --> parental care 
+ 
+ S Rohwer. Social significance of avian winter plumage variability for black-aggression correlation. Evolution. 1975.
+ 
+ Siefferman L and Hill GE. Structural and melanin coloration indicate parental effort and reproductive success in male eastern bluebirds. Behavioral Ecology. 2003. for coloration-parental care correlation
+ 
+ Bokony V and Liker A. Melanin-based black plumage coloration is related to reproductive investment in cardueline finches. Condor. 2005. for coloration-parental care correlation
+ 
+paper wasps: more spots on clypeus means higher dominance \cite{Tibbetts:2004kx} but percentage of black not a significant predictor of dominance \cite{Tibbetts:2004kx}. what really matters is ``brokenness" of black pigment: more broken means more dominance. But could we say that paying attention to number of spots is like a rough number of categories? 
+
+While a high correlation between quality values and signal values improve the effectiveness of learning via the badge system, our model shows that even with a moderate correlation the badge system is worth using. The correlation values we use are actually a bit higher than those estimated in two of the most frequently cited examples of badge systems, paper wasps and house sparrows.
+
+paper wasps: head width-percentage black $r^2=0.36$ for wasps with at least 2 spots, ``badge brokenness was the only significant predictor of dominance when included with spot number and percentage of clypeus black in a multiple logistic regression (whole model, $r^2=0.105$)  \cite{Tibbetts:2004kx} 
+
+house sparrows: badge size is correlated with physical condition $r=0.379$ \cite{Veiga:1993fk}
+
+swamp sparrow: rusty cap is correlated with parental investment ($r^2=0.33$) and black forehead is correlated with aggression (negative correlation with distance to intruder $r^2=0.41$) \cite{Olsen:2010uq}
+
+``[The individual-recognition] hypothesis is especially relevant for species with moderately sized flocks, in which the probability of repeated encounters between the same individuals is great and the value of being recognized is high (Whitfield 1987). These conditions are rare among breeding house sparrows, whose colonies frequently contain several dozen pairs in a small area and many bachelors that arrive throughout the breeding season (pers. obs.) " \cite{Veiga:1993fk}. Also highlights the need to study group dynamics.
+
+Whitfield, D. P. 1986. Plumage variability and territoriality in breeding turnstone: status signalling or individual recognition? Animal Behaviour.
+
+Whitfield, D. P. 1987. Plumage variability, status signalling, and individual recognition in avian flocks. Trends in Ecology and Evolution.
 
 \newpage
 \bibliography{BIB_badgeVSrecog,TODO_newrefs}
