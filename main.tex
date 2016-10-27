@@ -203,7 +203,7 @@ Using a category width $\delta$ equal to $0$ is always costly because it leads t
 
 The overall costs of using the badge system are higher than the costs of using individual recognition when group size is small and memory window is long (Figure~\ref{comparison}A,C). In these cases, animals using individual recognition are capable of learning accurately about their peers and there is no benefit from grouping animals together into categories. When the signal-quality correlation is high, individual recognition is only better for very small groups and very long memory windows (Figure~\ref{comparison}C). 
 
-At an intermediate group size ($N=50$), animals using individual recognition perform similarly to or better than animals using the badge system when category width is small and memory window is high (Figure \ref{comparison}B,D). In these cases, animals using the badge system are paying high costs for their cognitive abilities without receiving much benefit from either improved error or improved learning time. When the signal-quality correlation is high, individual recognition is more costly except when category width is equal to $0$ and the two systems are equivalent (Figure~\ref{comparison}D). 
+At an intermediate group size ($N=50$), animals using individual recognition perform similarly to or better than animals using the badge system when category width is small and memory window is long (Figure \ref{comparison}B,D). In these cases, animals using the badge system are paying high costs for their cognitive abilities without receiving much benefit from either improved error or improved learning time. When the signal-quality correlation is high, individual recognition is more costly except when category width is equal to $0$ and the two systems are equivalent (Figure~\ref{comparison}D). 
 
 \begin{figure}
 %I think we should more clearly specify if this is with or without observation
@@ -224,35 +224,45 @@ At an intermediate group size ($N=50$), animals using individual recognition per
 %%%%%%%%%%%%%%%%%
 
 \subsection*{Summary of results} %temporary heading
-% Study question, reframed
-Accurate assessment of the quality of conspecifics is important in many contexts, but the conditions under which different assessment systems may evolve is not well understood. Here, we modeled quality assessment in social groups, where agents used either a categorical badge signal (group others into quality categories based on the intensity of badge signals) or an individual recognition system (use individual recognition to remember the outcome of events with particular individuals to estimate quality). Our goal was to better understand the conditions under which each system might be favored. 
+% Study question, restated/reframed
+Accurate assessment of the quality of conspecifics is important in many contexts, but the conditions under which different assessment systems may be favored is not well understood. Here, we modeled quality assessment in social groups, where agents used either a categorical badge signal (group others into quality categories based on the intensity of badge signals) or an individual recognition system (use individual recognition to remember the outcome of events with particular individuals to estimate quality). Our goal was to better understand the costs and benefits of each system and the conditions under which each system might be favored. 
 
-In the absence of observational learning, our simulations are consistent with general intuition: smaller groups and longer memory duration makes it easier to learn in both learning systems, and agents using the badge system learned more quickly and accurately when there was a strong correlation between the signal and quality. In both systems, we found that the increasing the size of the social group and decreasing the duration of each agent's memory window generally caused a nonlinear increase in the extent of assessment errors and the overall time required to learn the quality of others. However, the extent of the impact differed between the two systems. Assessment error and learning time in individual recognition systems were much more affected by increasing group size than the categorical badge system. In the categorical badge system, we also found that changes in the discrimination ability of agents (category width) led to a tradeoff between error and learning time, with increasing category width resulting in lower average learning time but higher error. [\textit{from Results: When a focal animal lumps many of its peers together, it updates its opinion about each of those animals more frequently and by chance may at any given point in time have an accurate opinion about one of the animals in the category, leading to a lower average learning time. On the other hand, by lumping many animals into the same category, it loses its ability to accurately learn about their individual quality values, leading to a higher average error.}] 
+In the absence of observational learning, our simulations are consistent with general intuition: smaller groups and longer memory duration makes it easier to learn in both learning systems, and agents using the badge system learned more quickly and accurately when there was a strong correlation between the signal and quality than cases where this correlation was weaker. In both systems, we found that the increasing the size of the social group and decreasing the duration of each agent's memory window generally caused a nonlinear increase in the extent of assessment errors and the overall time required to learn the quality of others. However, the extent of the impact differed between the two systems. Assessment error and learning time in individual recognition systems were much more affected by increasing group size than the categorical badge system. 
 
-In the presence of observational learning, agents were able to learn more quickly and accurately and quickly in both systems, but the magnitude of this increase differed. Observational learning was more beneficial in improving quality assessments in individual recognition. Observational learning increases the number of animals about which a focal animal can learn at any given time; since animals using the badge system already learn about multiple animals at once, increasing the probability of observing interactions does not have a strong effect on learning rates in badge systems.
+In the badge system, we also found that changes in the discrimination ability of agents (category width) led to a tradeoff between error and learning time, with increasing category width resulting in lower average learning time but higher error. This is because when a focal animal lumps many of its peers together, it updates its opinion about each of those animals more frequently and by chance may at any given point in time have an accurate opinion about one of the animals in the category, leading to a lower average learning time. On the other hand, by lumping many animals into the same category, it loses its ability to accurately learn about their individual quality values, leading to a higher average error. While a high correlation between quality values and signal values improves the effectiveness of learning via the badge system, our model shows that even with a moderate correlation the badge system is worth using. The correlation values we use are actually a bit higher than those estimated in two of the most frequently cited examples of badge systems, paper wasps and house sparrows\cite{}. Considering the perception of receivers of these quality signals is important, and has a biological basis. For example, in paper wasps, more spots on clypeus means higher dominance \cite{Tibbetts:2004kx} but percentage of black not a significant predictor of dominance \cite{Tibbetts:2004kx}. The critical factor perceived by receivers appears to be the extent to which the black pigment is broken up: more broken means an individual is more dominant. This is somewhat analogous to our more abstract definition of category window size we have used in the current work, where wasps attending to the number of spots could be similar to perceiving a number of categories in signal intensity. 
+
+In the presence of observational learning, agents were able to learn more quickly and accurately in both systems, but the magnitude of this increase differed. Observational learning was more beneficial in improving quality assessments in individual recognition. Observational learning increases the number of animals about which a focal animal can learn at any given time; since animals using the badge system already learn about multiple animals at once, increasing the probability of observing interactions does not have a strong effect on learning rates in badge systems.
+
+% summary of costs results
+Overall, we found that xxxx was more/less costly, but that costs depended on underlying conditions, both in the perception and memory of agents, and in the number of categories or individuals that were tracked....
+
+% evo of different systems
+
+% under which kinds of natural conditions should we expect to see 1 system vs another?
+``[The individual-recognition] hypothesis is especially relevant for species with moderately sized flocks, in which the probability of repeated encounters between the same individuals is great and the value of being recognized is high (Whitfield 1987). These conditions are rare among breeding house sparrows, whose colonies frequently contain several dozen pairs in a small area and many bachelors that arrive throughout the breeding season (pers. obs.) " \cite{Veiga:1993fk}. Also highlights the need to study group dynamics.
+
+% might want to bring in Dunbar + group sizes here? or maybe earlier in intro?
+
+Our model results show that the categorical badge system of quality assessment is usually less costly than 
 
 
 
-\subsection*{More detail on 3-4 main results} %temporary heading
 
+% Learning, recognition, evolution of cognitive complexity / brain size
+Our model results identified a sweet spot that results in lower errors....
+ Previous modeling of the evolution of cognitive complexity shows that increases can occur on the scale of 10-20 generations (Gavrilets \& Vose 2006 - the dynamics of Machiavellian intelligence) <<ABSTRACT QUOTE:...our results suggest that the mechanisms underlying the ‘‘Machiavellian intelligence’’ hypothesis can indeed result in the evolution of significant cognitive abilities on the time scale of 10 to 20 thousand generations. We show that cerebral capacity evolves faster and to a larger degree than learning ability. Our model suggests that there may be a tendency toward a reduction in cognitive abilities (driven by the costs of having a large brain) as the reproductive advantage of having a large brain decreases and the exposure to memes increases in modern societies.>>
+ 
+ 
+%%%%%%%%%%%%%%%%%%%%% previous notes %%%%%%%%%%%%%%%%%
 % Result 3: number of categories in badge systems
 While a high correlation between quality values and signal values improve the effectiveness of learning via the badge system, our model shows that even with a moderate correlation the badge system is worth using. The correlation values we use are actually a bit higher than those estimated in two of the most frequently cited examples of badge systems, paper wasps and house sparrows.
 
 paper wasps: more spots on clypeus means higher dominance \cite{Tibbetts:2004kx} but percentage of black not a significant predictor of dominance \cite{Tibbetts:2004kx}. what really matters is ``brokenness" of black pigment: more broken means more dominance. But could we say that paying attention to number of spots is like a rough number of categories? 
 
-% Result 4: conditions under which we expect certain systems
-``[The individual-recognition] hypothesis is especially relevant for species with moderately sized flocks, in which the probability of repeated encounters between the same individuals is great and the value of being recognized is high (Whitfield 1987). These conditions are rare among breeding house sparrows, whose colonies frequently contain several dozen pairs in a small area and many bachelors that arrive throughout the breeding season (pers. obs.) " \cite{Veiga:1993fk}. Also highlights the need to study group dynamics.
 
 
 
-\subsection*{General implications of results} %temporary heading
 
-% Learning, recognition, evolution of cognitive complexity / brain size
-Our model results identified a sweet spot that results in lower errors....
- Previous modeling of the evolution of cognitive complexity shows that increases can occur on the scale of 10-20 generations (Gavrilets \& Vose 2006 - the dynamics of Machiavellian intelligence) <<ABSTRACT QUOTE:...our results suggest that the mechanisms underlying the ‘‘Machiavellian intelligence’’ hypothesis can indeed result in the evolution of signiﬁcant cognitive abilities on the time scale of 10 to 20 thousand generations. We show that cerebral capacity evolves faster and to a larger degree than learning ability. Our model suggests that there may be a tendency toward a reduction in cognitive abilities (driven by the costs of having a large brain) as the reproductive advantage of having a large brain decreases and the exposure to memes increases in modern societies.>>
- 
- 
-%%%%%%%%%%%%%%%%%%%%% previous notes %%%%%%%%%%%%%%%%%
 examples of cases where maximal cognitive abilities are not optimal
 \cite{Kerr:2003vn,Stephens:1991fk,Brush:2016kx,Dunlap:2009vn} 
 
