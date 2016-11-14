@@ -1,11 +1,11 @@
 \input{preamble}
 \begin{document}
 \noindent
-\title{Draft: Learned badges vs. Social recognition} 
+\title{Large group and moderate cognitive abilities favor the evolution of badges of status over individual recognition} 
 %The evolution of rank signaling?
 
 \author[1]{Eleanor Brush}
-\affil[1]{University of Maryland; email: xxxxx}
+\affil[1]{Department of Biology, University of Maryland, 4094 Campus Dr., College Park, MD 20742; email: eleanor.brush@gmail.com}
 \author[2,3,4]{Elizabeth A. Hobson}
 \affil[2]{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501 USA}
 \affil[3]{Center for Biosocial Complex Systems, Arizona State University}
@@ -26,46 +26,56 @@ Target submission date: October? or maybe early November??
 
 \framebox(500,100){to be added..........................................}
 
-\textit{Keywords: signal evolution, cognition, social groups, [.....]}
+\textit{Keywords: badge, cognition, evolution, learning, recognition, signal, social groups,  [.....]}
 \newline
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\section*{Overview of previous research, outstanding questions, goals} 
+\section*{Introduction} 
 %%%%%%%%%%%%%%%%%%%%%%%
 
-Species have different ways of assessing the quality of others. Quality here is used broadly, and can indicate an individual's body condition or immune status, overall reproductive potential, or fitness. Individuals can gain long-term benefits from assessing each others' quality. In the context of conflicts when individuals differ in fighting ability, resource-holding potential, or dominance rank, individuals can benefit [through decreased chances of injury, increased chances of outcome success, etc.] if they are able to identify and order individuals by quality. 
+\begin{enumerate}
+\item why signals and recognition and assessment are interesting and important
+\item two solutions
+\item what we know about how badge systems might have evolved
+\begin{itemize}
+\item honest signaling
+\end{itemize}
+\item what we know about how individual recognition systems might have evolved
+\begin{itemize}
+\item Dunbar's number
+\end{itemize}
+\item Little work has been done to explicitly compare the two systems and identify the types of species or social groups in which one or the other would be more likely to evolve, a deficit highlighted by \cite{sheehan2016evotradeoff}
+\item approach
+\item questions
+\end{enumerate}
 
-% summary of previous research
-...Lots of investigation into evolution of 'honest' signaling...  [but we don't want to get bogged down here, we're assuming a purely honest system, just with variation in how well coordinated the signal is with quality]
+Animals in social groups benefit from having accurate information about their group mates. For example, knowing about the dominance XXX, resource holding potential XXX, likelihood of investing in parental care XXX, or health XXX of other animals can help an animal decide with whom to fight, mate, or interact. In order to learn about one's group mates, an animal must be able to identify them. There are many solutions to this problem. Some animals can recognize other members of their groups as individuals. Other animal coarsely categorize conspecifics based on traits they exhibit. When such a trait is correlated with another property of interest, for example dominance or health, it becomes a badge of status, which allows animals to make inferences about each others' quality as mates or opponents or allies XXX. Much is known about what circumstances might promote the evolution of one or the other type of learning XXX, but there are few studies that compare the two systems directly \cite{sheehan2016evotradeoff}. In this paper, we develop and analyze a simple model of an animal social group, in which animals learn by interacting with each other and by observing these interactions, in order to learn how group size and cognitive abilities affect the effectiveness of using both types of learning and to determine the circumstances under which one or the other is preferable. 
+
+% summary of previous research on badges
+There are many species in which animals have been shown to use badges of status to make inferences about each other. One well known-example is the house sparrow (XX): the size of a male sparrow's black bib is correlated with its physical condition and other sparrows seem to use this information to decide how to interact with a given male XXX. Another well-studied example is the paper wasp (XX): the extent of black and the number of black patches on a wasp's face are positively correlated with its dominance, suggesting that wasps use that trait when deciding with whom to fight and how aggressively \cite{Tibbetts:2004kx}XXX. Other examples include XXX. It has been shown that XXX factors promote the evolution of a badge that is correlated with quality. When a group starts to use a badge as a proxy for quality, an incentive appears for low-quality animals to ``cheat" and produce a badge that indicates they are higher quality than they actually are. This would seem to lead to the loss of an informative signal. One mechanism that can keep a badge ``honest" is the cost required to produce or maintain it XXX. However, even cost-free signals can maintain their honesty XXX. We focus here on the factors that might lead to the evolution of learning system that relies on badges, rather than the evolution of the badges themselves, since the former has received relatively little attention.
+
+There are also many animals that can individually recognize their group mates. These include XXX 
+
+While badges of status and individual recognition are usually presented as fundamentally different solutions to the same biological problem, individual recognition is in some ways just an extreme version of learning about others' badges \cite{Barnard:1979fk}. Animals that make inferences about their peers based on the badges they display are limited by their perceptive and cognitive abilities: if two animals have badges that are close enough in size that others cannot tell the difference between them, their peers will judge that they have the same size badge and therefore the same ``quality." As perceptive abilities improve, an animal will be able to make finer distinctions about its peers, to the point that it may be able to recognize each of them individually. (We use vision here for the sake of clarity, but the same holds true for other senses as well.) Such a spectrum from coarse-grained to fine-grained perceptive abilities can be seen in the group of paper wasp species. In some species, wasps distinguish between other wasps based on the number of black patches on their face, a relatively coarse trait \cite{Tibbetts:2004kx}XXX, whereas in some species wasps can recognize other individuals based on their unique facial patterns XXX. The correlation between the badge and another trait has received a lot of attention in previous studies of the evolution of badges of status. However, the specificity with which the badge can be perceived has not been. As we show below, it is a crucial factor in determining how effectively an animal can learn from its group mates' badges.
 
 
-% summary of our focus for the modeling work (learned badge vs learned recognition) 
+%``Individual recognition" is not a prerequisite for dominance hierarchies but dominance hierarchies may be a driving force of the evolution of ``individual rcognition." \cite{Barnard:1979fk}
 
-Species have different ways of assessing the quality of others. Here, we focus on one type of signal -- the badge of status -- and compare it to a system based on recognition and memory of specific individuals. A badge is an arbitrary signal, not directly indicative of fighting ability, where the intensity of the signal correlates with the underlying quality of the individual (here, rank/power) (CITE). Another quality assessment system is one based on a combination of  recognition and relationships, where individuals that are able to recognize individuals track their actions and event outcomes to remember the quality of specific individuals in the absence of a cue or badge of status (CITE). In both cases, individuals must learn about their opponents in order to assess their quality.
-
-At the two extremes, individuals in a pure badge quality signal system would be completely unable to recognize individuals, and would treat all individuals with similar badge intensities as equivalent; individuals in a pure recognition/relationship based quality system would be completely reliant on remembering an individual's actions, and have no other cues to infer that individual's quality or rank. Binning individuals with similar badge intensities into the same category effectively decreases the functional group size to the number of bins, but also increases noise about quality of each individual, as there is an inverse relationship between the variability of individuals categorized in a particular bin and the range of badge intensities in each bin. An individual recognition-based system is one in which the number of bins equals the number of individuals in the group.  
-
-\subsection*{Justification and Goals}
-
-Many factors likely affect the accuracy, speed, and cost of quality assessment in these two systems. Recent work (\cite{sheehan2016evotradeoff}) provides several predictions but focused on predicting differences in signaling systems comparing an innate quality signal to a social recognition system across different species, not within species (\cite{sheehan2016response}). Here, we use a somewhat different approach: we are interested in two hypothetical systems, where individuals learn to assess quality to others in different ways. 
+Many factors. Recent work (\cite{sheehan2016evotradeoff}) provides several predictions but focused on predicting differences in signaling systems comparing an innate quality signal to a social recognition system across different species, not within species (\cite{sheehan2016response}). 
 
 %we might want to go with "interact" instead of fight, as we're not using the fight outcomes (yet!!) 
-Our goal is to better understand how learning the quality of conspecifics is affected by differences in group size, memory, and discrimination in categorical badge and individual recognition systems. We also want to determine the conditions under which the evolution of a badge signal or individual recognition would be favored. We simulated quality assessment through interactions among individuals. Each time individuals interact, they are able to assess each other's quality and update their previous opinion about quality. We use two quality assessment methods: (1) Badge signal systems: individuals group others into quality categories based on the intensity of badge signals and (2) Recognition systems: individuals use individual recognition to remember the outcome of events with particular individuals to estimate quality. 
+Our goal is to better understand how learning the quality of conspecifics is affected by differences in group size, memory, and perceptive ability. We also want to determine the conditions under which the evolution of a badge signal or individual recognition would be favored. We simulated quality assessment through interactions among individuals. Each time individuals interact, they are able to assess each other's quality and update their previous opinion about quality. We use two quality assessment methods: (1) Badge signal systems: individuals group others into quality categories based on the intensity of badge signals and (2) Recognition systems: individuals use individual recognition to remember the outcome of events with particular individuals to estimate quality. 
 
-%motivation for using various category widths
-In any species, there are many traits that could be used as a means of identification and any particular trait could be perceived in a number of ways. For example, in wasps, there is a spectrum of perceptive abilities ranging from fine-grained to coarse-grained: in some species, individuals are recognized by their unique facial patterns, but in other species, what matters is the extent of black on the face or even just the number of black patches \cite{Tibbetts:2004kx}XXX. While the correlation between an animal's badge and its quality has previously been studied, the specificity with which the badge is perceived has not been. As we show below, it is a crucial factor in determining how effectively an animal can learn from its group mates' badges.
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\section*{Methods} 
+\section*{Model} 
 %%%%%%%%%%%%%%%%%%%%%%%
-%
-\subsection*{Model}
-%
+
 % add 'biological basis' for some of assumptions in model
-Each animal in the social group has an inherent quality value. This can be thought of, for example, as fighting ability \cite{}, resource holding potential \cite{}, or body size. In our basic model, an animal learns about another's quality value by interacting with it directly. We also extend our model to cases where animals can learn through observing the interactions between other pairs in addition to direct interactions. We consider two different methods of learning: individual recognition and badges. An animal using individual recognition can identify each of its group mates as a particular individual. An animal using the badge system only recognizes animals based on the signals they display in a categorical fashion. Our model assumes that it is costly to the animals in the group to learn about each other inaccurately. Since animals can use information about their group mates to decide how to interact with them in the future, having the wrong information can lead to an inappropriate choice. We also assume that it is also costly to learn slowly. The time spent interacting and learning about one's group mates could be spent in other ways. Additionally, if the interaction is actually a fight between animals, having more interactions than necessary can lead to injury and perhaps even death. Finally, we also assume that having improved memory and perceptive ability is costly because of the associated energetic costs of larger brain or because improving these properties involves a trade-off that negatively affects other traits. We combine the costs associated with inaccurate learning, the time required to learn, and cognitive abilities to assess the performance of animals using each of the two learning systems. 
+Each animal in the social group has an inherent quality value. This can be thought of, for example, as fighting ability \cite{}, resource holding potential \cite{}, body size, body condition, or any other property about which it would be beneficial to have information. In our basic model, an animal learns about another's quality value by interacting with it directly. We also extend our model to cases where animals can learn through observing the interactions between other pairs in addition to direct interactions. We consider two different methods of learning: individual recognition and badges. An animal using individual recognition can identify each of its group mates as a particular individual. An animal using the badge system only recognizes animals based on the signals they display in a categorical fashion. Our model assumes that it is costly to the animals in the group to learn about each other inaccurately. Since animals can use information about their group mates to decide how to interact with them in the future, having the wrong information can lead to an inappropriate choice. We also assume that it is also costly to learn slowly. The time spent interacting and learning about one's group mates could be spent in other ways. Additionally, if the interaction is actually a fight between animals, having more interactions than necessary can lead to injury and perhaps even death. Finally, we also assume that having improved memory and perceptive ability is costly because of the associated energetic costs of larger brain or because improving these properties involves a trade-off that negatively affects other traits. We combine the costs associated with inaccurate learning, the time required to learn, and cognitive abilities to assess the performance of animals using each of the two learning systems. 
 
 \subsection{Interactions and learning }
-We assign each animal a quality value, $q_i$, and a signal, $s_i$, which is always perceptible to conspecifics. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. In a group with $N$ animals, we draw quality values $\{q_1,\dots,q_N\}$ from a normal distribution with mean $0$ and standard deviation $\sigma_\text{q}$. We then generate $N$ signal values such that $\min_i{s_i}\approx -1$, $\max_i{s_i}\approx 1$, and the correlation between $\{q_i\}$ and $\{s_i\}$ is precisely $\rho$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.) 
+We assign each animal a quality value, $q_i$, and a signal, $s_i$, which is always perceptible to conspecifics. We define the parameter $\rho$ as the correlation between the signals, $\{s_i\}$, and the quality values, $\{q_i\}$. In a group with $N$ animals, we draw quality values $\{q_1,\dots,q_N\}$ from a normal distribution with mean $0$ and standard deviation $\sigma_\text{q}$. We then generate $N$ signal values such that $\min_i{s_i}\approx -1$, $\max_i{s_i}\approx 1$, and the correlation between $\{q_i\}$ and $\{s_i\}$ is precisely $\rho$. (A list of the variables used in the text is provided in Table \ref{tab:vars}.) The question of how a signal comes to be correlated with quality is an interesting one. Some of the circumstances that can allow for this to happen include XXX In the future, we plan to include an evolutionary timescale in our model and to consider the evolution of the signal, but for the moment, we assume the signal-quality correlation is fixed at a given level.
 %added a little about how we don't consider/allow for cheating
 We do not consider or allow for cheating in this model (i.e. lower-quality individuals cannot display a higher than expected signal intensity, all individuals display signals that are linked to their underlying quality in the same way).
   
@@ -83,6 +93,7 @@ where $b_i(t)$ is a baseline opinion of any animal it encounters. Specifically, 
 An animal that uses the pure badge system to learn cannot perceive the difference between animals with similar signals and is forced to make a noisy estimate of the quality values of all such animals. Specifically, an animal divides the rest of its group into categories before any interactions take place. It does so by picking another animal, $j$, at random. All animals whose signals are within $\delta/2$ of $s_j$ are put in the same category. Then the focal animal picks an uncategorized animal at random, $k$, forming a second category of all uncategorized animals whose signals are within $\delta/2$ of $s_k$. The process continues until every animal in the group has been assigned a category. Category width $\delta$ depends on the animals' perceptive abilities. For example, if $\delta$ is large, an animal might only be able to identify animals with small, medium, and large signals, whereas if $\delta=0$ an animal can identify every individual in its group and using the badge is no different than using individual recognition. Different animals will categorize the group differently and may perceive different numbers of categories. Figure \ref{cats_ex} shows one example of this process. 
 %Each individual $i$ will identify a category $c$ by the median of the signal being displayed by individuals in that category, $\bar{s}_{ic}$. 
 The average number of categories  animals perceive decreases with group size and category width, $\delta$ (Figure \ref{num_cat}). When an animal using the badge system updates its opinion of another animal based on direct interaction or on observation, it simultaneously updates its opinions of all the other animals in the same category. If an animal observes an interaction between two animals in the same category, it does not updates its opinion of that category.
+%Add something about how badge learners with delta=0 are equivalent to individual recognition except in how they make errors. See Appendix.
 
 %A categorical learner re-categorizes the rest of the group at each time step. Specifically, animal $i$ puts animal $j$ in category $k$ with probability 
 %\begin{equation*}
@@ -108,7 +119,9 @@ We also calculate the average time it takes for an animal's error about each oth
 \end{equation*}
 (If $\epsilon_{ij}$ is always greater than the threshold, then $i$'s learning time about $j$ is taken to be $T$.) Figure \ref{learnT.ex} shows one example of this calculation. We model $25$ groups of animals using each of the two learning systems and calculate the average error $\bar{\epsilon}$ and average learning time $\bar{\tau}$ of all animals in all groups. In Figure \ref{curves} we show how the average error of animals using each of the two systems changes over time.
 
-Learning errors and learning time can both be costly. Improving  perceptive ability (by decreasing $\delta$) and improving memory (by increasing $w$) can also be costly. %need some citations / ties to biology here? Maybe cost of cognition involved in increasing memory?
+Learning errors and learning time can both be costly. Individuals can gain long-term benefits from assessing each others' quality. 
+%In the context of conflicts when individuals differ in fighting ability, resource-holding potential, or dominance rank, individuals can benefit [through decreased chances of injury, increased chances of outcome success, etc.] if they are able to identify and order individuals by quality.  
+Improving  perceptive ability (by decreasing $\delta$) and improving memory (by increasing $w$) can also be costly XXX. %need some citations / ties to biology here? Maybe cost of cognition involved in increasing memory?
 
 We describe the cost of the category width with the function
 \begin{equation*}
@@ -234,13 +247,13 @@ At an intermediate group size ($N=50$), animals using individual recognition per
 Accurate assessment of the quality of conspecifics is important in many contexts, but the conditions under which different assessment systems may be favored is not well understood. Here, we modeled quality assessment in social groups, with animals using either a badge signal, which allows them to group others into quality categories based on the intensity of the badge, or individual recognition, where they remember the outcomes of events involving each particular individual. Our goal was to better understand the costs and benefits of each system and the conditions under which each system might be favored. 
 
 \subsection*{Summary of results (no costs) and implications} %temporary heading
-In the absence of observational learning, smaller groups and longer memory duration make it easier to learn in both learning systems, which is consistent with general intuition. While the sign of the effect of increasing group size was the same in the two systems, the extent of the effect differed between. Assessment error and learning time were much more affected by increasing group size in the individual recognition system than the categorical badge system. We also find that agents using the badge system learn more quickly and accurately when there is a strong correlation between the signal and quality. While the correlation values we use are a bit higher than those estimated in two of the most frequently cited examples of badge systems, paper wasps and house sparrows XXX, our model shows that even with a moderate correlation the badge system is an effective way to learn about one's group mates.  
+In the absence of observational learning, smaller groups and longer memory duration make it easier to learn in both learning systems, which is consistent with general intuition. While the sign of the effect of increasing group size was the same in the two systems, the extent of the effect differed between. Assessment error and learning time were much more affected by increasing group size in the individual recognition system than the categorical badge system. We also find that agents using the badge system learn more quickly and accurately when there is a strong correlation between the signal and quality. While the correlation values we use are a bit higher than those estimated in species for which this data has been collected (XXX  paper wasps \cite{Tibbetts:2004kx}, house sparrows \cite{Veiga:1993fk}, swamp sparrows \cite{Olsen:2010uq}, see Table \ref{corr_examples} for details), our model shows that even with a moderate correlation the badge system is an effective way to learn about one's group mates.  
 
 %In the badge system, we also find that changes in the discrimination ability of agents (category width) led to a trade-off between error and learning time, with increasing category width resulting in lower average learning time but higher error. This is because when a focal animal lumps many of its peers together, it updates its opinion about each of those animals more frequently and by chance may at any given point in time have an accurate opinion about one of the animals in the category, leading to a lower average learning time. On the other hand, by lumping many animals into the same category, it loses its ability to accurately learn about their individual quality values, leading to a higher average error. 
 
 We also find that animals using the badge system could minimize both the error with which they learned and their learning time by having a moderate ability to discriminate between different badges (i.e. by using an intermediate category width), as long as the badge was highly correlated with the underlying quality. This is somewhat counterintuitive as one might expect that it would always be advantageous to improve one's cognitive abilities. Our finding is related to the bias-variance tradeoff in statistics and machine learning: as a statistical model becomes more complex, it is more likely that its predictions will be accurate, but its predictions become more contingent on the training set and are therefore more variable XXX. Similarly, as animals increase the number of categories into which they place their peers, it becomes easier for them to learn accurately about each of those categories, but they forget their assessments more quickly and therefore have more variable assessments over time. 
 
-One explanation for why animals have imperfect cognition is that there are costs involved in improving their cognition XXX. However, our results suggest that imperfect cognition itself may be adaptive. This may explain empirical examples of imperfect cognition (e.g. \cite{Kikuchi:2010ys} XXX). Other studies have also found that the most advanced cognitive strategies are not always optimal \cite{Brush:2016kx,Kerr:2003vn,Dunlap:2009vn,Stephens:1991fk}. Our work therefore contributes to our growing understanding of the circumstances that do or do not lead to the evolution of sophisticated cognition.
+One explanation for why animals have imperfect cognition is that there are costs involved in improving their cognition XXX \cite{Gavrilets:2006fk}. However, our results suggest that imperfect cognition itself may be adaptive. This may explain empirical examples of imperfect cognition (e.g. \cite{Kikuchi:2010ys} XXX). Other studies have also found that the most advanced cognitive strategies are not always optimal \cite{Brush:2016kx,Kerr:2003vn,Dunlap:2009vn,Stephens:1991fk}. Our work therefore contributes to our growing understanding of the circumstances that do or do not lead to the evolution of sophisticated cognition.
 
 When we allow the animals in our model to learn by observing interactions between other pairs of animals, they are able to learn more quickly and accurately in both systems, but observational learning was more beneficial for animals using individual recognition. While previous work has shown the benefits of observational learning XXX, our study is the first to show that this depends on how learning occurs int the first place. Our finding is somewhat surprising because one might expect that making more observations helps animals using the badge system to make up for the deficit inherent in their categorical method of learning. However, our finding agrees with / Indeed, our finding disagrees with XXX Many animals that use individual recognition also use observational learning XXX. Scientists have argued that this is because both individual recognition and observational learning require advanced social cognition, of which animals using a badge system are not capable XXX. However, our results suggest that it may be because it is precisely in those species that observational learning is most advantageous.
 
@@ -251,74 +264,42 @@ We find that, depending on how quickly the explicit costs of cognitive traits in
 
 \subsection*{Evolution of assessment systems} %temp heading
 
-We find that the categorical badge system is usually less costly than individual recognition, except when group sizes are small or their cognitive abilities are sophisticated. Not surprisingly, the higher the correlation between the badge and quality, the greater the advantage of using the badge system, since the badge becomes a more informative signal of the property animals are trying to estimate. With a long memory window and a strong correlation between badge and quality, the badge system was preferable in groups with more than about 30-40 individuals; with a weaker correlation between badge and quality, groups had to be larger than about 50-60 individuals in order for the badge system to be preferable. The advantage animals using the badge system have over animals using individual recognition increases as their cognitive abilities diminish, since their performance is not strongly affected and they pay fewer costs for investing in cognition. This finding agrees with previous studies that found that individual recognition is most useful in small groups XXX. In particular, Dunbar has argued that early human societies were limited by the number of other people a person can effectively learn about XXX. While our threshold of a group size 50-60 is not identical to his threshold of a group size of 150, they are of the same order of magnitude. Our finding also agrees with previous studies of badges of quality, which have found that badges are more likely to evolve in large groups with poor cognitive ability XXX. By explicitly comparing the two systems, we have generated a prediction about the types of groups and species in which we expect one or the other system to evolve. Testing this prediction is left for future work. 
+We find that the categorical badge system is usually less costly than individual recognition, except when group sizes are small or their cognitive abilities are sophisticated. Not surprisingly, the higher the correlation between the badge and quality, the greater the advantage of using the badge system, since the badge becomes a more informative signal of the property animals are trying to estimate. With a long memory window and a strong correlation between badge and quality, the badge system was preferable in groups with more than about 30-40 individuals; with a weaker correlation between badge and quality, groups had to be larger than about 50-60 individuals in order for the badge system to be preferable. The advantage animals using the badge system have over animals using individual recognition increases as their cognitive abilities diminish, since their performance is not strongly affected and they pay fewer costs for investing in cognition. This finding agrees with previous studies that found that individual recognition is most useful in small groups XXX \cite{Veiga:1993fk}. In particular, Dunbar has argued that early human societies were limited by the number of other people a person can effectively learn about XXX. While our threshold of a group size 50-60 is not identical to his threshold of a group size of 150, they are of the same order of magnitude. Our finding also agrees with previous studies of badges of quality, which have found that badges are more likely to evolve in large groups with poor cognitive ability XXX. By explicitly comparing the two systems, we have generated a prediction about the types of groups and species in which we expect one or the other system to evolve. Testing this prediction is left for future work. 
 
 
 % under which kinds of natural conditions should we expect to see 1 system vs another?
-``[The individual-recognition] hypothesis is especially relevant for species with moderately sized flocks, in which the probability of repeated encounters between the same individuals is great and the value of being recognized is high (Whitfield 1987). These conditions are rare among breeding house sparrows, whose colonies frequently contain several dozen pairs in a small area and many bachelors that arrive throughout the breeding season (pers. obs.) " \cite{Veiga:1993fk}. Also highlights the need to study group dynamics.
+%``[The individual-recognition] hypothesis is especially relevant for species with moderately sized flocks, in which the probability of repeated encounters between the same individuals is great and the value of being recognized is high (Whitfield 1987). These conditions are rare among breeding house sparrows, whose colonies frequently contain several dozen pairs in a small area and many bachelors that arrive throughout the breeding season (pers. obs.) " \cite{Veiga:1993fk}. Also highlights the need to study group dynamics.
 
 
 % Learning, recognition, evolution of cognitive complexity / brain size
-Our model results identified a sweet spot that results in lower errors....
- Previous modeling of the evolution of cognitive complexity shows that increases can occur on the scale of 10-20 generations (Gavrilets \& Vose 2006 - the dynamics of Machiavellian intelligence) <<ABSTRACT QUOTE:...our results suggest that the mechanisms underlying the ‘‘Machiavellian intelligence’’ hypothesis can indeed result in the evolution of significant cognitive abilities on the time scale of 10 to 20 thousand generations. We show that cerebral capacity evolves faster and to a larger degree than learning ability. Our model suggests that there may be a tendency toward a reduction in cognitive abilities (driven by the costs of having a large brain) as the reproductive advantage of having a large brain decreases and the exposure to memes increases in modern societies.>>
+%Previous modeling of the evolution of cognitive complexity shows that increases can occur on the scale of 10-20 generations (Gavrilets \& Vose 2006 - the dynamics of Machiavellian intelligence) <<ABSTRACT QUOTE:...our results suggest that the mechanisms underlying the ‘‘Machiavellian intelligence’’ hypothesis can indeed result in the evolution of significant cognitive abilities on the time scale of 10 to 20 thousand generations. We show that cerebral capacity evolves faster and to a larger degree than learning ability. Our model suggests that there may be a tendency toward a reduction in cognitive abilities (driven by the costs of having a large brain) as the reproductive advantage of having a large brain decreases and the exposure to memes increases in modern societies.>>
  
 \subsection*{Future steps and Conclusion}
 %caveat: we're not studying an ingrained badge system like in the original review paper. Our badge system is somewhere in between that and individual recognition. Exploring the full spectrum might be interesting in the future. 
+%...Lots of investigation into evolution of 'honest' signaling...  [but we don't want to get bogged down here, we're assuming a purely honest system, just with variation in how well coordinated the signal is with quality]
  
 By studying a rather simple model, we were able to identify the conditions under which each system is most effective and under which one or the other system should evolve. There are further steps towards improving the realism of the model that will also improve our predictions about the evolution of the two learning strategies. XXX
 
-Our study shows that is not enough to study the conditions that could allow for the evolution of a particular type of learning. By considering and comparing two solutions to the same biological problem we find that different conditions favor different solutions. %%Eleanor just wrote this and knows it needs work! 
- 
- 
-%%%%%%%%%%%%%%%%%%%%% previous notes %%%%%%%%%%%%%%%%%
-% Result 3: number of categories in badge systems
-While a high correlation between quality values and signal values improve the effectiveness of learning via the badge system, our model shows that even with a moderate correlation the badge system is worth using. The correlation values we use are actually a bit higher than those estimated in two of the most frequently cited examples of badge systems, paper wasps and house sparrows.
-
-paper wasps: more spots on clypeus means higher dominance \cite{Tibbetts:2004kx} but percentage of black not a significant predictor of dominance \cite{Tibbetts:2004kx}. what really matters is ``brokenness" of black pigment: more broken means more dominance. But could we say that paying attention to number of spots is like a rough number of categories? 
-
-
-
-
-
-examples of cases where maximal cognitive abilities are not optimal
-\cite{Kerr:2003vn,Stephens:1991fk,Brush:2016kx,Dunlap:2009vn} 
-
-real observation of imperfect cognition in predators of coral snakes \cite{Kikuchi:2010ys}
-
-empirical examples of badges: black on face of paper wasps \cite{Tibbetts:2004kx}, house sparrows \cite{Veiga:1993fk}, black crowns on swamp sparrows \cite{Olsen:2010uq}
-
- swamp sparrows: black crown --> aggression, less black crown --> parental care 
- 
- S Rohwer. Social significance of avian winter plumage variability for black-aggression correlation. Evolution. 1975.
- 
- Siefferman L and Hill GE. Structural and melanin coloration indicate parental effort and reproductive success in male eastern bluebirds. Behavioral Ecology. 2003. for coloration-parental care correlation
- 
- Bokony V and Liker A. Melanin-based black plumage coloration is related to reproductive investment in cardueline finches. Condor. 2005. for coloration-parental care correlation
- 
-paper wasps: more spots on clypeus means higher dominance \cite{Tibbetts:2004kx} but percentage of black not a significant predictor of dominance \cite{Tibbetts:2004kx}. what really matters is ``brokenness" of black pigment: more broken means more dominance. But could we say that paying attention to number of spots is like a rough number of categories? 
-
-While a high correlation between quality values and signal values improve the effectiveness of learning via the badge system, our model shows that even with a moderate correlation the badge system is worth using. The correlation values we use are actually a bit higher than those estimated in two of the most frequently cited examples of badge systems, paper wasps and house sparrows.
-
-paper wasps: head width-percentage black $r^2=0.36$ for wasps with at least 2 spots, ``badge brokenness was the only significant predictor of dominance when included with spot number and percentage of clypeus black in a multiple logistic regression (whole model, $r^2=0.105$)  \cite{Tibbetts:2004kx} 
-
-house sparrows: badge size is correlated with physical condition $r=0.379$ \cite{Veiga:1993fk}
-
-swamp sparrow: rusty cap is correlated with parental investment ($r^2=0.33$) and black forehead is correlated with aggression (negative correlation with distance to intruder $r^2=0.41$) \cite{Olsen:2010uq}
-
-``[The individual-recognition] hypothesis is especially relevant for species with moderately sized flocks, in which the probability of repeated encounters between the same individuals is great and the value of being recognized is high (Whitfield 1987). These conditions are rare among breeding house sparrows, whose colonies frequently contain several dozen pairs in a small area and many bachelors that arrive throughout the breeding season (pers. obs.) " \cite{Veiga:1993fk}. Also highlights the need to study group dynamics.
-
-Whitfield, D. P. 1986. Plumage variability and territoriality in breeding turnstone: status signalling or individual recognition? Animal Behaviour.
-
-Whitfield, D. P. 1987. Plumage variability, status signalling, and individual recognition in avian flocks. Trends in Ecology and Evolution.
-
-
+Our study shows that is not enough to study the conditions that could allow for the evolution of a particular type of learning. By considering and comparing two solutions to the same biological problem we find that different conditions favor different solutions. %%Eleanor just wrote this and knows it needs work!  &
 
 
 \newpage
 \bibliography{BIB_badgeVSrecog,TODO_newrefs, Mendeley_Badge_vs_Recognition.bib}
 \bibliographystyle{apa}
 
-\section{Supplemental Information } 
+\clearpage{}
+%\newpage{}
+\renewcommand{\thesection}{}
+\section{Supporting information}
+\renewcommand{\thesection}{S}
+\renewcommand{\thesubsection}{S\arabic{subsection}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{equation}{0}  
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
 \begin{figure}[h]
 \includegraphics[width=.8\textwidth]{figures/categories.pdf}
 \caption{\sffamily\small\textbf{Example of how categories are defined.}
@@ -363,14 +344,18 @@ In A, B, and C we show average error $\bar{\epsilon}$ for animals using the badg
 In A, B, and C we show average error $\bar{\epsilon}$ for animals using individual recognition as a function of two parameters. In D, E, and F we show average learning time $\bar{\tau}$ as a function of two parameters. Parameters: unless the parameter is being varied $\delta = 0.5$, $\ell_\text{i}=0.2$, $N=50$, $p_\text{o}=0$, $\rho=0.9$, $\sigma_\text{b}=0.2$, $\sigma_\text{i}=0.01$, $\sigma_\text{q}=0.5$, $T=10000$, $w=1100$.}
 \label{interactions_indiv}
 \end{figure}
+
+\begin{table}
+\caption{\label{corr_examples} Examples of the correlation between a badge and a measure of fitness.}
+\begin{tabular}{lllll}
+Species & Badge & Measure of fitness & Reference
+\\\hline paper wasp & percent black on face & body size (head width) & $r^2=0.36$  & \cite{Tibbetts:2004kx}
+\\ & & & for wasps with $\geq 2$ black spots
+\\ & ``badge brokenness" & dominance & $r^2=.105$ (multivariate) & \cite{Tibbetts:2004kx}
+\\ \hline house sparrow & size of black bib & physical condition & $r=0.379$ & \cite{Veiga:1993fk}
+\\ \hline swamp sparrow & size of rusty cap & parental investment & $r^2=0.33$ & \cite{Olsen:2010uq}
+\\ & size of black forehead & aggression & $r^2=0.41$ & \cite{Olsen:2010uq}
+\end{tabular}
+\end{table}
+
 \end{document}
-
-% CUT TEXT
-
-% summary data quantified
-We then use the simulated interaction datasets to quantify: 
-\begin{enumerate}
-  \item Learning curves: each individual's opinion error across the series of fights 
-  \item Learning accuracy: amount of error in final opinions about quality (summarize histograms of learning error)
-  \item Learning time: amount of fights (time) for opinion to achieve maximum potential accuracy (opinion at end of all fights)  
-\end{enumerate}

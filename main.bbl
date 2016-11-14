@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\astroncite{Barnard and Burk}{1979}]{Barnard:1979fk}
+Barnard, C.~J. and Burk, T. (1979).
+\newblock Dominance hierarchies and the evolution of ``individual recogntion".
+\newblock {\em Journal of Theoretical Biology}, 81:65--73.
+
 \bibitem[\protect\astroncite{Brush et~al.}{2016}]{Brush:2016kx}
 Brush, E., \r{A}ke Br\"{a}nnstr\"{o}m, and Dieckmann, U. (2016).
 \newblock Indirect reciprocity with imperfect information.
@@ -11,6 +16,12 @@ Dunlap, A.~S., McLinn, C.~M., MacCormick, H.~A., Scott, M.~E., and Kerr, B.
 \newblock Why some memories do not last a lifetile: dynamics long-term
   retrieval in changing environments.
 \newblock {\em Behavioral Ecology}, 20(5):1096--1105.
+
+\bibitem[\protect\astroncite{Gavrilets and Vose}{2006}]{Gavrilets:2006fk}
+Gavrilets, S. and Vose, A. (2006).
+\newblock The dynamics of machiavellian intellignece.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  103(45):16823--16828.
 
 \bibitem[\protect\astroncite{Kerr and Feldman}{2003}]{Kerr:2003vn}
 Kerr, B. and Feldman, M.~W. (2003).
