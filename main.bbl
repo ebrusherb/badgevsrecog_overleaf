@@ -46,8 +46,14 @@ Gareth Arnott and Robert~W. Elwood.
 \bibitem{Lemel:1993ve}
 Jonas Lemel and Kjell Wallin.
 \newblock Status signalling, motivational condition and dominance: an
-  experimental study in the great tit, \it{Parus major} l.
+  experimental study in the great tit, \emph{{P}arus major} l.
 \newblock {\em Animal Behaviour}, 45(3):549--558, 1993.
+
+\bibitem{Dick:1990cr}
+Jaimie T.~A. Dick and Robert~W. Elwood.
+\newblock Symmetrical assessment of female quality by male \emph{{G}ammarus
+  pulex} ({A}mphipoda) during struggles over precopula females.
+\newblock {\em Animal Behaviour}, 40(5):877--883, 1990.
 
 \bibitem{Olsen:2010uq}
 Brian~J. Olsen, Russell Greenberg, Irene~A. Liu, Joshua~M. Felch, and
@@ -73,6 +79,23 @@ Kevin~J. McGraw and Geoffrey~E. Hill.
   A negatively correlated handicap?
 \newblock {\em The Condor}, 102(2):456--461, 2000.
 
+\bibitem{Loyau:2005nx}
+Adeline Loyau, Michel~Saint Jalme, C\'{e}cile Cagniant, and Gabriele Sorci.
+\newblock Multiple sexual advertisements honestly reflect health status in
+  peacocks (\emph{{P}avo cristatus}).
+\newblock {\em Behavioral Ecology and Sociobiology}, 58(6):552--557, 2005.
+
+\bibitem{Young:2015dq}
+Catherine~Mary Young, Kristal~Elaine Cain, Nina Svedin, Patricia Ruth~Yvonne
+  Backwell, and Sarah~Rosalind Pryke.
+\newblock The role of pigment based plumage traits in resolving conflicts.
+\newblock {\em Journal of Avian Biology}, 47(2):167--175, 2015.
+
+\bibitem{Jawor:2003bh}
+Jodie~M. Jawor and Randall Breitwisch.
+\newblock Melanin ornaments, honesty, and sexual selection.
+\newblock {\em The Auk}, 120(2):249--265, 2003.
+
 \bibitem{Dawkins:1991ly}
 Marian~Stump Dawkins and Tim Guilford.
 \newblock The corruption of honest signalling.
@@ -91,7 +114,7 @@ Jose~P. Veiga.
 
 \bibitem{Gavrilets:2006fk}
 Sergey Gavrilets and Aaron Vose.
-\newblock The dynamics of machiavellian intellignece.
+\newblock The dynamics of {M}achiavellian intelligence.
 \newblock {\em Proceedings of the National Academy of Sciences},
   103(45):16823--16828, 2006.
 
