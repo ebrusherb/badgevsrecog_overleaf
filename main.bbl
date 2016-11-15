@@ -10,6 +10,12 @@ Brush, E., \r{A}ke Br\"{a}nnstr\"{o}m, and Dieckmann, U. (2016).
 \newblock Indirect reciprocity with imperfect information.
 \newblock {\em In prep}.
 
+\bibitem[\protect\astroncite{Brush et~al.}{2013}]{Brush:2013fk}
+Brush, E.~R., Krakauer, D.~C., and Flack, J.~C. (2013).
+\newblock A family of algorithms for computing consensus about node state from
+  network data.
+\newblock {\em PLoS Computational Biology}, 9(7):e1003109.
+
 \bibitem[\protect\astroncite{Dunlap et~al.}{2009}]{Dunlap:2009vn}
 Dunlap, A.~S., McLinn, C.~M., MacCormick, H.~A., Scott, M.~E., and Kerr, B.
   (2009).
@@ -17,11 +23,33 @@ Dunlap, A.~S., McLinn, C.~M., MacCormick, H.~A., Scott, M.~E., and Kerr, B.
   retrieval in changing environments.
 \newblock {\em Behavioral Ecology}, 20(5):1096--1105.
 
+\bibitem[\protect\astroncite{Flack et~al.}{2006}]{Flack:2006fk}
+Flack, J.~C., Girvan, M., de~Waal, F. B.~M., and Krakauer, D.~C. (2006).
+\newblock Policing stabilizes construction of social niches in primates.
+\newblock {\em Nature}, 439(7075):426--429.
+
+\bibitem[\protect\astroncite{Flack and Krakauer}{2006}]{Flack:2006uq}
+Flack, J.~C. and Krakauer, D.~C. (2006).
+\newblock Encoding power in communication networks.
+\newblock {\em The American Naturalist}, 168(3):87--102.
+
 \bibitem[\protect\astroncite{Gavrilets and Vose}{2006}]{Gavrilets:2006fk}
 Gavrilets, S. and Vose, A. (2006).
 \newblock The dynamics of machiavellian intellignece.
 \newblock {\em Proceedings of the National Academy of Sciences},
   103(45):16823--16828.
+
+\bibitem[\protect\astroncite{Hobson and DeDeo}{2015}]{Hobson:2015uq}
+Hobson, E.~A. and DeDeo, S. (2015).
+\newblock Social feedback and the emergence of rank in animal society.
+\newblock {\em PLoS Computational Biology}, 11(9):e1004411.
+
+\bibitem[\protect\astroncite{Hobson et~al.}{2015}]{Hobson:2015kx}
+Hobson, E.~A., John, D.~J., McIntosh, T.~L., Avery, M.~L., and Wright, T.~F.
+  (2015).
+\newblock The effect of social context and social scale on the perception of
+  relationships in monk parakeets.
+\newblock {\em Current Zoology}, 61(1):55--69.
 
 \bibitem[\protect\astroncite{Kerr and Feldman}{2003}]{Kerr:2003vn}
 Kerr, B. and Feldman, M.~W. (2003).
