@@ -1,67 +1,149 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 
-\bibitem[\protect\astroncite{Barnard and Burk}{1979}]{Barnard:1979fk}
-Barnard, C.~J. and Burk, T. (1979).
-\newblock Dominance hierarchies and the evolution of ``individual recogntion".
-\newblock {\em Journal of Theoretical Biology}, 81:65--73.
+\bibitem{Hobson:2015kx}
+Elizabeth~A. Hobson, Darlene~J. John, Tiffany~L. McIntosh, Michael~L. Avery,
+  and Timothy~F. Wright.
+\newblock The effect of social context and social scale on the perception of
+  relationships in monk parakeets.
+\newblock {\em Current Zoology}, 61(1):55--69, 2015.
 
-\bibitem[\protect\astroncite{Brush et~al.}{2016}]{Brush:2016kx}
-Brush, E., \r{A}ke Br\"{a}nnstr\"{o}m, and Dieckmann, U. (2016).
-\newblock Indirect reciprocity with imperfect information.
-\newblock {\em In prep}.
+\bibitem{Hobson:2015uq}
+Elizabeth~A. Hobson and Simon DeDeo.
+\newblock Social feedback and the emergence of rank in animal society.
+\newblock {\em PLoS Computational Biology}, 11(9):e1004411, 2015.
 
-\bibitem[\protect\astroncite{Dunlap et~al.}{2009}]{Dunlap:2009vn}
-Dunlap, A.~S., McLinn, C.~M., MacCormick, H.~A., Scott, M.~E., and Kerr, B.
-  (2009).
-\newblock Why some memories do not last a lifetile: dynamics long-term
-  retrieval in changing environments.
-\newblock {\em Behavioral Ecology}, 20(5):1096--1105.
+\bibitem{Flack:2006fk}
+Jessica~C. Flack, Michelle Girvan, Frans B.~M. de~Waal, and David~C. Krakauer.
+\newblock Policing stabilizes construction of social niches in primates.
+\newblock {\em Nature}, 439(7075):426--429, January 2006.
 
-\bibitem[\protect\astroncite{Gavrilets and Vose}{2006}]{Gavrilets:2006fk}
-Gavrilets, S. and Vose, A. (2006).
-\newblock The dynamics of machiavellian intellignece.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  103(45):16823--16828.
+\bibitem{Brush:2013fk}
+Eleanor~R. Brush, David~C. Krakauer, and Jessica~C. Flack.
+\newblock A family of algorithms for computing consensus about node state from
+  network data.
+\newblock {\em PLoS Computational Biology}, 9(7):e1003109, 2013.
 
-\bibitem[\protect\astroncite{Kerr and Feldman}{2003}]{Kerr:2003vn}
-Kerr, B. and Feldman, M.~W. (2003).
-\newblock Carving the cognitive niche: Optimal learning strategies in
-  homogeneous and heterogeneous environments.
-\newblock {\em Journal of Theoretical Biology}, 220(2):169--188.
+\bibitem{Flack:2006uq}
+Jessica~C. Flack and David~C. Krakauer.
+\newblock Encoding power in communication networks.
+\newblock {\em The American Naturalist}, 168(3):87--102, September 2006.
 
-\bibitem[\protect\astroncite{Kikuchi and Pfennig}{2010}]{Kikuchi:2010ys}
-Kikuchi, D.~W. and Pfennig, D.~W. (2010).
-\newblock Predator cognition permits imperfect coral snake mimicry.
-\newblock {\em The American Naturalist}, 176(6):830--834.
+\bibitem{Cowlishaw:1990vn}
+Guy Cowlishaw and R.~I.~M. Dunbar.
+\newblock Dominance rank and mating success in male primates.
+\newblock {\em Animal Behaviour}, 41(6):1045--1056, 1991.
 
-\bibitem[\protect\astroncite{Olsen et~al.}{2010}]{Olsen:2010uq}
-Olsen, B.~J., Greenberg, R., Liu, I.~A., Felch, J.~M., and Walters, J.~R.
-  (2010).
+\bibitem{Waal:1986ys}
+Frans B.~M. de~Waal.
+\newblock The integration of dominance and social bonding in primates.
+\newblock {\em The Quarterly Review of Biology}, 61(4):459--479, 1986.
+
+\bibitem{Arnott:2009zr}
+Gareth Arnott and Robert~W. Elwood.
+\newblock Assessment of fighting ability in animal contests.
+\newblock {\em Animal Behaviour}, 77(5):991--1004, 2009.
+
+\bibitem{Lemel:1993ve}
+Jonas Lemel and Kjell Wallin.
+\newblock Status signalling, motivational condition and dominance: an
+  experimental study in the great tit, \emph{{P}arus major} l.
+\newblock {\em Animal Behaviour}, 45(3):549--558, 1993.
+
+\bibitem{Dick:1990cr}
+Jaimie T.~A. Dick and Robert~W. Elwood.
+\newblock Symmetrical assessment of female quality by male \emph{{G}ammarus
+  pulex} ({A}mphipoda) during struggles over precopula females.
+\newblock {\em Animal Behaviour}, 40(5):877--883, 1990.
+
+\bibitem{Olsen:2010uq}
+Brian~J. Olsen, Russell Greenberg, Irene~A. Liu, Joshua~M. Felch, and
+  Jeffrey~R. Walters.
 \newblock Interactions between sexual and natural selection on the evolution of
   a plumage badge.
-\newblock {\em Evolutionary Ecology}, 24:731--748.
+\newblock {\em Evolutionary Ecology}, 24:731--748, 2010.
 
-\bibitem[\protect\astroncite{Sheehan and
-  Bergman}{2016}]{sheehan2016evotradeoff}
-Sheehan, M.~J. and Bergman, T.~J. (2016).
+\bibitem{sheehan2016evotradeoff}
+Michael~J. Sheehan and Thore~J. Bergman.
 \newblock Is there an evolutionary trade-off between quality signaling and
   social recognition?
-\newblock {\em Behavioral Ecology}, 27(1):2--13.
+\newblock {\em Behavioral Ecology}, 27(1):2--13, 2016.
 
-\bibitem[\protect\astroncite{Stephens}{1991}]{Stephens:1991fk}
-Stephens, D.~W. (1991).
-\newblock Change, regularity, and value in the evolution of animal learning.
-\newblock {\em Behavioral Ecology}, 2(1):77--89.
-
-\bibitem[\protect\astroncite{Tibbetts and Dale}{2004}]{Tibbetts:2004kx}
-Tibbetts, E.~A. and Dale, J. (2004).
+\bibitem{Tibbetts:2004kx}
+Elizabeth~A. Tibbetts and James Dale.
 \newblock A socially enforced signal of quality in a paper wasp.
-\newblock {\em Nature}, 432:218--222.
+\newblock {\em Nature}, 432:218--222, 2004.
 
-\bibitem[\protect\astroncite{Veiga}{1993}]{Veiga:1993fk}
-Veiga, J.~P. (1993).
+\bibitem{McGraw:2000qf}
+Kevin~J. McGraw and Geoffrey~E. Hill.
+\newblock Plumage brightness and breeding-season dominance in the house finch:
+  A negatively correlated handicap?
+\newblock {\em The Condor}, 102(2):456--461, 2000.
+
+\bibitem{Loyau:2005nx}
+Adeline Loyau, Michel~Saint Jalme, C\'{e}cile Cagniant, and Gabriele Sorci.
+\newblock Multiple sexual advertisements honestly reflect health status in
+  peacocks (\emph{{P}avo cristatus}).
+\newblock {\em Behavioral Ecology and Sociobiology}, 58(6):552--557, 2005.
+
+\bibitem{Young:2015dq}
+Catherine~Mary Young, Kristal~Elaine Cain, Nina Svedin, Patricia Ruth~Yvonne
+  Backwell, and Sarah~Rosalind Pryke.
+\newblock The role of pigment based plumage traits in resolving conflicts.
+\newblock {\em Journal of Avian Biology}, 47(2):167--175, 2015.
+
+\bibitem{Jawor:2003bh}
+Jodie~M. Jawor and Randall Breitwisch.
+\newblock Melanin ornaments, honesty, and sexual selection.
+\newblock {\em The Auk}, 120(2):249--265, 2003.
+
+\bibitem{Dawkins:1991ly}
+Marian~Stump Dawkins and Tim Guilford.
+\newblock The corruption of honest signalling.
+\newblock {\em Animal Behaviour}, 41(5):865--873, 1991.
+
+\bibitem{Barnard:1979fk}
+C.~J. Barnard and T.~Burk.
+\newblock Dominance hierarchies and the evolution of ``individual recogntion".
+\newblock {\em Journal of Theoretical Biology}, 81:65--73, 1979.
+
+\bibitem{Veiga:1993fk}
+Jose~P. Veiga.
 \newblock Badge size, phenotypic quality, and reproductive success in the house
   sparrow: A study on honest advertisment.
-\newblock {\em Evolution}, 47(4):1161--1170.
+\newblock {\em Evolution}, 47(4):1161--1170, 1993.
+
+\bibitem{Gavrilets:2006fk}
+Sergey Gavrilets and Aaron Vose.
+\newblock The dynamics of {M}achiavellian intelligence.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  103(45):16823--16828, 2006.
+
+\bibitem{Kikuchi:2010ys}
+David~W. Kikuchi and David~W. Pfennig.
+\newblock Predator cognition permits imperfect coral snake mimicry.
+\newblock {\em The American Naturalist}, 176(6):830--834, 2010.
+
+\bibitem{Brush:2016kx}
+Eleanor Brush, \r{A}ke Br\"{a}nnstr\"{o}m, and Ulf Dieckmann.
+\newblock Indirect reciprocity with imperfect information.
+\newblock {\em In prep}, 2016.
+
+\bibitem{Kerr:2003vn}
+Benjamin Kerr and Marcus~W. Feldman.
+\newblock Carving the cognitive niche: Optimal learning strategies in
+  homogeneous and heterogeneous environments.
+\newblock {\em Journal of Theoretical Biology}, 220(2):169--188, 2003.
+
+\bibitem{Dunlap:2009vn}
+Aimee~S. Dunlap, Colleen~M. McLinn, Holly~A. MacCormick, Matthew~E. Scott, and
+  Benjamin Kerr.
+\newblock Why some memories do not last a lifetile: dynamics long-term
+  retrieval in changing environments.
+\newblock {\em Behavioral Ecology}, 20(5):1096--1105, 2009.
+
+\bibitem{Stephens:1991fk}
+D.~W. Stephens.
+\newblock Change, regularity, and value in the evolution of animal learning.
+\newblock {\em Behavioral Ecology}, 2(1):77--89, 1991.
 
 \end{thebibliography}
