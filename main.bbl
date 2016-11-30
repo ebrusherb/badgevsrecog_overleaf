@@ -86,10 +86,22 @@ Michael~J. Sheehan and Thore~J. Bergman.
   social recognition?
 \newblock {\em Behavioral Ecology}, 27(1):2--13, 2016.
 
+\bibitem{Moller:1987vn}
+Anders~Pape M{\o}ller.
+\newblock Variation in badge size in male house sparrows \emph{{P}asser
+  domesticus}: evidence for status signalling.
+\newblock {\em Animal Behaviour}, 35(6):1637--1644, 1987.
+
 \bibitem{Tibbetts:2004kx}
 Elizabeth~A. Tibbetts and James Dale.
 \newblock A socially enforced signal of quality in a paper wasp.
 \newblock {\em Nature}, 432:218--222, 2004.
+
+\bibitem{Tibbetts:2007zr}
+Elizabeth~A. Tibbetts and Tracy~R. Curtis.
+\newblock Rearing conditions influence quality signals but not individual
+  identity signals in \emph{Polistes} wasps.
+\newblock {\em Behavioral Ecology}, 18(3):602--607, 2007.
 
 \bibitem{McGraw:2000qf}
 Kevin~J. McGraw and Geoffrey~E. Hill.
@@ -114,6 +126,11 @@ Jodie~M. Jawor and Randall Breitwisch.
 \newblock Melanin ornaments, honesty, and sexual selection.
 \newblock {\em The Auk}, 120(2):249--265, 2003.
 
+\bibitem{Rohwer:1975fk}
+Sievert Rohwer.
+\newblock The social significance of avian winter plumage variability.
+\newblock {\em Evolution}, 29(4):595--610, December 1975.
+
 \bibitem{Smith2003AnimalSignals}
 JM~Smith and D~Harper.
 \newblock {\em {Animal signals}}.
@@ -135,21 +152,55 @@ R.~H. Wiley.
   implications for the evolution of social behaviour}.
 \newblock {\em Biological Reviews}, 88(1):179--195, 2 2013.
 
-\bibitem{Seyfarth2015SocialCognition}
-Robert~M. Seyfarth and Dorothy~L. Cheney.
-\newblock {Social cognition}.
-\newblock {\em Animal Behaviour}, 103:191--202, 2015.
-
 \bibitem{Barnard:1979fk}
 C.~J. Barnard and T.~Burk.
 \newblock Dominance hierarchies and the evolution of ``individual recogntion".
 \newblock {\em Journal of Theoretical Biology}, 81:65--73, 1979.
 
-\bibitem{Moller:1987vn}
-Anders~Pape M{\o}ller.
-\newblock Variation in badge size in male house sparrows \emph{{P}asser
-  domesticus}: evidence for status signalling.
-\newblock {\em Animal Behaviour}, 35(6):1637--1644, 1987.
+\bibitem{Rohwer:1982fk}
+Sievert Rohwer.
+\newblock The evolution of reliable and unreliable badges of fighting ability.
+\newblock {\em American Zoologist}, 22(3):531--546, 1982.
+
+\bibitem{Seyfarth2015SocialCognition}
+Robert~M. Seyfarth and Dorothy~L. Cheney.
+\newblock {Social cognition}.
+\newblock {\em Animal Behaviour}, 103:191--202, 2015.
+
+\bibitem{Dunbar:1993zr}
+R.~I. Dunbar.
+\newblock Coevolution of neocortical size, group size, and language in humans.
+\newblock {\em Behavioral and brain sciences}, 16(4):681--694, 1993.
+
+\bibitem{Hill:2003ly}
+R.~A. Hill and R.~I. Dunbar.
+\newblock Social network size in humans.
+\newblock {\em Human nature}, 14(1):53--72, 2003.
+
+\bibitem{Dunbar:1992ys}
+R.~I. Dunbar.
+\newblock Neocortex size as a constraint on group size in primates.
+\newblock {\em Journal of Human Evolution}, 22(6):469--493, 1992.
+
+\bibitem{Tibbetts:2002ys}
+Elizabeth~A. Tibbetts.
+\newblock Visual signals of individuals identity in the wasp \emph{Polistes
+  fuscatus}.
+\newblock {\em Proceedings of the Royal Society London B: Biological Sciences},
+  269(1499):1423--1428, 2002.
+
+\bibitem{Ripoll:2004vn}
+Jordi Ripoll, Joan Salda{\~n}a, and Juan~Carlos Senar.
+\newblock Evolutionarily stable transition rates in a stage-structured model.
+  an application to the analysis of size distributions of badges of social
+  status.
+\newblock {\em Mathematical Biosciences}, 190(2):145--181, 2004.
+
+\bibitem{Flack:2007kx}
+Jessica~C. Flack and Frans de~Waal.
+\newblock Context modulates signal meaning in primate communication.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  104(5):1581--1586, January 2007.
 
 \bibitem{Veiga:1993fk}
 Jose~P. Veiga.
