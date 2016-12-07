@@ -263,6 +263,12 @@ Michael~J. Sheehan, Michael~A. Straub, and Elizabeth~A. Tibbetts.
   recognition.
 \newblock {\em Ethology}, 120(2):169--179, 2014.
 
+\bibitem{Whitfield:1987tg}
+D.~Philip Whitfield.
+\newblock Plumage variability, status signalling and individual recognition in
+  avian flocks.
+\newblock {\em Trends in Ecology \& Evolution}, 2(1):13--18, 1987.
+
 \bibitem{Barnard:1979fk}
 C.~J. Barnard and T.~Burk.
 \newblock Dominance hierarchies and the evolution of ``individual recogntion".
@@ -355,6 +361,22 @@ Carel~P. van Schaik and Judith~M. Burkart.
 \newblock {\em Proceedings of the Royal Society London B: Biological Sciences},
   366(1567):1008--1016, 2011.
 
+\bibitem{Laughlin:2001qf}
+Simon~B. Laughlin.
+\newblock Energy as a constraint on the coding and processing of sensory
+  information.
+\newblock {\em Curr. Opin. Neurobiol.}, 11(4):475--480, 2001.
+
+\bibitem{Laughlin:1998ly}
+Simon~B. Laughlin, Rob~R. de~Ruyter~van Steveninck, and John~C. Anderson.
+\newblock The metabolic cost of neural information.
+\newblock {\em Nat. Neurosci.}, 1(1):36--41, 1998.
+
+\bibitem{MacIver:2010ve}
+Malcolm~A. MacIver, Neelesh~A. Patankar, and Anup~A. Shirgaonkar.
+\newblock Energy-information trade-offs between movement and sensing.
+\newblock {\em PLoS Comp. Biol.}, 6(5):e1000769, 2010.
+
 \bibitem{Veiga:1993fk}
 Jose~P. Veiga.
 \newblock Badge size, phenotypic quality, and reproductive success in the house
@@ -400,5 +422,25 @@ Aimee~S. Dunlap, Colleen~M. McLinn, Holly~A. MacCormick, Matthew~E. Scott, and
 D.~W. Stephens.
 \newblock Change, regularity, and value in the evolution of animal learning.
 \newblock {\em Behavioral Ecology}, 2(1):77--89, 1991.
+
+\bibitem{Parr:2000hc}
+Lisa~A. Parr, James~T. Winslow, William~D. Hamilton, and Frans B.~M. de~Waal.
+\newblock Recognizing facial cues: Individual discrimination by chimpanzees
+  (\emph{Pan troglodytes}) and rhesus monkeys (\emph{Macaca mulatta}).
+\newblock {\em Journal of Comparative Psychology}, 114(1):47--60, 2000.
+
+\bibitem{Krutzen:2005ij}
+Michael Kr{\"u}tzen, Janet Mann, Michael~R. Heithaus, Richard~C. Connor, Lars
+  Bejder, and William~B. Sherwin.
+\newblock Cultural transmission of tool use in bottlenose dolphins.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  102(25):8939--8943, 2005.
+
+\bibitem{Sayigh:1999bs}
+Laela~S. Sayigh, Peter~L. Tyack, Randall~S. Wells, Andrew~R. Solow, Michael~D.
+  Scott, and A.~B. Irvine.
+\newblock Individual recognition in wild bottlenose dolphins: a field test
+  using playback experiments.
+\newblock {\em Animal Behaviour}, 57(1):41--50, 1999.
 
 \end{thebibliography}
