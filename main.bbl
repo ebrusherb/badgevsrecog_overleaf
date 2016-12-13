@@ -110,6 +110,23 @@ Adeline Loyau, Michel~Saint Jalme, C\'{e}cile Cagniant, and Gabriele Sorci.
   peacocks (\emph{{P}avo cristatus}).
 \newblock {\em Behavioral Ecology and Sociobiology}, 58(6):552--557, 2005.
 
+\bibitem{dawkins1978signals}
+R.~Dawkins and J.R. Krebs.
+\newblock {\em Behavioural Ecology}, chapter Animal signals: information or
+  manipulation?, pages 282--309.
+\newblock Sinauer Associates, 1978.
+
+\bibitem{Rohwer:1981vn}
+Sievert Rohwer and Paul~W. Ewald.
+\newblock The cost of dominance and advantage of subordination in a badge
+  signaling system.
+\newblock {\em Evolution}, 35(3):441--454, 1981.
+
+\bibitem{Rohwer:1982fk}
+Sievert Rohwer.
+\newblock The evolution of reliable and unreliable badges of fighting ability.
+\newblock {\em American Zoologist}, 22(3):531--546, 1982.
+
 \bibitem{sheehan2016evotradeoff}
 Michael~J. Sheehan and Thore~J. Bergman.
 \newblock Is there an evolutionary trade-off between quality signaling and
@@ -228,11 +245,11 @@ Laura~E. Molles and Sandra~L. Vehrencamp.
 \newblock {\em Proceedings of the Royal Society London B: Biological Sciences},
   268(1480):2013--2019, 2001.
 
-\bibitem{Rohwer:1981vn}
-Sievert Rohwer and Paul~W. Ewald.
-\newblock The cost of dominance and advantage of subordination in a badge
-  signaling system.
-\newblock {\em Evolution}, 35(3):441--454, 1981.
+\bibitem{Thompson:2014fk}
+Faye~J. Thompson, Lynda Donaldson, Rufus~A. Johnstone, Jeremy Field, and
+  Michael~A. Cant.
+\newblock Dominant aggression as a deterrent signal in paper wasps.
+\newblock {\em Behavioral Ecology}, 25(4):706--715, 2014.
 
 \bibitem{Dawkins:1991ly}
 Marian~Stump Dawkins and Tim Guilford.
@@ -273,11 +290,6 @@ D.~Philip Whitfield.
 C.~J. Barnard and T.~Burk.
 \newblock Dominance hierarchies and the evolution of ``individual recogntion".
 \newblock {\em Journal of Theoretical Biology}, 81:65--73, 1979.
-
-\bibitem{Rohwer:1982fk}
-Sievert Rohwer.
-\newblock The evolution of reliable and unreliable badges of fighting ability.
-\newblock {\em American Zoologist}, 22(3):531--546, 1982.
 
 \bibitem{Seyfarth2015SocialCognition}
 Robert~M. Seyfarth and Dorothy~L. Cheney.
@@ -382,6 +394,29 @@ Jose~P. Veiga.
 \newblock Badge size, phenotypic quality, and reproductive success in the house
   sparrow: A study on honest advertisment.
 \newblock {\em Evolution}, 47(4):1161--1170, 1993.
+
+\bibitem{Johnstone:1994uq}
+Rufus~A. Johnstone.
+\newblock Honest signalling, perceptual error and the evolution of
+  `all-or-nothing' displays.
+\newblock {\em Proceedings of the Royal Society London B: Biological Sciences},
+  256(1346):169--175, 1994.
+
+\bibitem{Lachmann:1998fk}
+Michael Lachmann and Carl~T. Bergstrom.
+\newblock Signalling among relatives ii. beyond the tower of babel.
+\newblock {\em Theoretical Population Biology}, 54(2):146--160, 1998.
+
+\bibitem{Grafen:1993kx}
+Alan Grafen and Rufus~A. Johnstone.
+\newblock Why we need {ESS} signalling theory.
+\newblock {\em Philosophical Transactions of the Royal Society of London B:
+  Biological Sciences}, 340(1292):245--250, 1993.
+
+\bibitem{Johnstone:1995vn}
+Rufus~A. Johnstone.
+\newblock Honest advertisement of multiple qualities using multiple signals.
+\newblock {\em Journal of Theoretical Biology}, 177(1):87--94, 1995.
 
 \bibitem{Gavrilets:2006fk}
 Sergey Gavrilets and Aaron Vose.
