@@ -1,6 +1,8 @@
 \documentclass[11pt]{article}
 \usepackage{amsmath,amsfonts}
-\usepackage[numbers,sort&compress]{natbib}
+%\usepackage[numbers,sort&compress]{natbib}
+\usepackage[authoryear,sectionbib]{natbib}
+\setcitestyle{aysep={}}
 \usepackage{times}
 \usepackage[left=2.54cm,top=2.54cm,right=2.54cm,bottom=2.54cm,bindingoffset=0.0cm]{geometry}
 \usepackage{setspace}
@@ -12,7 +14,7 @@
 \usepackage{titlesec}
 \titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
-\usepackage{parskip} % skip paragraph indentations
+%\usepackage{parskip} % skip paragraph indentations
 \usepackage{lipsum}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -44,4 +46,8 @@
 \setcounter{page}{0}
 \usepackage[left]{lineno}
 \usepackage{varwidth}
-
+\linespread{2}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{10pt}
+\pagestyle{fancy}
