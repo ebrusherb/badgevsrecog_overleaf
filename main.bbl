@@ -127,6 +127,42 @@ Sievert Rohwer.
 \newblock The evolution of reliable and unreliable badges of fighting ability.
 \newblock {\em American Zoologist}, 22(3):531--546, 1982.
 
+\bibitem{Remy:2010fk}
+Alice R{\'e}my, Arnaud Gr{\'e}goire, Philippe Perret, and Claire Doutrelant.
+\newblock Mediating male-male interactions: the role of the uv blue crest
+  coloration in blue tits.
+\newblock {\em Behavioral Ecology and Sociobiology}, 64(11):1839--1847, 2010.
+
+\bibitem{Solberg:1997uq}
+Erling~Johan Solberg and Thor~Harald Ringsby.
+\newblock Does male badge size signal status in small island populations of
+  house sparrows, \emph{Passer domesticus}?
+\newblock {\em Ethology}, 103(3):177--186, 1997.
+
+\bibitem{Rohwer:1975fk}
+Sievert Rohwer.
+\newblock The social significance of avian winter plumage variability.
+\newblock {\em Evolution}, 29(4):595--610, December 1975.
+
+\bibitem{Tibbetts:2009kx}
+E.~A. Tibbetts and R.~J. Safran.
+\newblock Co-evolution of plumage characteristics and winter sociality in new
+  and old world sparrows.
+\newblock {\em Journal of evolutionary biology}, 22(12):2376--2386, 2009.
+
+\bibitem{Sheehan:2014fk}
+Michael~J. Sheehan, Michael~A. Straub, and Elizabeth~A. Tibbetts.
+\newblock How does individual recognition evolve? comparing response to
+  identity information in \emph{Polistes} species with and without individual
+  recognition.
+\newblock {\em Ethology}, 120(2):169--179, 2014.
+
+\bibitem{Whitfield:1987tg}
+D.~Philip Whitfield.
+\newblock Plumage variability, status signalling and individual recognition in
+  avian flocks.
+\newblock {\em Trends in Ecology \& Evolution}, 2(1):13--18, 1987.
+
 \bibitem{sheehan2016evotradeoff}
 Michael~J. Sheehan and Thore~J. Bergman.
 \newblock Is there an evolutionary trade-off between quality signaling and
@@ -149,12 +185,6 @@ Elizabeth~A. Tibbetts and Tracy~R. Curtis.
 \newblock Rearing conditions influence quality signals but not individual
   identity signals in \emph{Polistes} wasps.
 \newblock {\em Behavioral Ecology}, 18(3):602--607, 2007.
-
-\bibitem{Remy:2010fk}
-Alice R{\'e}my, Arnaud Gr{\'e}goire, Philippe Perret, and Claire Doutrelant.
-\newblock Mediating male-male interactions: the role of the uv blue crest
-  coloration in blue tits.
-\newblock {\em Behavioral Ecology and Sociobiology}, 64(11):1839--1847, 2010.
 
 \bibitem{McGraw:2000qf}
 Kevin~J. McGraw and Geoffrey~E. Hill.
@@ -197,22 +227,10 @@ Juan~Carlos Senar.
   dominance}, chapter~3, pages 87--36.
 \newblock Harvard University Press, Cambridge, Massachusetts, 2006.
 
-\bibitem{Solberg:1997uq}
-Erling~Johan Solberg and Thor~Harald Ringsby.
-\newblock Does male badge size signal status in small island populations of
-  house sparrows, \emph{Passer domesticus}?
-\newblock {\em Ethology}, 103(3):177--186, 1997.
-
-\bibitem{Rohwer:1975fk}
-Sievert Rohwer.
-\newblock The social significance of avian winter plumage variability.
-\newblock {\em Evolution}, 29(4):595--610, December 1975.
-
-\bibitem{Tibbetts:2009kx}
-E.~A. Tibbetts and R.~J. Safran.
-\newblock Co-evolution of plumage characteristics and winter sociality in new
-  and old world sparrows.
-\newblock {\em Journal of evolutionary biology}, 22(12):2376--2386, 2009.
+\bibitem{Smith2003AnimalSignals}
+JM~Smith and D~Harper.
+\newblock {\em {Animal signals}}.
+\newblock Oxford University Press, 2003.
 
 \bibitem{Veiga:1995ys}
 Jose~P. Veiga.
@@ -232,11 +250,6 @@ Katherine~L. Buchanan, Matthew~R. Evans, Arthur~R. Goldsmith, David~M. Bryant,
 Peyton~M. West and Craig Packer.
 \newblock Sexual selection, temperature, and the lion's mane.
 \newblock {\em Science}, 297(5585):1339--1343, 2002.
-
-\bibitem{Smith2003AnimalSignals}
-JM~Smith and D~Harper.
-\newblock {\em {Animal signals}}.
-\newblock Oxford University Press, 2003.
 
 \bibitem{Molles:2001kx}
 Laura~E. Molles and Sandra~L. Vehrencamp.
@@ -272,19 +285,6 @@ R.~H. Wiley.
 \newblock {Specificity and multiplicity in the recognition of individuals:
   implications for the evolution of social behaviour}.
 \newblock {\em Biological Reviews}, 88(1):179--195, 2 2013.
-
-\bibitem{Sheehan:2014fk}
-Michael~J. Sheehan, Michael~A. Straub, and Elizabeth~A. Tibbetts.
-\newblock How does individual recognition evolve? comparing response to
-  identity information in \emph{Polistes} species with and without individual
-  recognition.
-\newblock {\em Ethology}, 120(2):169--179, 2014.
-
-\bibitem{Whitfield:1987tg}
-D.~Philip Whitfield.
-\newblock Plumage variability, status signalling and individual recognition in
-  avian flocks.
-\newblock {\em Trends in Ecology \& Evolution}, 2(1):13--18, 1987.
 
 \bibitem{Barnard:1979fk}
 C.~J. Barnard and T.~Burk.
@@ -395,17 +395,23 @@ Jose~P. Veiga.
   sparrow: A study on honest advertisment.
 \newblock {\em Evolution}, 47(4):1161--1170, 1993.
 
+\bibitem{Briscoe:2011nx}
+Erica Briscoe and Jacob Feldman.
+\newblock Conceptual complexity and the bias/variance tradeoff.
+\newblock {\em Cognition}, 118(1):2--16, 2011.
+
+\bibitem{Domingos:2000cr}
+Pedro Domingos.
+\newblock A unified bias-variance decomposition.
+\newblock {\em Proceedings of the 17th International Conference on Machine
+  Learning}, pages 231--238, 2000.
+
 \bibitem{Johnstone:1994uq}
 Rufus~A. Johnstone.
 \newblock Honest signalling, perceptual error and the evolution of
   `all-or-nothing' displays.
 \newblock {\em Proceedings of the Royal Society London B: Biological Sciences},
   256(1346):169--175, 1994.
-
-\bibitem{Lachmann:1998fk}
-Michael Lachmann and Carl~T. Bergstrom.
-\newblock Signalling among relatives ii. beyond the tower of babel.
-\newblock {\em Theoretical Population Biology}, 54(2):146--160, 1998.
 
 \bibitem{Grafen:1993kx}
 Alan Grafen and Rufus~A. Johnstone.
@@ -418,6 +424,11 @@ Rufus~A. Johnstone.
 \newblock Honest advertisement of multiple qualities using multiple signals.
 \newblock {\em Journal of Theoretical Biology}, 177(1):87--94, 1995.
 
+\bibitem{Lachmann:1998fk}
+Michael Lachmann and Carl~T. Bergstrom.
+\newblock Signalling among relatives ii. beyond the tower of babel.
+\newblock {\em Theoretical Population Biology}, 54(2):146--160, 1998.
+
 \bibitem{Gavrilets:2006fk}
 Sergey Gavrilets and Aaron Vose.
 \newblock The dynamics of {M}achiavellian intelligence.
@@ -428,17 +439,6 @@ Sergey Gavrilets and Aaron Vose.
 David~W. Kikuchi and David~W. Pfennig.
 \newblock Predator cognition permits imperfect coral snake mimicry.
 \newblock {\em The American Naturalist}, 176(6):830--834, 2010.
-
-\bibitem{Stoddard:2011zr}
-Mary~Caswell Stoddard and Martin Stevens.
-\newblock Avian vision and the evolution of egg color mimicry in the common
-  cuckoo.
-\newblock {\em Evolution}, 65(7):2004--2013, 2011.
-
-\bibitem{Brush:2016kx}
-Eleanor Brush, \r{A}ke Br\"{a}nnstr\"{o}m, and Ulf Dieckmann.
-\newblock Indirect reciprocity with imperfect information.
-\newblock {\em In prep}, 2016.
 
 \bibitem{Kerr:2003vn}
 Benjamin Kerr and Marcus~W. Feldman.
