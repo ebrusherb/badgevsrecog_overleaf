@@ -1,4 +1,4 @@
-\begin{thebibliography}{77}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -23,13 +23,6 @@ Briscoe, E. \& Feldman, J. 2011.
 \newblock Conceptual complexity and the bias/variance tradeoff.
 \newblock Cognition 118: 2--16.
 
-\bibitem[{Buchanan et~al.(2001)Buchanan, Evans, Goldsmith, Bryant \&
-  Rowe}]{Buchanan:2001zr}
-Buchanan, K.L., Evans, M.R., Goldsmith, A.R., Bryant, D.M. \& Rowe, L.V. 2001.
-\newblock Testosterone influences basal metabolic rate in male house sparrows:
-  a new cost of dominance signalling.
-\newblock Proc Roy Soc Lond B Biol Sci 268: 1337--1344.
-
 \bibitem[{Bugnyar \& Kotrschal(2002)}]{Bugnyar:2002qf}
 Bugnyar, T. \& Kotrschal, K. 2002.
 \newblock Observational learning and the raiding of food caches in ravens,
@@ -41,16 +34,11 @@ Cowlishaw, G. \& Dunbar, R.I.M. 1991.
 \newblock Dominance rank and mating success in male primates.
 \newblock Anim Behav 41: 1045--1056.
 
-\bibitem[{Dawkins \& Guilford(1991)}]{Dawkins:1991ly}
-Dawkins, M.S. \& Guilford, T. 1991.
-\newblock The corruption of honest signalling.
-\newblock Anim Behav 41: 865--873.
-
 \bibitem[{Dawkins \& Krebs(1978)}]{dawkins1978signals}
 Dawkins, R. \& Krebs, J. 1978.
-\newblock Behavioural Ecology, chap. Animal signals: information or
-  manipulation?, pp. 282--309.
-\newblock Sinauer Associates.
+\newblock Behavioural ecology.
+\newblock chap. Animal signals: information or manipulation?, pp. 282--309.
+  Sinauer Associates.
 
 \bibitem[{de~Waal(1986)}]{Waal:1986ys}
 de~Waal, F.B.M. 1986.
@@ -146,11 +134,6 @@ Hopper, L.M., Lambeth, S.P., Shapiro, S.J. \& Whiten, A. 2008.
   `ghost' conditions.
 \newblock Proc Roy Soc Lond B Biol Sci 275: 835--840.
 
-\bibitem[{Jawor \& Breitwisch(2003)}]{Jawor:2003bh}
-Jawor, J.M. \& Breitwisch, R. 2003.
-\newblock Melanin ornaments, honesty, and sexual selection.
-\newblock The Auk 120: 249--265.
-
 \bibitem[{Johnstone(1994)}]{Johnstone:1994uq}
 Johnstone, R.A. 1994.
 \newblock Honest signalling, perceptual error and the evolution of
@@ -184,12 +167,6 @@ Kr{\"u}tzen, M., Mann, J., Heithaus, M.R., Connor, R.C., Bejder, L. \& Sherwin,
 Lachmann, M. \& Bergstrom, C.T. 1998.
 \newblock Signalling among relatives ii. beyond the tower of babel.
 \newblock Theor Pop Biol 54: 146--160.
-
-\bibitem[{Lachmann et~al.(2001)Lachmann, Sz{\'a}mad{\'o} \&
-  Bergstrom}]{Lachmann:2001uq}
-Lachmann, M., Sz{\'a}mad{\'o}, S. \& Bergstrom, C.T. 2001.
-\newblock Cost and conflict in animal signals and human language.
-\newblock Proc Natl Acad Sci U S A 98: 13189--13194.
 
 \bibitem[{Laughlin(2001)}]{Laughlin:2001qf}
 Laughlin, S.B. 2001.
@@ -227,30 +204,6 @@ Marchetti, C. \& Drent, P.J. 2000.
   by captive great tits.
 \newblock Anim Behav 60: 131--140.
 
-\bibitem[{McGraw \& Hill(2000)}]{McGraw:2000qf}
-McGraw, K.J. \& Hill, G.E. 2000.
-\newblock Plumage brightness and breeding-season dominance in the house finch:
-  A negatively correlated handicap?
-\newblock The Condor 102: 456--461.
-
-\bibitem[{M{\o}ller(1987)}]{Moller:1987vn}
-M{\o}ller, A.P. 1987.
-\newblock Variation in badge size in male house sparrows \emph{{P}asser
-  domesticus}: evidence for status signalling.
-\newblock Anim Behav 35: 1637--1644.
-
-\bibitem[{Molles \& Vehrencamp(2001)}]{Molles:2001kx}
-Molles, L.E. \& Vehrencamp, S.L. 2001.
-\newblock Songbird cheaters pay a retaliation cost: evidence for auditory
-  conventional signals.
-\newblock Proc Roy Soc Lond B Biol Sci 268: 2013--2019.
-
-\bibitem[{Moore et~al.(1997)Moore, Reagan-Wallin, Haynes \&
-  Moore}]{Moore:1997kx}
-Moore, P.J., Reagan-Wallin, N.L., Haynes, K.F. \& Moore, A.J. 1997.
-\newblock Odour conveys status on cockroaches.
-\newblock Nature 389: 25--25.
-
 \bibitem[{Olsen et~al.(2010)Olsen, Greenberg, Liu, Felch \&
   Walters}]{Olsen:2010uq}
 Olsen, B.J., Greenberg, R., Liu, I.A., Felch, J.M. \& Walters, J.R. 2010.
@@ -263,12 +216,6 @@ Parr, L.A., Winslow, J.T., Hamilton, W.D. \& de~Waal, F.B.M. 2000.
 \newblock Recognizing facial cues: Individual discrimination by chimpanzees
   (\emph{Pan troglodytes}) and rhesus monkeys (\emph{Macaca mulatta}).
 \newblock Jour Comp Pscyhol 114: 47--60.
-
-\bibitem[{P{\"a}rt \& Qvarnstr{\"o}m(1997)}]{Part:1997ys}
-P{\"a}rt, T. \& Qvarnstr{\"o}m, A. 1997.
-\newblock Badge size in collared flycatchers predicts outcome of male
-  competition over territories.
-\newblock Anim Behav 54: 893--899.
 
 \bibitem[{Qvarnstrom(1997)}]{Qvarnstrom:1997fk}
 Qvarnstrom, A. 1997.
@@ -312,12 +259,6 @@ Rohwer, S. \& Ewald, P.W. 1981.
   signaling system.
 \newblock Evolution 35: 441--454.
 
-\bibitem[{Santos et~al.(2011)Santos, Scheck \& Nakagawa}]{Santos:2011ly}
-Santos, E.S.A., Scheck, D. \& Nakagawa, S. 2011.
-\newblock Dominance and plumage traits: meta-analysis and metaregression
-  analysis.
-\newblock Anim Behav 82: 3--19.
-
 \bibitem[{Sayigh et~al.(1999)Sayigh, Tyack, Wells, Solow, Scott \&
   Irvine}]{Sayigh:1999bs}
 Sayigh, L.S., Tyack, P.L., Wells, R.S., Solow, A.R., Scott, M.D. \& Irvine,
@@ -325,12 +266,6 @@ Sayigh, L.S., Tyack, P.L., Wells, R.S., Solow, A.R., Scott, M.D. \& Irvine,
 \newblock Individual recognition in wild bottlenose dolphins: a field test
   using playback experiments.
 \newblock Anim Behav 57: 41--50.
-
-\bibitem[{Senar(2006)}]{Senar:2006dq}
-Senar, J.C. 2006.
-\newblock Color displays as intrasexual signals of aggression and dominance,
-  chap.~3, pp. 87--36.
-\newblock Harvard University Press, Cambridge, Massachusetts.
 
 \bibitem[{Seyfarth \& Cheney(2015)}]{Seyfarth2015SocialCognition}
 Seyfarth, R.M. \& Cheney, D.L. 2015.
@@ -367,15 +302,6 @@ Sheehan, M.J., Straub, M.A. \& Tibbetts, E.A. 2014.
   recognition.
 \newblock Ethology 120: 169--179.
 
-\bibitem[{Smith \& Harper(2003)}]{Smith2003AnimalSignals}
-Smith, J. \& Harper, D. 2003.
-\newblock {Animal signals}.
-\newblock Oxford University Press.
-\newblock
-  \urlprefix\url{https://books.google.com/books?hl=en{\&}lr={\&}id=SUA51MeG1lc%
-C{\&}oi=fnd{\&}pg=PA1{\&}dq=animal+signals+maynard+smith+harper{\&}ots=zMNyizR%
-nw2{\&}sig=cWBEAtbfyjGJCmIKGQlb7w993f8}.
-
 \bibitem[{Solberg \& Ringsby(1997)}]{Solberg:1997uq}
 Solberg, E.J. \& Ringsby, T.H. 1997.
 \newblock Does male badge size signal status in small island populations of
@@ -387,33 +313,16 @@ Stephens, D.W. 1991.
 \newblock Change, regularity, and value in the evolution of animal learning.
 \newblock Behav Ecol 2: 77--89.
 
-\bibitem[{Thompson et~al.(2014)Thompson, Donaldson, Johnstone, Field \&
-  Cant}]{Thompson:2014fk}
-Thompson, F.J., Donaldson, L., Johnstone, R.A., Field, J. \& Cant, M.A. 2014.
-\newblock Dominant aggression as a deterrent signal in paper wasps.
-\newblock Behav Ecol 25: 706--715.
-
 \bibitem[{Tibbetts(2002)}]{Tibbetts:2002ys}
 Tibbetts, E.A. 2002.
 \newblock Visual signals of individuals identity in the wasp \emph{Polistes
   fuscatus}.
 \newblock Proc Roy Soc Lond B Biol Sci 269: 1423--1428.
 
-\bibitem[{Tibbetts \& Curtis(2007)}]{Tibbetts:2007zr}
-Tibbetts, E.A. \& Curtis, T.R. 2007.
-\newblock Rearing conditions influence quality signals but not individual
-  identity signals in \emph{Polistes} wasps.
-\newblock Behav Ecol 18: 602--607.
-
 \bibitem[{Tibbetts \& Dale(2004)}]{Tibbetts:2004kx}
 Tibbetts, E.A. \& Dale, J. 2004.
 \newblock A socially enforced signal of quality in a paper wasp.
 \newblock Nature 432: 218--222.
-
-\bibitem[{Tibbetts \& Dale(2007)}]{Tibbetts2007IndividualDifferent}
-Tibbetts, E.A. \& Dale, J. 2007.
-\newblock {Individual recognition: it is good to be different}.
-\newblock Trends Ecol Evol 22: 529--537.
 
 \bibitem[{Tibbetts \& Safran(2009)}]{Tibbetts:2009kx}
 Tibbetts, E.A. \& Safran, R.J. 2009.
@@ -432,36 +341,10 @@ Veiga, J.P. 1993.
   sparrow: A study on honest advertisment.
 \newblock Evolution 47: 1161--1170.
 
-\bibitem[{Veiga(1995)}]{Veiga:1995ys}
-Veiga, J.P. 1995.
-\newblock Honest signaling and the survival cost of badges in the house
-  sparrow.
-\newblock Evolution 49: 570--572.
-
-\bibitem[{West \& Packer(2002)}]{West:2002ly}
-West, P.M. \& Packer, C. 2002.
-\newblock Sexual selection, temperature, and the lion's mane.
-\newblock Science 297: 1339--1343.
-
 \bibitem[{Whitfield(1987)}]{Whitfield:1987tg}
 Whitfield, D.P. 1987.
 \newblock Plumage variability, status signalling and individual recognition in
   avian flocks.
 \newblock Trends Ecol Evol 2: 13--18.
-
-\bibitem[{Wiley(2013)}]{Wiley2013SpecificityBehaviour}
-Wiley, R.H. 2013.
-\newblock {Specificity and multiplicity in the recognition of individuals:
-  implications for the evolution of social behaviour}.
-\newblock Biol Rev Camb Philos Soc 88: 179--195.
-\newblock \doi{10.1111/j.1469-185X.2012.00246.x}.
-\newblock
-  \urlprefix\url{http://doi.wiley.com/10.1111/j.1469-185X.2012.00246.x}.
-
-\bibitem[{Young et~al.(2015)Young, Cain, Svedin, Backwell \&
-  Pryke}]{Young:2015dq}
-Young, C.M., Cain, K.E., Svedin, N., Backwell, P.R.Y. \& Pryke, S.R. 2015.
-\newblock The role of pigment based plumage traits in resolving conflicts.
-\newblock J Avian Biol 47: 167--175.
 
 \end{thebibliography}
