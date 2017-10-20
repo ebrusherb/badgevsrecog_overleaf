@@ -121,7 +121,7 @@ To quantify how well the animals learn about each other, we measure how accurate
 \epsilon(t) = \frac{\sum_{\text{groups}}\sum_i\sum_{j\in \mathscr{O}_i(t)}e_{ij}(t)}{25N|\mathscr{O}_i(t)|},
 \end{equation*}
 where $\mathscr{O}_i(t)$ is the set of animals about whom $i$ has an opinion at time $t$.
-As the animals learn about each other, $\epsilon(t)$ decreases until it either reaches $0$ or reaches a non-zero asymptote (Figure \ref{learning_curves}). In Figure \ref{learning_curves} we show three representative examples of how the average error in quality assessment of animals using each of the two systems changes over time. At first, animals are more or less guessing about the quality of their peers, which results in a high average error. When learning is difficult, for example because the animals' memory is poor or there are many animals to learn about, the average error barely decreases from its initially high level (Figure \ref{learning_curves}). When learning is easier, for example because the animals can remember more interactions, because there are fewer animals to learn about, or because the badge becomes more informative, average error decreases over time and can even approach $0$ (Figure \ref{learning_curves}).  
+As the animals learn about each other, $\epsilon(t)$ decreases until it reaches an asymptote asymptote (Figure \ref{learning_curves}). In Figure \ref{learning_curves} we show three representative examples of how the average error in quality assessment of animals using each of the two systems changes over time. At first, animals are more or less guessing about the quality of their peers, which results in a high average error. When learning is difficult, for example because the animals' memory is poor or there are many animals to learn about, the average error barely decreases from its initially high level (Figure \ref{learning_curves}). When learning is easier, for example because the animals can remember more interactions, because there are fewer animals to learn about, or because the badge becomes more informative, average error decreases over time and can even approach $0$ (Figure \ref{learning_curves}).  
 
 As described above, animals incur costs when they have inaccurate estimates of their peers' quality values and by continuing to spend time learning about each other when they could be engaging in other activities. We thus quantify the cost of learning at time $t$ as 
 \begin{equation*}
@@ -136,28 +136,27 @@ There are six important parameters or variables in our model: group size $N$, si
 
 As we will show, it is sometimes beneficial for an animal to group its peers into categories based on the signals they display. Similarly, different updating rates are beneficial in different circumstances. Given group size $N$, signal-quality correlation $\rho$, and memory window $w$, we find the stopping time $\tau$ for every possible combination of the values of $\delta$ and $r$ and then find the combination of these two parameters that minimizes $C(\tau)$. If category width and updating rate are evolving or if they can be changed by the animals on an ecological timescale, they should move toward these optimized values. This allows us to compare the performance of the three systems. For a given group size $N$, signal-quality correlation $\rho$, and memory window $w$, we compare the cost of learning $C(\tau)$ for animals using the recognition system with optimized $\delta$ and $r$, for animals using an innate rule-of-thumb (which does not depend on $w$), and for animals using a learned rule-of-thumb. We would expect that the assessment system with the lowest cost of learning would be able to invade a population using either of the other two systems.
 
-
-%In all of our analyses, we use the following parameters: standard deviation of noise in estimating quality $\sigma_\xi=0.05$, standard deviation of quality values $\sigma_\text{q}=0.5$, and the total number of interactions $T=30,000$. As shown in Figure \ref{learning_curves}, using $T=30,000$ interactions ensures that the average error has reached its equilibrium level.
-
-
-
 %%%%%%%%%%%%%%%%%%%%
 \section*{Results}
 %%%%%%%%%%%%%%%%%%%%
 \subsection*{The effects of group size and cognitive abilities on learning}
 % Fig 'parameters' description 
-For animals using all assessment systems, smaller groups and longer memory windows make it easier to learn. As group size ($N)$ increases, the error with which animals can learn about their peers ($\epsilon(\tau$) increases (Figure \ref{parameters}A). (This can also be seen by comparing the panels in Figure \ref{learning_curves}).) The stopping time ($\tau$) sometimes actually decreases as a function of group size, but this is only true in a large group, where learning is so difficult that it is not worth spending time on (Figure~\ref{parameters}E).  As memory window ($w$) increases, animals can take a long time to learn more accurately (Figure~\ref{parameters}B and F). Increasing memory window has a greater effect on animals using recognition than on those using a rule-of-thumb (the rate of change of the dashed lines is more gradual than that of the solid lines in Figure \ref{parameters}B and F).  Animals using a rule-of-thumb or recognition with category width greater than $0$ learn more accurately and more quickly when the the signal and quality are more strongly correlated (compare the blue and green lines in Figure \ref{parameters}D and H). In summary, the effects of group size ($N$), memory window ($w$), and signal-quality correlation ($\rho$) on error and learning time are intuitive and confirm that our model is a reasonable description of some of the basic properties of a real social system. 
+The only parameters that affect the genetic rule-of-thumb are group size ($N$) and signal-quality correlation ($\rho$): group size does not strongly affect the accuracy of this assessment strategy (Figure \ref{parameters}A). For animals using recognition or a learned rule-of-thumb, animals have more accurate assessments of their peers in smaller groups (low $N$) (Figure \ref{parameters}A and B). (This can also be seen by comparing the panels in Figure \ref{learning_curves}).) Generally, animals using recognition or a learned rule-of-thumb also learn more quickly in smaller groups (Figure \ref{parameters}E). (Stopping time ($\tau$) does decrease or plateau as a function of group size when learning is so difficult that it is not worth spending time on (Figure~\ref{parameters}E).) Animals using recognition or a learned rule-of-thumb learn more accurately (Figure \ref{parameters}B), but spend more time learning (Figure~\ref{parameters}F) as memory window ($w$) increases. Increasing memory window has a greater effect on animals using recognition than on those using a rule-of-thumb (the rate of change of the dashed curves is more gradual than that of the solid curves in Figure \ref{parameters}B and F).  Animals using a rule-of-thumb or recognition with category width greater than $0$ learn more accurately and more quickly when the the signal and quality are more strongly correlated (compare the blue and red curves in Figure \ref{parameters}D and H). In summary, the effects of group size ($N$), memory window ($w$), and signal-quality correlation ($\rho$) on error and learning time are intuitive and confirm that our model is a reasonable description of some of the basic properties of a real social system. 
  
-Increasing the updating rate ($r$) tends to decrease the stopping time ($\tau$) (Figure \ref{parameters}G): an animal will reach asymptotic assessments of its peers more quickly if it incorporates new information more readily. In a large group or when memory is poor, increasing the updating rate also decreases error (Figure \ref{parameters}C). This is because a higher updating rate helps animals form a somewhat accurate assessment of a peer before they forget past interactions. However, when animals live in small groups and have long memories, error can be minimized by reducing the updating rate (the blue line in Figure \ref{parameters}C): it is best to avoid updating one's assessment based on noisy information and to incorporate new information slowly. In this case, changing the updating rate introduces a tradeoff between speed and accuracy (see also Supporting Figure XX).
+When animals have long memories, increasing the updating rate \emph{increases} errors (the blue curve in Figure \ref{parameters}C): it is best to avoid updating one's assessment based on noisy information and to incorporate new information slowly. However, when memory is poor, increasing the updating rate decreases error (the red curve in Figure \ref{parameters}C). This is because a higher updating rate helps animals form a somewhat accurate assessment of a peer before they forget past interactions. Increasing the updating rate ($r$) either does not affect or decreases stopping time  (Figure \ref{parameters}G): an animal will reach asymptotic assessments of its peers more quickly if it incorporates new information more readily. The interaction between memory window and updating rate is shown in Figure \ref{interactions}.
  
-When the signal is highly correlated with quality and animals have a short memory, an intermediate category width minimizes error (Figure~\ref{parameters}D). This pattern can be explained as follows. Regardless of the signal-quality correlation, as category width increases, the number of animals in a given category also increases (Figure \ref{num_cat}). The first consequence of this is that an animal trying to learn about a given category will encounter it more often, and be less likely to forget its opinion of it before its memory window lapses. This tends to decrease the error with which animals can learn about their peers. The second consequence is that each time an animal encounters a category it extrapolates the information it gathers to more animals. This ``confusion" tends to increase learning error. When the badge is poorly correlated with quality, this increase in error due to increased confusion is much greater than the decrease in error due to a lower chance of forgetting. Therefore, as category width increases error increases as well. However, when the badge is highly correlated with quality, the increase in error due to increased confusion is much less pronounced because animals with similar badges do actually have similar quality values. Therefore, as category width increases, at first error decreases, because of the reduced probability of forgetting, while later error increases, because of increased confusion. When the animals have a long memory window, increasing category width always increases overall error because there is no chance of forgetting what has been learned (Figure~\ref{interactions_badge}). 
+When the signal is highly correlated with quality and animals have a short memory, an intermediate category width minimizes error (the blue curve in Figure~\ref{parameters}D). This pattern can be explained as follows. Regardless of the signal-quality correlation, as category width increases, the number of animals in a given category also increases (Figure \ref{num_cat}). The first consequence of this is that an animal trying to learn about a given category will encounter it more often, and be less likely to forget its opinion of it before its memory window lapses. This tends to decrease the error with which animals can learn about their peers. The second consequence is that each time an animal encounters a category it extrapolates the information it gathers to more animals. This ``confusion" tends to increase learning error. When the badge is poorly correlated with quality, this increase in error due to increased confusion is much greater than the decrease in error due to a lower chance of forgetting. Therefore, as category width increases error increases as well. However, when the badge is highly correlated with quality, the increase in error due to increased confusion is much less pronounced because animals with similar badges do actually have similar quality values. Therefore, as category width increases, at first error decreases, because of the reduced probability of forgetting, while later error increases, because of increased confusion. When the animals have a long memory window, increasing category width always increases overall error because there is no chance of forgetting what has been learned (Figure~\ref{interactions}). 
 
-\subsection*{Optimal cognitive traits for recognition}
-The optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$) depend on how costly errors are, relative to how costly the time spent learning is. As the costs of errors ($c$) increases, the optimal stopping time increases: animals should spend longer learning in order to acquire more 
+\subsection*{Optimal learning strategies for animals using recognition}
+As the cost of errors ($c$) increases, the optimal stopping time increases: animals should spend longer learning in order to acquire more information (Figure \ref{optimization}A-C). As the cost of errors increases, the optimal updating rate decreases: again, animals should spend longer learning and incorporate noisy information less readily (Figure \ref{optimization}D-F). In large groups or when memory window is short, animals should always use the highest updating rate (Figure \ref{optimization}D-F). 
 
-It is only optimal to use categories when the badge-quality correlation is very high (e.g. $\rho=0.99$).
+When errors are not very costly, when memory window is short, or when group size is large, animals should use category width $\delta=0.25$ (Figure \ref{optimization}G-I). Under these circumstances, rather than focusing on the individual identity of their peers, the animals should categorize the rest of their group based on the signals they display and assess all of the animals in each category simultaneously. It is only optimal to use categories when the badge-quality correlation is quite high (e.g. $\rho=0.99$) (Figure \ref{delta}). When animals use these optimal strategies---stopping time, updating rate, and category width---the error with which animals assess their peers decreases as the cost of errors increases, as memory window increases, and as group size decreases (Figure \ref{optimization}J-L). Figure \ref{optimization} shows optimal stopping time, updating rate, and category width when the signal-quality correlation is quite high ($\rho=0.99$). Results for lower values of $\rho$ are shown in Figures \ref{time}-\ref{error}.
 
-\subsection*{Optimal learning strategy}
+\subsection*{Optimal assessment strategy}
+Having found the optimal assessment strategies for animals using recognition, we can finally compare the overall costs of using the three assessment strategies. Remember that the overall cost of using a strategy is a weighted average of the error with which animals can assess their peers and the number of interactions it takes to reach an accurate assessment. First, we compare the two learned strategies: recognition and a learned rule-of-thumb. Recognition is preferable, that is, less costly, when errors are very costly (Figure \ref{comparison}): given a long time to learn, recognition is more accurate. However, as the speed of learning is prioritized, a learned rule-of-thumb becomes preferable. Recognition tends to be favored in small groups and when animals have long memories (Figure \ref{comparison}).
+
+When we compare all three assessment strategies, we find a similar pattern: recognition is the best of all three strategies when accuracy is important, when animals have long memories, and in smaller groups (Figure \ref{best}). There is no set of parameters where animals using recognition should use categories \emph{and} recognition performs better than either rule-of-thumb (compare Figure \ref{best} to Figure \ref{optimization}). Therefore, even if categorical assessment were to evolve, a rule-of-thumb strategy might be expected to subsequently invade. Of the parameters where a rule-of-thumb is preferable, a genetic rule-of-thumb is preferable to a learned rule-of-thumb only when group size is large ($N=100$) and the memory window is very short ($w<=500$) (Figure \ref{optimization}). There are large regions of parameter space where all three assessment strategies perform almost equally (the purple regions in Figure \ref{optimization}).
+%This agrees with predictions made by Sheehan et al. Whether learning about categories or a rule-of-thumb is easier is left for future research.
 
 %%%%%%%%%%%%%%%%%
 \section*{Discussion}
@@ -204,34 +203,34 @@ Learning about one's group mates is a challenge facing every animal that lives i
 \newpage
 \begin{figure}
 %\includegraphics[width=.95\textwidth]{figures/learning_curves.pdf}
-\caption{\label{learning_curves} \sffamily\small\textbf{Examples of how average error decreases over time.}
-In each panel, we show time (in number of interactions) on the x-axis and average error ($\epsilon(t)$) on the y-axis. In each panel, solid lines show animals using recognition, dashed lines show animals using a learned rule-of-thumb, and dotted lines show animals using a genetic rule-of-thumb. In A, group size $N=25$, in B $N=50$, and in C $N=100$. Each color corresponds to a combination of memory window ($w$), updating rate ($r$), and category width ($\delta$). The signal-quality correlation is high ($\rho=0.99$) in all panels. There are only two dashed lines because $r$ and $\delta$ do not affect a learned rule-of-thumb and only one dotted line because only group size affects a genetic rule-of-thumb. As group size increases, error increases (moving from left to right). As memory window increases, the error of animals using the learned rule-of-thumb is not strongly affected, whereas the error of animals using recognition becomes lower (compare the green and purple lines). When group size increases, moving left to right, the error of animals using both systems increases, but it affects the error of animals using recognition more.}
+\caption{\label{learning_curves} \sffamily\small\textbf{Error decreases over time until it  asymptote.}
+In each panel, we show time (in number of interactions) on the x-axis and the average error in an animal's assessments of its peers ($\epsilon(t)$) on the y-axis. In each panel, solid curves show animals using recognition, dashed curves show animals using a learned rule-of-thumb, and dotted curves show animals using a genetic rule-of-thumb. In A, group size $N=25$, in B $N=50$, and in C $N=100$. Each color corresponds to a combination of memory window ($w$), updating rate ($r$), and category width ($\delta$). The signal-quality correlation is high ($\rho=0.99$) in all panels. There are only two dashed curves because $r$ and $\delta$ do not affect a learned rule-of-thumb and there is only one dotted curve because only group size and signal-quality correlation affect a genetic rule-of-thumb. As group size increases (moving from left to right), error increases, but this affects the error of animals using recognition more than animals using either rule-of-thumb. As memory window increases, the error of animals using the learned rule-of-thumb is not strongly affected, but the error of animals using recognition decreases (compare the green and purple curves).}
 \end{figure}
 
 \begin{figure}
 %\includegraphics[width=6.85in]{figures/parameters_exploration.pdf}
-\caption{\sffamily\small\textbf{Decreasing group size and increasing memory window both improve the accuracy with which animals can learn about their peers.} Here we show average error ($\epsilon(\tau)$) (A-D) and stopping time ($\tau$) (E-H) as a function of group size ($N$), memory window ($w$), updating rate ($r$), and category width ($\delta$). In each panel, solid lines show animals using recognition, dashed lines show animals using a learned rule-of-thumb, and dotted lines show animals using a genetic rule-of-thumb. The red lines correspond to groups in which the signal-quality correlation $\rho=0.9$ and memory window $w=2500$ and the blue lines correspond to groups in which the signal-quality correlation $\rho=0.99$ and memory window $w=250$. Increasing the updating rate ($r$) helps animals to learn more quickly (D) but increases the error with which they learn when they have long memories (G). Increasing the category width ($\delta$) helps animals to learn more quickly (H). Error is minimized at low or intermediate category widths, depending on how long the animals' memory windows are. Parameters: unless the parameter is being varied $\delta = 0$, $N=25$, $r=0.25$.}
+\caption{\sffamily\small\textbf{Decreasing group size and increasing memory window both improve the accuracy with which animals can learn about their peers.} Here we show average error ($\epsilon(\tau)$) (A-D) and stopping time ($\tau$) (E-H) as a function of group size ($N$), memory window ($w$), updating rate ($r$), and category width ($\delta$). In each panel, solid curves show animals using recognition, dashed curves show animals using a learned rule-of-thumb, and dotted curves show animals using a genetic rule-of-thumb. The red curves correspond to groups in which the signal-quality correlation $\rho=0.9$ and memory window $w=2500$ and the blue curves correspond to groups in which the signal-quality correlation $\rho=0.99$ and memory window $w=250$. Increasing the updating rate ($r$) helps animals to learn more quickly (C) but increases the error with which they learn when they have long memories (G). Error is minimized at low or intermediate category widths, depending on how long the animals' memory windows are (D). Increasing the category width ($\delta$) helps animals to learn more quickly (H). Parameters: unless the parameter is being varied $\delta = 0$, $N=25$, $r=0.25$.}
 \label{parameters}
 \end{figure}
 
 \begin{figure}
-%\includegraphics[width=6.85in]{figures/strategies.pdf}
-\caption{\sffamily\small\textbf{}}
+%\includegraphics[width=6.85in]{figures/strategies_heat_maps.pdf}
+\caption{\sffamily\small\textbf{As the cost of errors increases, animals using recognition should use higher stopping times, smaller updating rates and smaller category widths.} Here we show how the stopping time ($\tau$) (A-C),  optimal updating rate ($r$) (D-F), and optimal category width ($\delta$) (G-I), and error at stopping time ($\epsilon(\tau)$) (J-L), depend on how costly errors are ($c$) and memory window ($w$). In the first column, group size $N=25$, in the second column $N=50$, and in the third column $N=100$. For a given cost of error ($c$), memory window ($w$), and group size ($N$), the stopping time, updating rate, and category width shown here are those that minimize the costs incurred from the combination error and learning time. Parameters: $\rho=0.99$. }
 \label{optimization}
 \end{figure}
 
+
 \begin{figure}
-%\includegraphics[width=6.85in]{figures/best_type_of_learning.pdf}
-\caption{\sffamily\small\textbf{}}
-\label{comp}
+%\includegraphics[width=6.85in]{figures/recog_vs_learned_rule.pdf}
+\caption{\sffamily\small\textbf{A learned rule-of-thumb is less costly than recognition (with optimized learning strategies) when animals live in large groups and have short memories and when the signal-quality correlation is high.} In each panel, we show the difference in overall costs between recognition and a learned rule-of-thumb as a function of the cost of errors ($c$) and memory window ($w$). Blue indicates a learned rule-of-thumb is less costly and red indicates recognition is less costly. The animals using recognition are using the optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$). In the first column $N=25$, in the middle column, $N=50$, and in the right column $N=100$. In the first row $\rho=0.9$ and in the second row $\rho=0.99$.}
+\label{comparison}
 \end{figure}
 
 \begin{figure}
 %\includegraphics[width=6.85in]{figures/best_type_of_learning.pdf}
-\caption{\sffamily\small\textbf{The overall costs of using the badge system are lower than the costs of using individual recognition at high group size, low memory window, high category width, and small probability of observing.} When the signal-quality correlation $\rho$ increases, animals using the badge system incur lower costs for more combinations or parameters. Here we show the difference in the overall costs ($C$) associated with the badge system and with individual recognition as a function of pairs of two parameters. Red indicates the difference is negative, i.e. individual recognition is more costly, and blue indicates the difference is positive, i.e. individual recognition is less costly.  In the left column (A-D), the signal-quality correlation $\rho=0.9$, and in the right column (E-H), the signal-quality correlation $\rho=0.5$. Parameters: unless the parameter is being varied $\delta = 0.5$, $N=50$, $p_\text{o}=0$, $w=1200$.}
-\label{comparison}
+\caption{\sffamily\small\textbf{A rule-of-thumb is the best assessment strategy when animals live in large groups and have short memories and when the signal-quality correlation is high.} In each panel, we show which of the three assessment strategies---recognition, a learned rule-of-thumb, or a genetic rule-of-thumb---is the least costly, as a function of the cost of errors ($c$) and memory window ($w$). Red indicates recognition is the least costly. Light blue indicates a learned rule-of-thumb is the best strategy. Intermediate blue indicates a genetic rule-of-thumb is the best strategy. Dark blue indicates the two rule-of-thumbs are essentially equally costly and less costly than recognition. Purple indicates the three strategies are all essentially equally costly. The animals using recognition are using the optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$). In the first column $N=25$, in the middle column, $N=50$, and in the right column $N=100$. In the first row $\rho=0.9$ and in the second row $\rho=0.99$.}
+\label{best}
 \end{figure}
-%LIZ comment: specify if this is with/without observational learning
 
 %
 \begin {table}[ht]
@@ -276,7 +275,12 @@ $\xi$ & noise in the information animals get about each other's quality through 
 
 
 \begin{figure}
-\includegraphics[width=6.85in]{figures/strategies.pdf}
+\includegraphics[width=6.85in]{figures/strategies_heat_maps.pdf}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6.85in]{figures/recog_vs_learned_rule.pdf}
 \caption{}
 \end{figure}
 
@@ -308,37 +312,46 @@ Each circle corresponds to an animal in the group. In each row, the horizontal p
 \begin{figure}[ht]
 \includegraphics[width=.8\textwidth]{figures/number_of_categories.pdf}
 \caption{\sffamily\small\textbf{As category width $\delta$ decreases the number of categories into which the group is divided increases.}
-For a given group size $N$ and category width $\delta$ we generated a group with $N$ signal values $\{s_i\}$ and categorized the group according to the procedure in the text and Figure \ref{cats_ex} $100$ times and took the average number of categories across these $100$ iterations. Here we show how the average number of categories into which a group is divided depends on group size $N$ and category width $\delta$.  Each colored line corresponds to a group size. There are overlapping solid and dotted lines in each color since the signal-quality correlation $\rho$ does not affect the number of categories formed. When $\delta=0$ there are as many categories as there are animals in the group. When $\delta=2$, it is possible for all animals to be put into the same category, but in all $100$ iterations we simulated for each group size, there were $2$ categories. }
+For a given group size ($N$), signal-quality correlation ($\rho$), and category width ($\delta$), we generated $100$ group with signal values $\{s_i\}$ and categorized the group according to the procedure described in the text and shown in Figure \ref{cats_ex}.  Category width is on the x-axis and the average number of categories across the $100$ groups on a logarithmic scale is on the y-axis. Each color corresponds to a group size. Solid curves indicate that $\rho=0.5$ and dashed curves indicate that $\rho=0.9$, but curves overlap since the signal-quality correlation $\rho$ does not affect the number of categories formed. When $\delta=0$ there are as many categories as there are animals in the group. When $\delta=2$, it is theoretically possible for all animals to be put into the same category, but in all $100$ iterations we simulated for each group size, there were $2$ categories. }
 \label{num_cat}
 \end{figure}
 
-
-
-\begin{figure}[ht]
-\includegraphics[width=.8\textwidth]{figures/parameters_interactions_full.pdf}
-\caption{\sffamily\small\textbf{Parameter interactions for animals using the badge system.}
-In A-D we show average error ($\bar{\epsilon}$) for animals using the badge system as a function of two parameters. In E-H we show average learning time ($\bar{\tau}$) as a function of two parameters. Parameters: unless the parameter is being varied $\delta = 0.5$, $N=50$, $p_\text{o}=0$, $\rho=0.9$, $w=1200$.}
-\label{interactions_badge}
-\end{figure}
-
-
 \begin{figure}
 \includegraphics[width=6.85in]{figures/speed_accuracy_tradeoff.pdf}
-\caption{\sffamily\small\textbf{}}
+\caption{\sffamily\small\textbf{Increasing memory always improves learning; increasing updating rate or category width can help animals learn more quickly, but limits how accurately they can learn.} In each panel, we show time (in number of interactions) on the x-axis and the average error in an animal's recognition-based assessment of its peers ($\epsilon(t)$) on the y-axis. In (A), the different curves represent different memory windows ($w$). In (B), the different curves represent different updating rates ($r$). In (C), the different curves represent different category widths ($\delta$). As memory window increases, the learning curves monotonically decrease; there is no benefit to decreasing memory window. As either updating rate or category width increases, the asymptotic error decreases, but error decreases more slowly. If learning quickly is prioritized, it is sometimes desirable to use a large updating rate or category width. Parameters: unless the parameter is being varied $\delta=0$, $N=25$, $\rho=0.99$, $r=0.05$, $w=30000$.}
 \label{tradeoff}
 \end{figure}
 
 
+\begin{figure}[ht]
+\includegraphics[width=6.85in]{figures/parameters_interactions_full.pdf}
+\caption{\sffamily\small\textbf{Memory window, updating rate, and category width interact in their effects on how accurately and quickly animals using recognition can learn.}
+In A-C we show average error ($\epsilon(\tau)$) for animals using recognition as a function of two parameters. In D-F we show stopping time ($\tau$) as a function of two parameters. Increasing memory window always decreases error (A) and increases stopping time (D). Intermediate category widths minimize error when memory and updating rate are low, but otherwise category width $\delta=0$ minimizes error (B). Increasing updating rate always decreases stopping time (F). However, the effects of updating rate depend strongly on memory window: when memory window is low, increasing updating rate decreases error, but when memory window is high, increasing updating rate \emph{increases} error (C). Parameters: unless the parameter is being varied $\delta = 0$, $N=25$, $\rho=0.99$, $w=1000$, $r=0.1$.}
+\label{interactions}
+\end{figure}
+
 \begin{figure}
-\includegraphics[width=6.85in]{figures/delta_heat_map.pdf}
-\caption{\sffamily\small\textbf{}}
+\includegraphics[width=6.85in]{figures/time_heat_maps.pdf}
+\caption{\sffamily\small\textbf{} Here we show how the optimal stopping time ($\tau$) depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$ and in the third row $\rho=0.99$. The animals are also using the optimal updating rate ($r$) and category width ($\delta$), which are shown in Figures \ref{l} and \ref{delta}.}
+\label{time}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6.85in]{figures/l_heat_maps.pdf}
+\caption{\sffamily\small\textbf{A high updating rates is better than a low updating rate when animals live in large groups and have short memory windows.} Here we show how the optimal updating rate ($r$) depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$, and in the third row $\rho=0.99$. The animals are also using the optimal category width ($\delta$), which is shown in Figure \ref{l}.}
+\label{l}
+\end{figure} 
+
+\begin{figure}
+\includegraphics[width=6.85in]{figures/delta_heat_maps.pdf}
+\caption{\sffamily\small\textbf{Categorical recognition is better than individual recognition when animals live in large groups and have short memory windows and when the signal-quality correlation is very high.} Here we show how the optimal category width ($\delta$) depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$, and in the third row $\rho=0.99$. The animals are also using the optimal updating rate ($r$), which is shown in Figure \ref{l}.}
 \label{delta}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=6.85in]{figures/l_heat_map.pdf}
-\caption{\sffamily\small\textbf{}}
-\label{l}
+\includegraphics[width=6.85in]{figures/error_heat_maps.pdf}
+\caption{\sffamily\small\textbf{} Here we show how the average error ($\epsilon(\tau)$) of animals using optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$), depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first  row $\rho=0.5$, in the second row $\rho=0.9$ and in the third row $\rho=0.99$.}
+\label{error}
 \end{figure}
 
 \begin{table}
