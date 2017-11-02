@@ -12,6 +12,9 @@
 \setcounter{secnumdepth}{0}
 \usepackage{fullpage}
 \usepackage{titlesec}
+\usepackage{graphicx,multirow}
+\newcommand{\spheading}[2][10em]{% \spheading[<width>]{<stuff>}
+  \rotatebox{90}{\parbox{#1}{\raggedright #2}}}
 \titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
 %\usepackage{parskip} % skip paragraph indentations
