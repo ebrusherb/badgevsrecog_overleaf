@@ -1,4 +1,4 @@
-\begin{thebibliography}{58}
+\begin{thebibliography}{61}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -111,6 +111,11 @@ Grafen, A. \& Johnstone, R.A. 1993.
 \newblock Why we need {ESS} signalling theory.
 \newblock Philos Trans R Soc Lond B Biol Sci 340: 245--250.
 
+\bibitem[{Harnad(1990)}]{Harnad:1990ux}
+Harnad, S. (ed) 1990.
+\newblock Categorical Perception: The Groundwork of Cognition.
+\newblock Cambridge University Press.
+
 \bibitem[{Hill \& Dunbar(2003)}]{Hill:2003ly}
 Hill, R.A. \& Dunbar, R.I. 2003.
 \newblock Social network size in humans.
@@ -186,6 +191,11 @@ Lemel, J. \& Wallin, K. 1993.
   experimental study in the great tit, \emph{{P}arus major} l.
 \newblock Anim Behav 45: 549--558.
 
+\bibitem[{Lim \& Pike(2016)}]{Lim:2016ye}
+Lim, H.H. \& Pike, T.W. 2016.
+\newblock Dietary carotenoid availability affects avian color discrimination.
+\newblock Behavioral Ecology 27: 1579--1584.
+
 \bibitem[{Loyau et~al.(2005)Loyau, Jalme, Cagniant \& Sorci}]{Loyau:2005nx}
 Loyau, A., Jalme, M.S., Cagniant, C. \& Sorci, G. 2005.
 \newblock Multiple sexual advertisements honestly reflect health status in
@@ -203,6 +213,11 @@ Marchetti, C. \& Drent, P.J. 2000.
 \newblock Individual differences in the use of social information in foraging
   by captive great tits.
 \newblock Anim Behav 60: 131--140.
+
+\bibitem[{Nelson \& Marler(1989)}]{Nelson:1989rt}
+Nelson, D.A. \& Marler, P. 1989.
+\newblock Categorical perception of a natural stimulus continuum: birdsong.
+\newblock Science 244: 976--978.
 
 \bibitem[{Olsen et~al.(2010)Olsen, Greenberg, Liu, Felch \&
   Walters}]{Olsen:2010uq}
