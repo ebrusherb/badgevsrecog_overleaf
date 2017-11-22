@@ -1,4 +1,4 @@
-\begin{thebibliography}{63}
+\begin{thebibliography}{75}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -39,6 +39,17 @@ Cowlishaw, G. \& Dunbar, R.I.M. 1991.
 \newblock Dominance rank and mating success in male primates.
 \newblock Anim Behav 41: 1045--1056.
 
+\bibitem[{Dale et~al.(2001)Dale, Lank \& Reeve}]{Dale:2001dv}
+Dale, J., Lank, D.B. \& Reeve, H.K. 2001.
+\newblock Signaling individual identity versus quality: A model and case
+  stuides with ruffs, queleas, and house finches.
+\newblock The American Naturalist 158: 75--86.
+
+\bibitem[{Dawkins \& Guilford(1991)}]{Dawkins:1991ly}
+Dawkins, M.S. \& Guilford, T. 1991.
+\newblock The corruption of honest signalling.
+\newblock Anim Behav 41: 865--873.
+
 \bibitem[{Dawkins \& Krebs(1978)}]{dawkins1978signals}
 Dawkins, R. \& Krebs, J. 1978.
 \newblock Behavioural ecology.
@@ -49,6 +60,11 @@ Dawkins, R. \& Krebs, J. 1978.
 de~Waal, F.B.M. 1986.
 \newblock The integration of dominance and social bonding in primates.
 \newblock Q Rev Biol 61: 459--479.
+
+\bibitem[{D'Ettorre \& Heinze(2005)}]{DEttorre:2005nu}
+D'Ettorre, P. \& Heinze, J. 2005.
+\newblock Individual recognition in ant queens.
+\newblock Current Biology 15: 2170--2174.
 
 \bibitem[{Dick \& Elwood(1990)}]{Dick:1990cr}
 Dick, J.T.A. \& Elwood, R.W. 1990.
@@ -102,6 +118,12 @@ Folstad, I. \& Karter, A.J. 1992.
 \newblock Parasites, bright males, and the immunocompetence handicap.
 \newblock Am Nat 139: 603--622.
 
+\bibitem[{Fox et~al.(1990)Fox, Heger \& Delay}]{Fox:1990hd}
+Fox, S.F., Heger, N.A. \& Delay, L.S. 1990.
+\newblock Social cost of tail loss in {\emph{uta stansburiana}}: lizard tails
+  as status-signalling badges.
+\newblock Animal Behaviour 39: 548--554.
+
 \bibitem[{Freeman(1985)}]{Freeman:1985kl}
 Freeman, S. 1985.
 \newblock Male red-winged blackbirds (\emph{Agelaius phoeniceus}) assess the
@@ -112,6 +134,11 @@ Freeman, S. 1985.
 Gavrilets, S. \& Vose, A. 2006.
 \newblock The dynamics of {M}achiavellian intelligence.
 \newblock Proc Natl Acad Sci U S A 103: 16823--16828.
+
+\bibitem[{Gerald(2001)}]{Gerald:2001zm}
+Gerald, M.S. 2001.
+\newblock Primate colour predicts social status and aggressive outcome.
+\newblock Animal Behaviour 61: 559--568.
 
 \bibitem[{Grafen \& Johnstone(1993)}]{Grafen:1993kx}
 Grafen, A. \& Johnstone, R.A. 1993.
@@ -156,6 +183,13 @@ Johnstone, R.A. 1994.
 Johnstone, R.A. 1995.
 \newblock Honest advertisement of multiple qualities using multiple signals.
 \newblock J Theor Biol 177: 87--94.
+
+\bibitem[{Kamo et~al.(2002)Kamo, Ghirlanda \& Enquist}]{Kamo:2002vi}
+Kamo, M., Ghirlanda, S. \& Enquist, M. 2002.
+\newblock The evolution of signal form: effects of learned versus inherited
+  recognition.
+\newblock Proceedings of the Royal Society of London B: Biological Sciences
+  269: 1765--1771.
 
 \bibitem[{Kerr \& Feldman(2003)}]{Kerr:2003vn}
 Kerr, B. \& Feldman, M.W. 2003.
@@ -215,6 +249,14 @@ MacIver, M.A., Patankar, N.A. \& Shirgaonkar, A.A. 2010.
 \newblock Energy-information trade-offs between movement and sensing.
 \newblock PLoS Comput Biol 6: e1000769.
 
+\bibitem[{McGlothlin et~al.(2007)McGlothlin, Jawor, Greives, Casto, Phillips \&
+  Ketterson}]{McGlothlin:2007au}
+McGlothlin, J.W., Jawor, J.M., Greives, T.J., Casto, J.M., Phillips, J.L. \&
+  Ketterson, E.D. 2007.
+\newblock Hormones and honest signals: males with larger ornaments elevate
+  testosterone more when challenged.
+\newblock Journal of Evolutionary Biology 21: 39--48.
+
 \bibitem[{Nelson \& Marler(1989)}]{Nelson:1989rt}
 Nelson, D.A. \& Marler, P. 1989.
 \newblock Categorical perception of a natural stimulus continuum: birdsong.
@@ -232,6 +274,17 @@ Parr, L.A., Winslow, J.T., Hamilton, W.D. \& de~Waal, F.B.M. 2000.
 \newblock Recognizing facial cues: Individual discrimination by chimpanzees
   (\emph{Pan troglodytes}) and rhesus monkeys (\emph{Macaca mulatta}).
 \newblock Jour Comp Pscyhol 114: 47--60.
+
+\bibitem[{P{\"a}rt \& Qvarnstr{\"o}m(1997)}]{Part:1997ys}
+P{\"a}rt, T. \& Qvarnstr{\"o}m, A. 1997.
+\newblock Badge size in collared flycatchers predicts outcome of male
+  competition over territories.
+\newblock Anim Behav 54: 893--899.
+
+\bibitem[{Pollard \& Blumstein(2011)}]{Pollard:2011te}
+Pollard, K.A. \& Blumstein, D.T. 2011.
+\newblock Social group size predicts the evolution of individuality.
+\newblock Current Biology 21: 413--417.
 
 \bibitem[{Qvarnstrom(1997)}]{Qvarnstrom:1997fk}
 Qvarnstrom, A. 1997.
@@ -283,6 +336,12 @@ Sayigh, L.S., Tyack, P.L., Wells, R.S., Solow, A.R., Scott, M.D. \& Irvine,
   using playback experiments.
 \newblock Anim Behav 57: 41--50.
 
+\bibitem[{Schug et~al.(2010)Schug, Matsumoto, Horita, Yamagishi \&
+  Bonnet}]{Schug:2010be}
+Schug, J., Matsumoto, D., Horita, J., Yamagishi, T. \& Bonnet, K. 2010.
+\newblock Emotional expressivity as a signal of cooperation.
+\newblock Evolution and Human Behavior 31: 87--94.
+
 \bibitem[{Seyfarth \& Cheney(2015)}]{Seyfarth2015SocialCognition}
 Seyfarth, R.M. \& Cheney, D.L. 2015.
 \newblock {Social cognition}.
@@ -317,6 +376,12 @@ Sheehan, M.J., Straub, M.A. \& Tibbetts, E.A. 2014.
   identity information in \emph{Polistes} species with and without individual
   recognition.
 \newblock Ethology 120: 169--179.
+
+\bibitem[{Sheehan \& Tibbetts(2009)}]{Sheehan:2009we}
+Sheehan, M.J. \& Tibbetts, E.A. 2009.
+\newblock Evolution of identity signals: Frequency-dependent benefits of
+  distinctive phenotypes used for individual recognition.
+\newblock Evolution 63: 3106--3113.
 
 \bibitem[{Solberg \& Ringsby(1997)}]{Solberg:1997uq}
 Solberg, E.J. \& Ringsby, T.H. 1997.
@@ -361,6 +426,12 @@ Veiga, J.P. 1993.
 \newblock Badge size, phenotypic quality, and reproductive success in the house
   sparrow: A study on honest advertisment.
 \newblock Evolution 47: 1161--1170.
+
+\bibitem[{Veiga(1995)}]{Veiga:1995ys}
+Veiga, J.P. 1995.
+\newblock Honest signaling and the survival cost of badges in the house
+  sparrow.
+\newblock Evolution 49: 570--572.
 
 \bibitem[{Whitfield(1987)}]{Whitfield:1987tg}
 Whitfield, D.P. 1987.
