@@ -224,39 +224,40 @@ Learning about one's group mates is a challenge facing every animal that lives i
 
 \newpage
 
+\begin{figure}[ht]
+%\includegraphics[width=.8\textwidth]{figures/category_diagram.pdf}
+\caption{\sffamily\small\textbf{As category width increases, the animals use fewer categories, each of which includes more animals.} 
+In A we show how a given set of signals could be categorized using three different category widths ($\delta$). The three vertical lines of dots represent the same group, with the same set of signals $\{s_i\}$. Each dot represents an animal in the group and the vertical position of a dot represents the animal's signal. In each column, animals in the same category are represented by circles of the same size and color, indicated the average signal for animals in that category. The range of signals in a given category can be no more than $\delta$. In the left column, $\delta=0$ and there are $N=100$ categories. In the middle column, $\delta=1$ and there are four categories. In the right column, $\delta=2$ and there are two categories.  In B, we show how the number of categories an animal uses depends on the category width. For a given group size ($N$) and category width, we generated $5,000$ groups with signal values $\{s_i\}$ and categorized the group according to the procedure shown in A.  Category width is on the x-axis. The average number of categories across the $5,000$ groups is on the y-axis, which is on a logarithmic scale, with the color indicating group size. The shaded areas show this average plus or minus the standard deviation across the $5,000$ groups. When $\delta=0$ there are as many categories as there are animals in the group. When $\delta=2$, it is theoretically possible for all animals to be put into the same category, but this was never observed, and instead the animals were always put into $2$ categories. }
+ \label{category_diagram}
+\end{figure}
+
 \begin{figure}
-%\includegraphics[width=6.85in]{figures/schematic_small_font.pdf}
+%\includegraphics[width=6.85in]{figures/schematic_cropped.png}
 \caption{\label{schematic}\sffamily\small\textbf{Animals can use signals to infer the quality values of conspecifics.} They can do so using either a linear rule, which can be either learned or innate and which is determined by a slope and intercept, or categories, which can be coarse or fine. When there are as many categories as there are individuals in the group, categorical perception becomes individual recognition.}
 \end{figure}
 
 \begin{figure}
-%\includegraphics[width=6.85in]{figures/learning_curves.pdf}
-\caption{\label{learning_curves} \sffamily\small\textbf{Error decreases over time until it  asymptote.}
-In each panel, we show time (in number of interactions) on the x-axis and the average error in an animal's assessments of its peers ($\epsilon(t)$) on the y-axis. In each panel, solid curves show animals using recognition, dashed curves show animals using a learned rule, and dotted curves show animals using a innate rule. In (a), group size $N=25$, in (b) $N=50$, and in (c) $N=100$. Each color corresponds to a combination of memory window ($w$), updating rate ($r$), and category width ($\delta$). The signal-quality correlation is high ($\rho=0.99$) in all panels. There are only two dashed curves because $r$ and $\delta$ do not affect a learned rule and there is only one dotted curve because only group size and signal-quality correlation affect a innate rule. As group size increases (moving from left to right), error increases, but this affects the error of animals using recognition more than animals using either rule. As memory window increases, the error of animals using the learned rule is not strongly affected, but the error of animals using recognition decreases (compare the green and purple curves).}
+%\includegraphics[width=6.85in]{figures/speed_accuracy_tradeoff.pdf}
+\caption{\sffamily\small\textbf{As the animals learn, their errors decrease and eventually reach an equilibrium value.} Increasing the updating rate ($r$) or category width ($\delta$) helps the animals learn more quickly. When they have a long memory, this increases the equilibrium level of error, but when they have a short memory, it decreases the equilibrium level of error. In each panel, we show time ($t$, in number of interactions) on the x-axis and the average error in an animal's assessment of its peers ($\epsilon(t)$) on the y-axis. In each panel, light blue indicates animals using a learned rule, dark blue indicates animals using an innate rule, reddish colors indicates animals using recognition, and purple indicates animals using categorization. The points show the stopping time ($\tau$) at which error stops decreasing (not shown for the innate rule because there is no learning). In A and B, the different reddish curves represent different updating rates ($r$). In C and D, the red and purple curves represent different category widths ($\delta$). In the left column, memory window $w=2500$ and in the right column, memory window $w=500$. Parameters: unless the parameter is being varied $\delta=0$, $N=25$, $\rho=0.99$, $r=0.05$.}
+\label{tradeoff}
 \end{figure}
 
 \begin{figure}
 %\includegraphics[width=6.85in]{figures/parameters_exploration.pdf}
-\caption{\sffamily\small\textbf{Decreasing group size and increasing memory window both improve the accuracy with which animals can learn about their peers.} Here we show average error ($\epsilon(\tau)$) (a-d) and stopping time ($\tau$) (e-h) as a function of group size ($N$), memory window ($w$), updating rate ($r$), and category width ($\delta$). Stopping time is on a logarithmic scale. We do not show stopping time for animals using the innate rule because it is always equal to $1$.  In each panel, solid curves show animals using recognition, dashed curves show animals using a learned rule, and dotted curves show animals using a innate rule. The red curves correspond to groups in which the signal-quality correlation $\rho=0.9$ and memory window $w=2500$ and the blue curves correspond to groups in which the signal-quality correlation $\rho=0.99$ and memory window $w=250$. Increasing the updating rate ($r$) helps animals to learn more quickly (c) but increases the error with which they learn when they have long memories (g). Error is minimized at low or intermediate category widths, depending on how long the animals' memory windows are (d). Increasing the category width ($\delta$) helps animals to learn more quickly (h). Parameters: unless the parameter is being varied $\delta = 0$, $N=25$, $r=0.25$.}
+\caption{\sffamily\small\textbf{Animals can learn about their peers with smaller errors when they have signals that are highly correlated with quality, live in small groups, and have long memory windows, and when errors are costly.} Here we show (A-D) average error ($\epsilon(\tau)$) and (E-H) stopping time ($\tau$) as a function of signal-quality correlation ($\rho$), group size ($N$), memory window ($w$), and cost of errors ($c$). Stopping time is on a logarithmic scale. In each panel, light blue curves show animals using a learned rule, dark blue curves show animals using a innate rule, red curves show animals using recognition ($\delta=0$), and purple curves show animals using categorization (with $\delta=0.25$). We do not show stopping time for animals using the innate rule because there is no learning involved.  The solid curves correspond to groups in which the signal-quality correlation $\rho=0.99$ and the dashed curves correspond to groups in which the signal-quality correlation $\rho=0.9$ (except in A and E, where we explicitly vary $\rho$). There are no dashed red curves because $\rho$ does not affect animals using recognition. Parameters: unless the parameter is being varied $c=1$, $N=25$, $r=0.5$, $w=2500$.}
 \label{parameters}
 \end{figure}
 
 \begin{figure}
 %\includegraphics[width=6.85in]{figures/strategies_heat_maps.pdf}
-\caption{\sffamily\small\textbf{As the cost of errors increases, animals using recognition should use higher stopping times, smaller updating rates and smaller category widths.} Here we show how the stopping time ($\tau$) (a-c),  optimal updating rate ($r$) (d-f), and optimal category width ($\delta$) (g-i), and error at stopping time ($\epsilon(\tau)$) (j-l), depend on how costly errors are ($c$) and memory window ($w$). Stopping time is on a logarithmic scale. In the first column, group size $N=25$, in the second column $N=50$, and in the third column $N=100$. For a given cost of error ($c$), memory window ($w$), and group size ($N$), the stopping time, updating rate, and category width shown here are those that minimize the costs incurred from the combination error and learning time. Parameters: $\rho=0.99$. }
+\caption{\sffamily\small\textbf{Categorization is the better than recognition when animals live in large groups, have short memories, when the signal-quality correlation is high, and when errors are not very costly.} Here we show how the optimal category width ($\delta$), as a function of the cost of errors ($c$) and memory window ($w$). The optimal category width is the value of $\delta$ that minimizes the costs incurred from the combination of error and learning time. We concurrently find the value of $r$ that minimizes costs, as shown in Figure \ref{l}. In the first column, group size $N=25$, in the second column $N=50$, and in the third column $N=100$. Parameters: $\rho=0.99$. }
 \label{optimization}
 \end{figure}
 
 
 \begin{figure}
-%\includegraphics[width=6.85in]{figures/recog_vs_learned_rule.pdf}
-\caption{\sffamily\small\textbf{A learned rule is less costly than recognition (with optimized learning strategies) when animals live in large groups and have short memories and when the signal-quality correlation is high.} In each panel, we show the difference in overall costs between recognition and a learned rule as a function of the cost of errors ($c$) and memory window ($w$). Blue indicates a learned rule is less costly and red indicates recognition is less costly. The animals using recognition are using the optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$). In the first column $N=25$, in the middle column, $N=50$, and in the right column $N=100$. In the first row $\rho=0.9$ and in the second row $\rho=0.99$.}
-\label{comparison}
-\end{figure}
-
-\begin{figure}
 %\includegraphics[width=6.85in]{figures/best_type_of_learning.pdf}
-\caption{\sffamily\small\textbf{A rule is the best assessment strategy when animals live in large groups and have short memories and when the signal-quality correlation is high.} In each panel, we show which of the three assessment strategies---recognition, a learned rule, or a innate rule---is the least costly, as a function of the cost of errors ($c$) and memory window ($w$). Red indicates recognition is the least costly. Light blue indicates a learned rule is the best strategy. Intermediate blue indicates a innate rule is the best strategy. Dark blue indicates the two rules are essentially equally costly and less costly than recognition. Purple indicates the three strategies are all essentially equally costly. The animals using recognition are using the optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$). In the first column $N=25$, in the middle column, $N=50$, and in the right column $N=100$. In the first row $\rho=0.9$ and in the second row $\rho=0.99$.}
+\caption{\sffamily\small\textbf{A rule is the best assessment strategy when animals live in large groups and have short memories, when the signal-quality correlation is high, and when errors are not very costly.} Here we show which of the three assessment strategies---recognition, a learned rule, or a innate rule---is the least costly, as a function of the cost of errors ($c$) and memory window ($w$). Red indicates recognition is the least costly. Light blue indicates a learned rule is the best strategy. Intermediate blue indicates a innate rule is the best strategy. Dark blue indicates the two rules are essentially equally costly and less costly than recognition. Grey indicates the three strategies are all essentially equally costly. (Strategies are classified as equivalent if their costs are within $0.05$ of each other.) Using categorization is never the least costly strategy. Animals using recognition are using the optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta=0$), as shown in Figures \ref{tau}-\ref{delta}, and animals using a learned rule are using the optimal stopping time. In the first column $N=25$, in the middle column, $N=50$, and in the right column $N=100$. In the first row $\rho=0.9$ and in the second row $\rho=0.99$.}
 \label{best}
 \end{figure}
 
@@ -335,15 +336,19 @@ $\xi$ & noise in the information animals get about each other's quality through 
 \setcounter{figure}{0}
 
 \begin{figure}
+\includegraphics[width=6.85in]{figures/category_diagram.pdf}
+\caption{}
+\end{figure}
+
+\begin{figure}
 \includegraphics[width=6.85in]{figures/schematic_cropped.png}
 \caption{}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=6.85in]{figures/learning_curves.pdf}
+\includegraphics[width=6.85in]{figures/speed_accuracy_tradeoff.pdf}
 \caption{}
 \end{figure}
-
 
 \begin{figure}
 \includegraphics[width=6.85in]{figures/parameters_exploration.pdf}
@@ -356,10 +361,6 @@ $\xi$ & noise in the information animals get about each other's quality through 
 \caption{}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=6.85in]{figures/recog_vs_learned_rule.pdf}
-\caption{}
-\end{figure}
 
 \begin{figure}
 \includegraphics[width=6.85in]{figures/best_type_of_learning.pdf}
@@ -380,55 +381,49 @@ $\xi$ & noise in the information animals get about each other's quality through 
 \setcounter{table}{0}
 
 \begin{figure}[ht]
-\includegraphics[width=.8\textwidth]{figures/categories.pdf}
-\caption{\sffamily\small\textbf{Here we show an example of how a group of $N=100$ animals being divided into categories.} 
-Each circle corresponds to an animal in the group. In each row, the horizontal position of the circle corresponds to its badge size. In the top row, the color and size of each circle indicate the size of each animal's badge. In the second and third rows, the color and size indicate the mean size of the badges of animals in each category, where categories were constructed using category width $\delta=0.5$ and $\delta=2$ respectively. Categories were formed by choosing an animal $i$ at random, putting all other animals whose signals were within $\delta/2$ of $i$'s signal $s_i$ into the same category, then choosing another uncategorized animal at random, and continuing until all animals were categorized.}
- \label{cats_ex}
-\end{figure}
-
-\begin{figure}[ht]
-\includegraphics[width=.8\textwidth]{figures/number_of_categories.pdf}
-\caption{\sffamily\small\textbf{As category width $\delta$ decreases the number of categories into which the group is divided increases.}
-For a given group size ($N$), signal-quality correlation ($\rho$), and category width ($\delta$), we generated $100$ group with signal values $\{s_i\}$ and categorized the group according to the procedure described in the text and shown in Figure \ref{cats_ex}.  Category width is on the x-axis and the average number of categories across the $100$ groups on a logarithmic scale is on the y-axis. Each color corresponds to a group size. Solid curves indicate that $\rho=0.5$ and dashed curves indicate that $\rho=0.9$, but curves overlap since the signal-quality correlation $\rho$ does not affect the number of categories formed. When $\delta=0$ there are as many categories as there are animals in the group. When $\delta=2$, it is theoretically possible for all animals to be put into the same category, but in all $100$ iterations we simulated for each group size, there were $2$ categories. }
-\label{num_cat}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=6.85in]{figures/speed_accuracy_tradeoff.pdf}
-\caption{\sffamily\small\textbf{Increasing memory always improves learning; increasing updating rate or category width can help animals learn more quickly, but limits how accurately they can learn.} In each panel, we show time (in number of interactions) on the x-axis and the average error in an animal's recognition-based assessment of its peers ($\epsilon(t)$) on the y-axis. In (a), the different curves represent different memory windows ($w$). In (b), the different curves represent different updating rates ($r$). In (c), the different curves represent different category widths ($\delta$). As memory window increases, the learning curves monotonically decrease; there is no benefit to decreasing memory window. As either updating rate or category width increases, the asymptotic error decreases, but error decreases more slowly. If learning quickly is prioritized, it is sometimes desirable to use a large updating rate or category width. Parameters: unless the parameter is being varied $\delta=0$, $N=25$, $\rho=0.99$, $r=0.05$, $w=30000$.}
-\label{tradeoff}
+\includegraphics[width=6.85in]{figures/stopping_time.pdf}
+\caption{\sffamily\small\textbf{As the cost of errors decreases and the cost of learning time increases, animals should stop learning earlier.} Here we show how we calculate stopping time ($\tau$). In each panel, time in number of interactions ($t$) is on the x-axis and the total cost $C(t)$ is on the y-axis. In A, the cost of errors $c=1$: all that matters is error and the total cost $C(t)$ is equal to $2$ times the average error $\epsilon(t)$. In B, the cost of errors $c=0.9$ and in C, the cost of errors $c=0.6$: in each case, as time goes on, the animals incur costs from their interactions. In each panel, the stopping time $\tau$ is shown with the red point: this is the number of interactions at which the cost $C$ stops decreasing and either plateaus or starts to increase. Parameters: $\delta=0$, $N=25$, $\rho=0.9$, $r=0.05$, $w=2500$.)
+}
+\label{tau}
 \end{figure}
 
 
 \begin{figure}[ht]
 \includegraphics[width=6.85in]{figures/parameters_interactions_full.pdf}
-\caption{\sffamily\small\textbf{Memory window, updating rate, and category width interact in their effects on how accurately and quickly animals using recognition can learn.}
-In (a-c) we show average error ($\epsilon(\tau)$) for animals using recognition as a function of two parameters. In (d-f) we show stopping time ($\tau$) as a function of two parameters. Stopping time is on a logarithmic scale. Increasing memory window always decreases error (a) and increases stopping time (d). Intermediate category widths minimize error when memory and updating rate are low, but otherwise category width $\delta=0$ minimizes error (b). Increasing updating rate always decreases stopping time (f). However, the effects of updating rate depend strongly on memory window: when memory window is low, increasing updating rate decreases error, but when memory window is high, increasing updating rate \emph{increases} error (c). Parameters: unless the parameter is being varied $\delta = 0$, $N=25$, $\rho=0.99$, $w=1000$, $r=0.1$.}
+\caption{\sffamily\small\textbf{Memory window, updating rate, and category width interact in their effects on how quickly and accurately animals using categorization can learn.}
+Here we show stopping time ($\tau$) (A-C) and average error ($\epsilon(\tau)$) (D-F) for animals using categorization as a function of two parameters. Stopping time is on a logarithmic scale. Increasing memory window increases stopping time (A and C) and decreases error (D and F). Increasing category width decreases stopping time (A and B). Intermediate category widths minimize error when memory and updating rate are low, but otherwise category width $\delta=0$ minimizes error (D and E). Increasing updating rate decreases stopping time (B and C). When memory window is low, increasing updating rate decreases error, but when memory window is high, increasing updating rate \emph{increases} error (F). Parameters: unless the parameter is being varied $\delta = 0$, $N=25$, $\rho=0.99$, $w=1000$, $r=0.1$. 
+}
 \label{interactions}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=6.85in]{figures/time_heat_maps.pdf}
-\caption{\sffamily\small\textbf{} Here we show how the optimal stopping time ($\tau$) depends on the cost of errors ($c$) and memory window ($w$). Stopping time is on a logarithmic scale. In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$ and in the third row $\rho=0.99$. The animals are also using the optimal updating rate ($r$) and category width ($\delta$), which are shown in Figures \ref{l} and \ref{delta}.}
+\caption{\sffamily\small\textbf{} Here we show how the optimal stopping time ($\tau$) depends on the cost of errors ($c$) and memory window ($w$). Stopping time is on a logarithmic scale. In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$ and in the third row $\rho=0.99$. The animals are also using the optimal updating rate ($r$) and category width ($\delta$), which are shown in Figures \ref{delta} and \ref{l}.}
 \label{time}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=6.85in]{figures/l_heat_maps.pdf}
-\caption{\sffamily\small\textbf{A high updating rates is better than a low updating rate when animals live in large groups and have short memory windows.} Here we show how the optimal updating rate ($r$) depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$, and in the third row $\rho=0.99$. The animals are also using the optimal category width ($\delta$), which is shown in Figure \ref{l}.}
-\label{l}
-\end{figure} 
-
-\begin{figure}
 \includegraphics[width=6.85in]{figures/delta_heat_maps.pdf}
-\caption{\sffamily\small\textbf{Categorical recognition is better than individual recognition when animals live in large groups and have short memory windows and when the signal-quality correlation is very high.} Here we show how the optimal category width ($\delta$) depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$, and in the third row $\rho=0.99$. The animals are also using the optimal updating rate ($r$), which is shown in Figure \ref{l}.}
+\caption{\sffamily\small\textbf{Categorical recognition is better than individual recognition when animals live in large groups and have short memory windows and when the signal-quality correlation is very high.} Here we show how the optimal category width ($\delta$) depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$, and in the third row $\rho=0.99$. The animals are also using the optimal stopping time ($\tau$) and updating rate ($r$), which are shown in Figures \ref{time} and \ref{l}.}
 \label{delta}
 \end{figure}
+
+\begin{figure}
+\includegraphics[width=6.85in]{figures/l_heat_maps.pdf}
+\caption{\sffamily\small\textbf{A high updating rate is better than a low updating rate when animals live in large groups and have short memory windows.} Here we show how the optimal updating rate ($r$) depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first row $\rho=0.5$, in the second row $\rho=0.9$, and in the third row $\rho=0.99$. The animals are also using the optimal stopping time ($\tau$) and category width ($\delta$), which are shown in Figures \ref{time} and \ref{l}.}
+\label{l}
+\end{figure} 
 
 \begin{figure}
 \includegraphics[width=6.85in]{figures/error_heat_maps.pdf}
 \caption{\sffamily\small\textbf{} Here we show how the average error ($\epsilon(\tau)$) of animals using optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$), depends on the cost of errors ($c$) and memory window ($w$). In the first column $N=25$, in the middle column $N=50$, and in the right column $N=100$. In the first  row $\rho=0.5$, in the second row $\rho=0.9$ and in the third row $\rho=0.99$.}
 \label{error}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6.85in]{figures/recog_vs_learned_rule.pdf}
+\caption{\sffamily\small\textbf{A learned rule is less costly than recognition (with optimized learning strategies) when animals live in large groups and have short memories and when the signal-quality correlation is high.} In each panel, we show the difference in overall costs between recognition and a learned rule as a function of the cost of errors ($c$) and memory window ($w$). Blue indicates a learned rule is less costly and red indicates recognition is less costly. The animals using recognition are using the optimal stopping time ($\tau$), updating rate ($r$), and category width ($\delta$). In the first column $N=25$, in the middle column, $N=50$, and in the right column $N=100$. In the first row $\rho=0.9$ and in the second row $\rho=0.99$.}
+\label{comparison}
 \end{figure}
 
 \begin{table}
