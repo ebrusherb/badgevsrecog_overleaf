@@ -1,4 +1,4 @@
-\begin{thebibliography}{71}
+\begin{thebibliography}{72}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -107,6 +107,12 @@ Ehret, G. 1987.
 \newblock Categorical perception of sound signals: Facts and hypotheses from
   animal studies, chap.~10, pp. 301--331.
 \newblock Cambridge University Press.
+
+\bibitem[{Engh et~al.(2005)Engh, Siebert, Greenberg \& Holekamp}]{Engh:2005qp}
+Engh, A.L., Siebert, E.R., Greenberg, D.A. \& Holekamp, K.E. 2005.
+\newblock Patterns of alliance formation and postconflict aggression indicate
+  spotted hyaenas recognize third-party relationships.
+\newblock Animal Behaviour 69: 209--217.
 
 \bibitem[{Flack \& Krakauer(2006)}]{Flack:2006uq}
 Flack, J.C. \& Krakauer, D.C. 2006.
