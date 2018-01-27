@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -22,11 +22,6 @@ Bergman, T.J., Beehner, J.C., Cheney, D.L. \& Seyfarth, R.M. 2003.
 Bornstein, M.H. 1987.
 \newblock Perceptual categories in vision and audition, chap.~9, pp. 287--300.
 \newblock Cambridge University Press.
-
-\bibitem[{Briscoe \& Feldman(2011)}]{Briscoe:2011nx}
-Briscoe, E. \& Feldman, J. 2011.
-\newblock Conceptual complexity and the bias/variance tradeoff.
-\newblock Cognition 118: 2--16.
 
 \bibitem[{Brush et~al.(2018)Brush, Krakauer \& Flack}]{Brush:2018ss}
 Brush, E.R., Krakauer, D.C. \& Flack, J.C. 2018.
@@ -71,12 +66,6 @@ Dick, J.T.A. \& Elwood, R.W. 1990.
 \newblock Symmetrical assessment of female quality by male \emph{{G}ammarus
   pulex} ({A}mphipoda) during struggles over precopula females.
 \newblock Anim Behav 40: 877--883.
-
-\bibitem[{Domingos(2000)}]{Domingos:2000cr}
-Domingos, P. 2000.
-\newblock A unified bias-variance decomposition.
-\newblock Proceedings of the 17th International Conference on Machine Learning
-  pp. 231--238.
 
 \bibitem[{Dugatkin \& Earley(2004)}]{Dugatkin:2004hz}
 Dugatkin, L.A. \& Earley, R.L. 2004.
