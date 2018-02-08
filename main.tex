@@ -1,14 +1,21 @@
 \input{preamble}
 
-\lhead{Learning about signals of quality can be a good strategy} 
+\lhead{Learning about signals of quality} 
 
 
 \begin{document}
 \noindent
 \title{Learning about signals of quality can be better than using an innate signal assessment strategy} 
-\author{}
+\author{Eleanor Redstart Harris$^{1, \ast}$, Elizabeth A. Hobson$^2$}
 \date{} 
 \maketitle
+
+\noindent{} 1. Department of Biology, University of Maryland;
+
+\noindent{} 2. Santa Fe Institute
+
+\noindent{} $\ast$ Corresponding author; e-mail: eleanor.brush@gmail.com.
+
 
 %New target journal: Proc B 
 %instructions: http://rspb.royalsocietypublishing.org/author-information
@@ -17,8 +24,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \linenumbers
 
-\section*{Lay summary}
-Animals that live in groups often need accurate information about their group mates and there are several strategies that animals can use to make assessments of conspecifics. Some animals learn to recognize each of their group mates, but others use a signal to infer something about the quality of conspecifics. We find that social assessment is always easier in small groups and when animals have long memories. We also find that learning about a signal of quality is often better than using an innate rule-of-thumb to infer quality from signal.
+%\section*{Lay summary}
+%Animals that live in groups often need accurate information about their group mates and there are several strategies that animals can use to make assessments of conspecifics. Some animals learn to recognize each of their group mates, but others use a signal to infer something about the quality of conspecifics. We find that social assessment is always easier in small groups and when animals have long memories. We also find that learning about a signal of quality is often better than using an innate rule-of-thumb to infer quality from signal.
 
 % % TERMS:
 % individual recognition vs signal-based assessment strategies
@@ -33,7 +40,7 @@ Animals that live in groups often need accurate information about their group ma
 Animals in social groups benefit from having accurate information about their group mates. In many species, animals display a signal that is correlated with a property of interest, such as dominance or health. An animal can then use the signals displayed by its group mates to make inferences about their quality. Alternatively, some animals can use individual recognition to learn about each of their peers. Much is known about the the evolution of traits that are used as either signals of quality or for individual recognition, but there are few studies that address the evolution of the assessment strategies themselves. We develop and analyze a theoretical model of an animal social group, in which the animals assess each other using different strategies: three signal-based assessment strategies, as well as individual recognition. First, we find that the animals have more accurate assessments of each other when they live in smaller groups and have longer memories, regardless of which assessment strategy they use. Second, we find that signal-based assessment strategies are more likely to be favored in species that live in large groups, that have short memories, and who cannot invest a lot of time in learning. Finally, contrary to the assumption commonly made in studies of signals of quality, we find that learning about a signal is as good or better than using an innate rule-of-thumb, except if the animals live in \emph{very} large groups and have \emph{very} short memories. These results generate testable predictions for when different assessment strategies should evolve and show that we should not always expect evolution to lead to greater cognitive complexity. 
 
 
-\textbf{Keywords:} badge, cognition, evolution, learning, recognition, signal, social groups
+\textbf{Keywords:} badge, evolution, learning, recognition, signal, social groups
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -146,7 +153,7 @@ Within a population of animals using categorization, the traits of category widt
 
 To compare all assessment strategies for a given signal-quality correlation $\rho$, group size $N$, memory window $w$, and cost of errors $c$, we compare the total cost of learning for animals using an innate rule, animals using a learned rule, and animals using categorization with optimized $\delta$ and $r$. We expect that the assessment strategy with the lowest cost would be able to invade a population using any other strategy.
 
-The entire model was written in R and all model code will be released on publication on Github.
+The entire model was written in R and all model code is available at \url{https://github.com/ebrusherb/assessment_strategies_model/releases/tag/v0}.
 
 %%%%%%%%%%%%%%%%%%%%
 \section*{Results}
@@ -202,6 +209,9 @@ By studying an abstract model of social assessment, we were able to identify the
 Learning about one's group mates is a challenge facing every animal that lives in a social group. There is a spectrum of solutions to this problem determined by the number of parameters the animals have to use: at one end, animals can use a simple linear rule to infer quality from signal or coarsely categorize conspecifics into two groups, while at the other, they can recognize every one of their peers individually.
 Different conditions favor different solutions. By considering a range of solutions to the same biological problem, we have rigorously verified the intuition we and others have had about these systems. By explicitly comparing different assessment strategies, we have generated testable predictions about the types of species and social groups in which we expect one or the other to evolve. Our approach also provides intriguing insight into the social factors that shape animal cognition and the evolution of cognitive complexity. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Acknowledgments} E.R.H. was supported by a James S. McDonnell Foundation Postdoctoral Fellowship. E.A.H was supported by the Arizona State University-Santa Fe Institute Center for Biosocial Complex Systems; part of this work was also conducted while E.A.H. was a Postdoctoral Fellow at the National Institute for Mathematical and Biological Synthesis, an Institute sponsored by the NSF, the U.S. Department of Homeland Security, and the U.S. Department of Agriculture through NSF Award \#DBI-1300426, with additional support from the University of Tennessee, Knoxville.
+
 \newpage
 \bibliography{BIB_badgeVSrecog}
 \bibliographystyle{jeb}
@@ -215,11 +225,6 @@ In A we show how a given set of signals could be categorized using three differe
  \label{category_diagram}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=6.85in]{figures/schematic_cropped.png}
-\caption{\sffamily\small\textbf{Animals can use signals to infer the quality values of conspecifics.} They can do so using either a linear rule, which can be either learned or innate and which is determined by a slope and intercept, or categories, which can be coarse or fine. When there are as many categories as there are individuals in the group, categorical perception becomes individual recognition.}
-\label{schematic}
-\end{figure}
 
 \begin{figure}
 \includegraphics[width=6.85in]{figures/speed_accuracy_tradeoff.pdf}
@@ -363,6 +368,12 @@ In A we show how a given set of signals could be categorized using three differe
 \setcounter{equation}{0}  
 \setcounter{figure}{0}
 \setcounter{table}{0}
+
+\begin{figure}
+\includegraphics[width=6.85in]{figures/schematic_cropped.png}
+\caption{\sffamily\small\textbf{Animals can use signals to infer the quality values of conspecifics.} They can do so using either a linear rule, which can be either learned or innate and which is determined by a slope and intercept, or categories, which can be coarse or fine. When there are as many categories as there are individuals in the group, categorical perception becomes individual recognition.}
+\label{schematic}
+\end{figure}
 
 \begin{figure}[ht]
 \includegraphics[width=6.85in]{figures/stopping_time.pdf}
